@@ -1,13 +1,11 @@
 import { Schema, model } from "mongoose";
 
-const userSettingsSchema = new Schema(
-    {
+const userSettingsSchema = new Schema({
         theme: {
             type: String,
             default: "dark"
         }
-    }
-);
+});
 
 const UserSettings = model("UserSettings", userSettingsSchema);
 
