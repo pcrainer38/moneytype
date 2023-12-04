@@ -7,7 +7,9 @@ absent
 absolutely
 accept
 access
+accessory
 accident
+accommodate
 accommodation
 accompany
 account
@@ -15,6 +17,7 @@ accountant
 accurate
 ache
 achieve
+acquiesce
 across
 act
 action
@@ -139,6 +142,7 @@ ashamed
 ask
 asleep
 aspirin
+asthma
 at
 athlete
 athletics
@@ -281,6 +285,7 @@ both
 bother
 bottle
 bottom
+bourbon
 bowl
 box
 boy
@@ -302,6 +307,7 @@ bright
 brilliant
 bring
 broad
+broccoli
 brochure
 broken
 brother
@@ -407,6 +413,7 @@ change
 channel
 chapter
 character
+charcuterie
 charge
 charity
 charming
@@ -505,6 +512,8 @@ confused
 confusing
 connect
 connection
+conscientious
+conscious
 consider
 consist
 consonant
@@ -659,6 +668,7 @@ difficult
 difficulty
 dig
 digital
+dilate
 dinner
 dinosaur
 diploma
@@ -753,6 +763,7 @@ education
 effect
 effort
 egg
+eight
 either
 elbow
 elder
@@ -767,6 +778,7 @@ elephant
 elevator
 else
 email
+embarrass
 embarrassed
 embarrassing
 embassy
@@ -792,10 +804,12 @@ enter
 entertain
 entertainment
 entrance
+entrepreneur
 entry
 envelope
 environment
 environmental
+epitome
 equal
 equipment
 eraser
@@ -971,6 +985,7 @@ front
 frozen
 fruit
 fry
+fuchsia
 fuel
 full
 full-time
@@ -1008,6 +1023,7 @@ glance
 glass
 glasses
 glove
+gnaw
 go
 goal
 goalkeeper
@@ -1182,12 +1198,14 @@ increase
 incredible
 indeed
 independent
+indict
 individual
 indoor
 indoors
 industry
 inform
 information
+ingenious
 ingredient
 initial
 injure
@@ -1321,6 +1339,7 @@ let
 letter
 lettuce
 level
+liaison
 library
 licence
 lie
@@ -1337,6 +1356,7 @@ line
 link
 lion
 lip
+liquefy
 liquid
 list
 listen
@@ -1442,8 +1462,10 @@ mind
 mine
 minimum
 minus
+minuscule
 minute
 mirror
+mischievous
 miserable
 miss
 missing
@@ -1490,12 +1512,14 @@ my
 myself
 mystery
 name
+narcissistic
 narrow
 nasty
 national
 nationality
 natural
 nature
+nauseous
 near
 nearby
 nearly
@@ -1573,6 +1597,7 @@ one
 onion
 online
 only
+onomatopoeia
 onto
 open
 opera
@@ -1617,7 +1642,9 @@ pale
 pan
 pants
 paper
+paradigm
 paragraph
+paraphernalia
 parcel
 pardon
 parent
@@ -1678,6 +1705,7 @@ persuade
 pet
 petrol
 pharmacy
+phlegm
 phone
 photo
 photocopy
@@ -1722,6 +1750,7 @@ pleasure
 plenty
 plug
 plus
+pneumonia
 pocket
 poem
 poet
@@ -1922,6 +1951,7 @@ review
 revise
 revision
 reward
+rhythm
 rice
 rich
 ride
@@ -1959,6 +1989,7 @@ ruler
 run
 runner
 running
+sacrilegious
 safe
 safely
 sail
@@ -2043,6 +2074,7 @@ she
 sheep
 sheet
 shelf
+sherbet
 shine
 shiny
 ship
@@ -2156,6 +2188,7 @@ southern
 southwest
 souvenir
 space
+spaghetti
 spare
 sparkling
 speak
@@ -2247,6 +2280,7 @@ sunglasses
 sunrise
 sunset
 sunshine
+supercalifragilisticexpialidocious
 supermarket
 supper
 support
@@ -2477,6 +2511,7 @@ use
 useful
 usual
 usually
+vacuum
 valley
 valuable
 value
@@ -2532,6 +2567,7 @@ weak
 weather
 web
 webcam
+wednesday
 week
 weekday
 weekend
@@ -2624,3 +2660,4 @@ zebra
 zero
 zone
 zoo
+zucchini
