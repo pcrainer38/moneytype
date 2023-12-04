@@ -10,7 +10,7 @@ const expiration = process.env.JWT_EXPIRE || "2h";
  * @param {{req: Express.Request}} ctx
  */
 export const authMiddleware = ({ req }) => {
-  const token = req.body.token || req.query.token || req.headers.authorization;
+  let token = req.body.token || req.query.token || req.headers.authorization;
 
   if (req.headers.authorization) {
     token = token.split(" ").pop().trim();
