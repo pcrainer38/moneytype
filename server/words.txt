@@ -382,8 +382,8 @@ catch
 cathedral
 cattle
 cave
-CD
-CD-Rom
+cd
+cd-rom
 ceiling
 celebrate
 celebration
@@ -586,7 +586,7 @@ customer
 customs
 cut
 cute
-CV
+cv
 cycle
 cycling
 cyclist
@@ -695,7 +695,7 @@ dive
 diver
 divide
 diving
-OJ
+oj
 do
 document
 documentary
@@ -712,7 +712,7 @@ down
 download
 downstairs
 dozen
-Dr
+dr
 drag
 drama
 draw
@@ -736,7 +736,7 @@ dusty
 duty
 duty-free
 duvet
-DVD
+dvd
 each
 earache
 early
@@ -1157,9 +1157,9 @@ hurry
 hurt
 husband
 hut
-I
+i
 icy
-ID
+id
 idea
 identification
 if
@@ -1226,7 +1226,6 @@ iron
 ironing
 island
 issue
-IT
 it
 item
 its
@@ -1376,7 +1375,7 @@ lunchtime
 luxury
 machine
 mad
-Madam
+madam
 magazine
 magic
 magnificent
@@ -1447,9 +1446,8 @@ minute
 mirror
 miserable
 miss
-Miss
-Missing
-Mistake
+missing
+mistake
 mix
 mobile
 model
@@ -1475,9 +1473,9 @@ moustache
 mouth
 move
 movie
-Mr
-Mrs
-Ms
+mr
+mrs
+ms
 much
 mug
 mum
@@ -1643,7 +1641,7 @@ pattern
 pause
 pavement
 pay
-PC
+pc
 pea
 peace
 peaceful
@@ -2086,7 +2084,7 @@ sing
 singer
 singing
 single
-Manchester
+manchester
 sink
 sir
 sister
@@ -2409,7 +2407,7 @@ trumpet
 trust
 truth
 try
-T-shirt
+t-shirt
 tube
 tuna
 tune
