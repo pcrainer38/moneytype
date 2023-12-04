@@ -1,3 +1,4 @@
+import User from "./User.js";
 import Word from "./Word.js";
 
-export { Word };
+export { User, Word };
