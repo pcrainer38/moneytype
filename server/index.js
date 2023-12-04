@@ -8,6 +8,7 @@ import path from "path";
 import db from "./config/connection.js";
 
 import { typeDefs, resolvers } from "./schemas/index.js";
+import { authMiddleware } from "./utils/auth.js";
 
 const __dirname = new URL(import.meta.url).pathname;
 
@@ -25,7 +26,7 @@ app.use(express.json());
 app.use(
   "/graphql",
   expressMiddleware(server, {
-    // context: authMiddleware
+    context: authMiddleware,
   })
 );
 
