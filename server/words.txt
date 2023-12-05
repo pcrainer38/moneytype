@@ -444,6 +444,7 @@ chip
 chocolate
 choice
 choose
+chrysanthemum
 cinema
 circle
 circus
