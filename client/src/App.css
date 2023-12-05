@@ -1,22 +1,16 @@
 :root {
-  --primary:#a6cc70 ;
-  --secondary:#e7ebd4 ;
-  --tertiary:#768076 ;
-  --quatiary:	#695649 ;
-  --extra:#534741;
+  --primary: #a6cc70;
+  --secondary: #e7ebd4;
+  --tertiary: #768076;
+  --quatiary: #695649;
+  --extra: #534741;
 
   color-scheme: light dark;
 }
 
-nav {
-  background-color: var(--primary);
-  border-bottom: solid;  
-  border-color: var(--quatiary);
-}
-
 h1 {
   color: var(--extra);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button {
@@ -42,6 +36,10 @@ body {
   background-color: var(--secondary);
 }
 
+.navbtn {
+  margin-left: 10px;
+}
+
 .gameWindow {
   height: 300px;
   margin-top: 50px;
@@ -65,6 +63,25 @@ body {
   margin-top: 20px;
 }
 
+#leadTitle {
+  font-size: 60px;
+}
+
+#leaderboard {
+  height: 800px;
+  margin-top: 50px;
+  background-color: var(--tertiary);
+  border: solid;
+  border-color: var(--extra);
+  border-radius: 10px;
+  font-size: 30px;
+  padding-left: 50px;
+}
+
+#rankings {
+  list-style-type: decimal;
+}
+
 #upgradelist {
   list-style-type: none;
 }
@@ -73,7 +90,15 @@ body {
   font-size: 75px;
 }
 
-#username-warning, #email-warning, #password-warning {
+#header {
+  background-color: var(--primary);
+  border-bottom: solid;
+  border-color: var(--quatiary);
+}
+
+#username-warning,
+#email-warning,
+#password-warning {
   display: none;
 }
 
