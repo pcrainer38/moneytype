@@ -1,12 +1,36 @@
 import { User, UserSettings, UserUpgrades, Word } from "../models/index.js";
 import { parseResolveInfo } from "graphql-parse-resolve-info";
-const { signToken, AuthenticationError } = require('../utils/auth');
+import { createToken, AuthenticationError } from "../utils/auth.js";
 
 const resolvers = {
   Query: {
-    user: async (parent, args, context) => {},
-    userSettings: async (parent, args, context) => {},
-    userUpgrades: async (parent, args, context) => {},    
+    user: async (parent, args, context) => {
+        if (context.user) {
+          const user = await User.findById(context.user._id)
+          .populate('UserSettings')
+          .populate('UserUpgrades');
+  
+          return user;
+        }
+  
+        throw AuthenticationError;
+    },
+    userSettings: async (parent, args, context) => {
+        try {
+            const settings = await UserSettings.findOne({user: context.user._id});
+            return settings;
+        } catch (error) {
+            throw new Error(`Error: ${error.message}`);
+        }
+    },
+    userUpgrades: async (parent, args, context) => { 
+        try {
+            const upgrades = await UserUpgrades.findOne({user: context.user._id});
+            return upgrades;
+        } catch (error) {
+            throw new Error(`Error: ${error.message}`);
+        }
+    },
     words: async (parent, { difficulty }, context, info) => {
       const ast = parseResolveInfo(info);
       const fields = {};
@@ -23,12 +47,64 @@ const resolvers = {
       ).limit(50);
     },
   },
+  
   Mutation: {
-    addUser: async (parent, args) => {},
-    updateUser: async (parent, args, context) => {},
-    login: async (parent, {email, password}) => {},
-    updateUserSettings: async (parent, args) => {},
-    updateUserUpgrades: async (parent, args) => {},
+    addUser: async (parent, args) => {
+        const user = await User.create(args);
+        const token = createToken(user);
+  
+        return { token, user };
+    },
+    updateUser: async (parent, args, context) => {
+        if (context.user) {
+          return await User.findByIdAndUpdate(
+            context.user._id, 
+            args, 
+            { new: true });
+        }
+  
+        throw AuthenticationError;
+    },
+    login: async (parent, {email, password}) => {
+        const user = await User.findOne({ email });
+        if (!user) {
+            throw AuthenticationError;
+        }
+        const correctPw = await user.isCorrectPassword(password);
+        
+        if (!correctPw) {
+            throw AuthenticationError;
+        }
+        const token = createToken(user);
+
+        return { token, user };
+    },
+    updateUserSettings: async (parent, args, context) => {
+        if (context.user) {
+            const updatedSettings = await UserSettings.findOneAndUpdate(
+                {user: context.user._id},
+                {$set: args},
+                {new: true}
+            );
+
+            return updatedSettings;
+        }
+
+        throw AuthenticationError;
+    },
+    updateUserUpgrades: async (parent, args) => {
+        if (context.user) {
+            const updatedUpgrades = await UserUpgrades.findOneAndUpdate(
+                {user: context.user._id},
+                {$set: args},
+                {new: true}
+            );
+
+            return updatedUpgrades;
+        }
+
+        throw AuthenticationError;
+    },
   }
 };
 
