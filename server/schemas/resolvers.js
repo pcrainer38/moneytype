@@ -53,6 +53,14 @@ const resolvers = {
         },
       ]);
     },
+    leaderboard: async (parent, {page}, context, info) => {
+      const ast = parseResolveInfo(info);
+      const fields = {};
+      for (const field in ast.fieldsByTypeName.PartialUser) {
+        fields[field] = 1;
+      }
+      return User.find({}, fields).sort({virtualMoney: -1}).limit(25).skip(page * 25);
+    }
   },
   
   Mutation: {

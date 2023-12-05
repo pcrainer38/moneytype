@@ -6,7 +6,18 @@ const typeDefs = `#graphql
     }
 
     type Query {
+        user: User
+        userSettings: UserSettings
+        userUpgrades: UserUpgrades
         words(difficulty: Int!): [Word]
+        leaderboard(page: Int): [PartialUser]
+    }
+    type Mutation {
+        addUser(username: String!, email: String!, password: String!): Auth
+        updateUser(email: String, password: String): User
+        login(email: String!, password: String!): Auth
+        updateUserSettings(theme: String): UserSettings
+        updateUserUpgrades(moneyMultiplier: Int, wordLength: Int, wordDifficulty: Int, timeExtender: Int): UserUpgrades
     }
 
     type User {
@@ -16,6 +27,12 @@ const typeDefs = `#graphql
         virtualMoney: Int
         UserUpgrades: UserUpgrades
         UserSettings: UserSettings
+    }
+
+    type PartialUser {
+        _id: ID
+        username: String
+        virtualMoney: Int
     }
 
     type Auth {
