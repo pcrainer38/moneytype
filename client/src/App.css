@@ -1,19 +1,22 @@
 :root {
-  --primary:#ff8c42ff ;
-  --secondary:#fcaf58ff ;
-  --tertiary:#f9c784ff ;
-  --quatiary:#ffffffff ;
-  --extra:#4e598cff ;
+  --primary:#a6cc70 ;
+  --secondary:#e7ebd4 ;
+  --tertiary:#768076 ;
+  --quatiary:	#695649 ;
+  --extra:#534741;
 
   color-scheme: light dark;
 }
 
-header {
-  background-color: var(--tertiary);
+nav {
+  background-color: var(--primary);
+  border-bottom: solid;  
+  border-color: var(--quatiary);
 }
 
 h1 {
-  color: var(--extra)
+  color: var(--extra);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button {
@@ -23,19 +26,54 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--quatiary);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: dark) {
+body {
+  background-color: var(--secondary);
+}
+
+.gameWindow {
+  height: 300px;
+  margin-top: 50px;
+  background-color: var(--primary);
+  border: solid;
+  border-color: var(--quatiary);
+  border-radius: 10px;
+}
+
+.UpgradesCard {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  background-color: var(--tertiary);
+  border-radius: 10px;
+}
+
+.toggle {
+  margin-top: 20px;
+}
+
+#upgradelist {
+  list-style-type: none;
+}
+
+#Word {
+  font-size: 75px;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --darkPrimary: #134074ff;
     --darkSecondary: #13315cff;
@@ -71,4 +109,4 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
   }
 
-}
+} */
