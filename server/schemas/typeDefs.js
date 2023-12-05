@@ -2,7 +2,7 @@ const typeDefs = `#graphql
     type Word {
         _id: ID
         word: String
-        difficulty: Int
+        difficulty: Number
     }
 
     type Query {
@@ -34,12 +34,6 @@ const typeDefs = `#graphql
     type UserSettings {
         _id: ID
         theme: String        
-    }
-
-    type Word {
-        _id: ID
-        word: String
-        difficulty: Number
     }
 `;
 
