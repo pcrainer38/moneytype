@@ -1,3 +1,6 @@
+// import { bootstrap } from 'bootstrap';
+// import { useQuery } from '@apollo/client';
+import Container from 'react-bootstrap/Container';
 const Game = () => {
 
   
@@ -5,30 +8,38 @@ const Game = () => {
   
     return (
     <>
-        <div>
-            <div>
-                <div>
-                    <p>{word}</p>
+        <Container>
+            <div className='gameWindow d-flex'>
+                <div className='wordCard'>
+                    <p>word</p>
                 </div>
-                <div>
+                <div className='UpgradesCard'>
                     <h3>upgrades</h3>
-                    <div>
-                        <img></img>
-                        <img></img>
-                        <img></img>
-                        <img></img>
+                    <div className='icons'>
+                        <ul>
+                            <li><img></img></li>
+                            <li><img></img></li>
+                            <li><img></img></li>
+                            <li><img></img></li>
+                        </ul>
                     </div>
-                    <div>
-                        <li key={upgradeschema}>
-                            {upgradeschema}
-                        </li>                        
+                    <div className='upgrades'>
+                        <ul>
+                            {/* {upgradeschema.map((upgrade) => {
+                                <li key={upgrade._id} value={upgrade.name}>
+                                    {upgrade._id}
+                                </li>  
+                            })} */}
+                        </ul>              
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
+        </Container>
+        <div className='toggle'>
             <button>toggle theme</button>
         </div>
     </>
     );
   };
+
+  export default Game;

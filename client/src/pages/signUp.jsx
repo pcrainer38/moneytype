@@ -1,8 +1,10 @@
 
 import Form from 'react-bootstrap/Form'
-import { useState } from 'react'
 
-export default function (props) {
+import InputGroup from 'react-bootstrap/InputGroup'
+
+
+export default function SignUp(props) {
     let [auth, setAuth] = useState('signin');
 
     const changeAuth = () => {
