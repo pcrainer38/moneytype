@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-import dollarSign from "/MONEYTYPEDOLLARSIGN.svg?url";
+import dollarSign from "/moneyTypeDollarSign.svg?url";
 
 let testUsers = [
   {
