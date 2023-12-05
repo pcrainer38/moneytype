@@ -10,6 +10,7 @@ const typeDefs = `#graphql
         userSettings: UserSettings
         userUpgrades: UserUpgrades
         words(difficulty: Int!): [Word]
+        leaderboard(page: Int): [PartialUser]
     }
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
@@ -26,6 +27,12 @@ const typeDefs = `#graphql
         virtualMoney: Int
         UserUpgrades: UserUpgrades
         UserSettings: UserSettings
+    }
+
+    type PartialUser {
+        _id: ID
+        username: String
+        virtualMoney: Int
     }
 
     type Auth {
