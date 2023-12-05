@@ -9,14 +9,20 @@ const resolvers = {
       for (const field in ast.fieldsByTypeName.Word) {
         fields[field] = 1;
       }
-      return Word.find(
+      return Word.aggregate([
         {
-          difficulty: {
-            $lte: difficulty,
+          $match: {
+            difficulty: {
+              $lte: difficulty,
+            },
           },
         },
-        fields
-      ).limit(50);
+        {
+          $sample: {
+            size: 50,
+          },
+        },
+      ]);
     },
   },
 };
