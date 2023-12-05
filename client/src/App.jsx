@@ -13,12 +13,17 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Navbar expand="lg">
+      <Navbar expand="lg" id="header">
         <Container>
               <h1>Money Type</h1>
-              <Link to={`/signUp`} >
-                <button as="input" type='button'>Sign Up</button>
-              </Link>
+              <nav>
+                <Link to={"/leaderboard"}>
+                  <button as="input" type='button' className='navbtn'>leaderboard</button>
+                </Link>
+                <Link to={`/signUp`} >
+                  <button as="input" type='button' className='navbtn'>Sign Up</button>
+                </Link>
+              </nav>
         </Container>
       </Navbar>
         <div className='gameCard'>
