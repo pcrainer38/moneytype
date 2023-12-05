@@ -1,5 +1,6 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
+
 import Container from "react-bootstrap/Container";
 const Game = () => {
   return (
@@ -42,11 +43,6 @@ const Game = () => {
               </ul>
             </div>
           </div>
-        </div>
-      </Container>
-      <Container>
-        <div className="toggle d-flex justify-content-end">
-          <button>Toggle Theme</button>
         </div>
       </Container>
     </>

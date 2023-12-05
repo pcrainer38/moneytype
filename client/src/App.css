@@ -36,6 +36,10 @@ button.active {
   background-color: var(--quatiary);
 }
 
+.theme-switcher {
+  width: 100px;
+}
+
 body {
   background-color: var(--secondary);
 }
