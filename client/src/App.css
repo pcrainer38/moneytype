@@ -32,6 +32,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button.active {
+  background-color: var(--quatiary);
+}
+
 body {
   background-color: var(--secondary);
 }
