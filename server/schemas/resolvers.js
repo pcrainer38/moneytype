@@ -19,6 +19,12 @@ const resolvers = {
       ).limit(50);
     },
   },
+  Mutation: {
+    addUser: async (parent, args) => {},
+    updateUser: async (parent, args, context) => {},
+    login: async (parent, {email, password}) => {},
+    updateUserSettings: async () => {}
+  }
 };
 
 export default resolvers;

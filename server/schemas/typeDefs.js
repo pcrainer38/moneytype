@@ -14,8 +14,8 @@ const typeDefs = `#graphql
         username: String
         email: String
         virtualMoney: Number
-        userUpgrades: [userUpgrades]
-        userSettings: [userSettings]
+        UserUpgrades: UserUpgrades
+        UserSettings: UserSettings
     }
 
     type Auth {
