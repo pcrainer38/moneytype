@@ -6,7 +6,7 @@ const typeDefs = `#graphql
     }
 
     type Query {
-        word(difficulty: Int!): [Word]
+        words(difficulty: Int!): [Word]
     }
 `;
 
