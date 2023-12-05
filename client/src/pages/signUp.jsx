@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 
 
-export default function (props) {
+export default function SignUp(props) {
     let [auth, setAuth] = useState('signin');
 
     const changeAuth = () => {
@@ -144,7 +144,3 @@ export default function (props) {
     )
 
 }
-
-
-export default SignUp;
-
