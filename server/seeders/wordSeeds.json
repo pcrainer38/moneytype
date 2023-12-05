@@ -2425,7 +2425,8 @@
         "vegetable",
         "waterfall",
         "wednesday",
-        "yesterday"
+        "yesterday",
+        "zamiaceae"
     ],
     "6": [
         "absolutely",
@@ -2557,6 +2558,7 @@
         "certificate",
         "challenging",
         "charcuterie",
+        "chiaroscuro",
         "comfortable",
         "communicate",
         "competition",
@@ -2578,6 +2580,7 @@
         "firefighter",
         "fortunately",
         "frightening",
+        "funambulist",
         "grandfather",
         "grandmother",
         "grandparent",
@@ -2592,6 +2595,7 @@
         "information",
         "intelligent",
         "interesting",
+        "legerdemain",
         "magnificent",
         "middle-aged",
         "mischievous",
@@ -2607,6 +2611,7 @@
         "second-hand",
         "sightseeing",
         "spectacular",
+        "succedaneum",
         "supermarket",
         "table-cloth",
         "traditional",
@@ -2618,9 +2623,12 @@
     ],
     "8": [
         "announcement",
+        "antediluvian",
+        "appoggiatura",
         "architecture",
         "championship",
         "conversation",
+        "dicarboxylic",
         "disadvantage",
         "disappointed",
         "embarrassing",
@@ -2639,6 +2647,7 @@
         "prescription",
         "presentation",
         "professional",
+        "recalcitrant",
         "receptionist",
         "refreshments",
         "refrigerator",
@@ -2649,6 +2658,7 @@
         "self-service",
         "snowboarding",
         "thunderstorm",
+        "transmogrify",
         "unbelievable",
         "unemployment",
         "uninterested",
@@ -2657,7 +2667,9 @@
     "9": [
         "accommodation",
         "advertisement",
+        "autochthonous",
         "businesswoman",
+        "chrysanthemum",
         "communication",
         "conscientious",
         "disappointing",
@@ -2672,14 +2684,20 @@
         "pronunciation",
         "qualification",
         "skateboarding",
+        "terpsichorean",
         "uncomfortable",
         "unforgettable",
         "unfortunately",
         "uninteresting"
     ],
     "10": [
+        "antiestablishmentarianism",
+        "commensurateness",
         "disappointment",
         "identification",
-        "supercalifragilisticexpialidocious"
+        "supercalifragilisticexpialidocious",
+        "tatterdemalion",
+        "valetudinarian",
+        "verisimilitude"
     ]
 }
