@@ -22,4 +22,4 @@ for (let word of words) {
   difficulties[difficulty].push(word);
 }
 
-Bun.write("./words.json", JSON.stringify(difficulties, null, 4));
+Bun.write("./seeders/wordSeeds.json", JSON.stringify(difficulties, null, 4));
