@@ -1,4 +1,5 @@
 import Form from 'react-bootstrap/Form'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 const SignUp = () => {
     return (
@@ -42,3 +43,5 @@ const SignUp = () => {
     )
 
 }
+
+export default SignUp;
