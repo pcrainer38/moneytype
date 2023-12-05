@@ -15,17 +15,17 @@ const resolvers = {
   
         throw AuthenticationError;
     },
-    userSettings: async (parent, args, context) => {
+    userSettings: async (parent, {userSettingsId}) => {
         try {
-            const settings = await UserSettings.findOne({user: context.user._id});
+            const settings = await UserSettings.findById(userSettingsId);
             return settings;
         } catch (error) {
             throw new Error(`Error: ${error.message}`);
         }
     },
-    userUpgrades: async (parent, args, context) => { 
+    userUpgrades: async (parent, {userUpgradesId}) => { 
         try {
-            const upgrades = await UserUpgrades.findOne({user: context.user._id});
+            const upgrades = await UserUpgrades.findById(userUpgradesId);
             return upgrades;
         } catch (error) {
             throw new Error(`Error: ${error.message}`);
