@@ -73,6 +73,10 @@ body {
   font-size: 75px;
 }
 
+#username-warning, #email-warning, #password-warning {
+  display: none;
+}
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --darkPrimary: #134074ff;
