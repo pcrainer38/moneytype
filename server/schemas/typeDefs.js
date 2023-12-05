@@ -6,7 +6,17 @@ const typeDefs = `#graphql
     }
 
     type Query {
+        user: User
+        userSettings: UserSettings
+        userUpgrades: UserUpgrades
         words(difficulty: Int!): [Word]
+    }
+    type Mutation {
+        addUser(username: String!, email: String!, password: String!): Auth
+        updateUser(email: String, password: String): User
+        login(email: String!, password: String!): Auth
+        updateUserSettings(theme: String): UserSettings
+        updateUserUpgrades(moneyMultiplier: Int, wordLength: Int, wordDifficulty: Int, timeExtender: Int): UserUpgrades
     }
 
     type User {
