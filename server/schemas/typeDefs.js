@@ -2,7 +2,7 @@ const typeDefs = `#graphql
     type Word {
         _id: ID
         word: String
-        difficulty: Number
+        difficulty: Int
     }
 
     type Query {
@@ -13,7 +13,7 @@ const typeDefs = `#graphql
         _id: ID
         username: String
         email: String
-        virtualMoney: Number
+        virtualMoney: Int
         UserUpgrades: UserUpgrades
         UserSettings: UserSettings
     }
@@ -25,10 +25,10 @@ const typeDefs = `#graphql
 
     type UserUpgrades {
         _id: ID
-        moneyMultiplier: Number
-        wordLength: Number
-        wordDifficulty: Number
-        timeExtender: Number
+        moneyMultiplier: Int
+        wordLength: Int
+        wordDifficulty: Int
+        timeExtender: Int
     }
 
     type UserSettings {

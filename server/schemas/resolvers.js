@@ -1,8 +1,12 @@
-import { Word } from "../models/index.js";
+import { User, UserSettings, UserUpgrades, Word } from "../models/index.js";
 import { parseResolveInfo } from "graphql-parse-resolve-info";
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
+    user: async (parent, args, context) => {},
+    userSettings: async (parent, args, context) => {},
+    userUpgrades: async (parent, args, context) => {},    
     words: async (parent, { difficulty }, context, info) => {
       const ast = parseResolveInfo(info);
       const fields = {};
@@ -23,7 +27,8 @@ const resolvers = {
     addUser: async (parent, args) => {},
     updateUser: async (parent, args, context) => {},
     login: async (parent, {email, password}) => {},
-    updateUserSettings: async () => {}
+    updateUserSettings: async (parent, args) => {},
+    updateUserUpgrades: async (parent, args) => {},
   }
 };
 
