@@ -1,5 +1,5 @@
-import { User, UserUpgrades, UserSettings, Thought } from "../models";
-import { signToken, AuthenticationError } from "../utils/auth";
+import { Word } from "../models/index.js";
+import { parseResolveInfo } from "graphql-parse-resolve-info";
 
 const resolvers = {
     Query: {
