@@ -1,16 +1,16 @@
 :root {
-  --primary:#a6cc70 ;
-  --secondary:#e7ebd4 ;
-  --tertiary:#768076 ;
-  --quatiary:	#695649 ;
-  --extra:#534741;
+  --primary: #a6cc70;
+  --secondary: #e7ebd4;
+  --tertiary: #768076;
+  --quatiary: #695649;
+  --extra: #534741;
 
   color-scheme: light dark;
 }
 
 h1 {
   color: var(--extra);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button {
@@ -79,7 +79,7 @@ body {
 }
 
 #rankings {
-  list-style-type: decimal;  
+  list-style-type: decimal;
 }
 
 #upgradelist {
@@ -92,8 +92,14 @@ body {
 
 #header {
   background-color: var(--primary);
-  border-bottom: solid;  
+  border-bottom: solid;
   border-color: var(--quatiary);
+}
+
+#username-warning,
+#email-warning,
+#password-warning {
+  display: none;
 }
 
 /* @media (prefers-color-scheme: dark) {
