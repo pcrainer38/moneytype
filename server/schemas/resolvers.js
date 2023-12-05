@@ -17,6 +17,7 @@ const resolvers = {
             },
           },
         },
+        { $project: fields },
         {
           $sample: {
             size: 50,
