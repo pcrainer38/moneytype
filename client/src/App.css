@@ -76,6 +76,16 @@ body {
   border-radius: 10px;
   font-size: 30px;
   padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+#leaderboard .leaderboard-image {
+  height: 0.8em;
+  position: relative;
+  float: left;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
 #rankings {
