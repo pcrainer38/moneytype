@@ -1,5 +1,5 @@
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import NavLink from "./components/NavLink.jsx";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,6 +9,7 @@ import Image from "react-bootstrap/Image";
 
 import moonSvg from "/Moon.svg?url";
 import sunSvg from "/Sun.svg?url";
+import Logo from "/moneyTypeLogo.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
 
@@ -24,7 +25,13 @@ function App() {
     <ApolloProvider client={client}>
       <Navbar expand="lg" id="header">
         <Container>
-          <h1>Money Type</h1>
+          <Link to={"/"} className="d-flex align-items-center text-decoration-none">
+          <Image
+            src={Logo}
+            className="Logo"
+          ></Image>
+            <h1>Money Type</h1>
+          </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
             <NavLink to={`/signUp`}>Sign Up</NavLink>
