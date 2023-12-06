@@ -128,7 +128,7 @@ const resolvers = {
     updateUserSettings: async (parent, args, context) => {
       if (context.user) {
         const updatedSettings = await UserSettings.findOneAndUpdate(
-          { user: context.user._id },
+          { _id: context.user.userSettings },
           { $set: args },
           { new: true }
         );
@@ -141,7 +141,7 @@ const resolvers = {
     updateUserUpgrades: async (parent, args) => {
       if (context.user) {
         const updatedUpgrades = await UserUpgrades.findOneAndUpdate(
-          { user: context.user._id },
+          { _id: context.user.userUpgrades },
           { $set: args },
           { new: true }
         );
