@@ -77,6 +77,10 @@ body {
   margin-top: 20px;
 }
 
+.link-primary {
+  cursor: pointer;
+}
+
 #leadTitle {
   font-size: 60px;
 }
@@ -127,6 +131,7 @@ body {
 #authentication-warning {
   display: none;
 }
+
 
 /* @media (prefers-color-scheme: dark) {
   :root {
