@@ -36,8 +36,11 @@ const resolvers = {
       }
     },
     words: async (parent, { difficulty, minDifficulty = 1 }, context, info) => {
-      minDifficulty = Math.min(8, Math.max(1, minDifficulty));
       difficulty = Math.min(10, Math.max(1, difficulty));
+      minDifficulty = Math.min(
+        Math.min(8, difficulty),
+        Math.max(1, minDifficulty)
+      );
       const ast = parseResolveInfo(info);
       const fields = {};
       for (const field in ast.fieldsByTypeName.Word) {
