@@ -2,6 +2,9 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
+import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
+import { useThemeContext } from "../components/ThemeContext.jsx";
 
 let testUsers = [
   {
@@ -32,6 +35,8 @@ let testUsers = [
 ];
 
 const Scoreboard = () => {
+  const { theme, setTheme } = useThemeContext();
+
   return (
     <>
       <Container>
@@ -44,7 +49,8 @@ const Scoreboard = () => {
                   <span>{user.username}</span>
                   <span>
                     <Image
-                      src={dollarSign}
+                      src={theme === "dark" ? darkDollarSign : dollarSign} 
+                      fluid
                       className="leaderboard-image"
                     ></Image>
                     {user.virtualMoney.toLocaleString()}

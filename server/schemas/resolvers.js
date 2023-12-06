@@ -1,6 +1,10 @@
 import { User, UserSettings, UserUpgrades, Word } from "../models/index.js";
 import { parseResolveInfo } from "graphql-parse-resolve-info";
-import { createToken, AuthenticationError } from "../utils/auth.js";
+import {
+  createToken,
+  AuthenticationError,
+  AuthenticatedError,
+} from "../utils/auth.js";
 
 const resolvers = {
   Query: {
@@ -69,6 +73,7 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, args) => {
+      if (context.user) throw AuthenticatedError;
       const user = await User.create(args);
       const token = createToken(user);
 
@@ -84,6 +89,7 @@ const resolvers = {
       throw AuthenticationError;
     },
     login: async (parent, { email, password }) => {
+      if (context.user) throw AuthenticatedError;
       const user = await User.findOne({ email });
       if (!user) {
         throw AuthenticationError;

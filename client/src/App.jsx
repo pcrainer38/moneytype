@@ -10,7 +10,7 @@ import Image from "react-bootstrap/Image";
 import moonSvg from "/Moon.svg?url";
 import sunSvg from "/Sun.svg?url";
 import Logo from "/moneyTypeLogo.svg?url";
-import darkLogo from "/moneyTypeLogo.svg?url";
+import darkLogo from "/moneyTypeLogoDark.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
 
@@ -27,7 +27,7 @@ function App() {
       <Navbar expand="lg" id="header">
         <Container>
           <Link to={"/"} className="d-flex align-items-center text-decoration-none">
-          <Image srcsrc={theme === "dark" ? darkLogo : Logo} fluid></Image>
+          <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
             <h1>Money Type</h1>
           </Link>
           <nav>
