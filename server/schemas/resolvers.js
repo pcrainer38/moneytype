@@ -95,9 +95,19 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    login: async (parent, { email, password }) => {
+    login: async (parent, { email, password }, context) => {
       if (context.user) throw AuthenticatedError;
-      const user = await User.findOne({ email });
+      const user = await User.findOne(
+        { email },
+        {
+          _id: 1,
+          username: 1,
+          password: 1,
+          email: 1,
+          userUpgrades: 1,
+          userSettings: 1,
+        }
+      );
       if (!user) {
         throw AuthenticationError;
       }
@@ -106,9 +116,15 @@ const resolvers = {
       if (!correctPw) {
         throw AuthenticationError;
       }
-      const token = createToken(user);
+      const token = createToken({
+        _id: user._id.toHexString(),
+        username: user.username,
+        email: user.email,
+        userUpgrades: user.userUpgrades,
+        userSettings: user.userSettings,
+      });
 
-      return { token, user };
+      return token;
     },
     updateUserSettings: async (parent, args, context) => {
       if (context.user) {
