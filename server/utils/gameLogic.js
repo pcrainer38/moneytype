@@ -10,7 +10,14 @@ const upgrades = {
     baseCost: 250,
     maxLevel: 10,
     calculateCost(level) {
-      return this.baseCost + (level - 1) * 750;
+      return this.baseCost + level * 750;
+    },
+  },
+  timeExtender: {
+    baseCost: 175,
+    maxLevel: 30,
+    calculateCost(level) {
+      return this.baseCost * (1 + level ** 2);
     },
   },
 };
