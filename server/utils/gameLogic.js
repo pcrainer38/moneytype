@@ -27,5 +27,5 @@ export const getUpgradeCost = (upgrade, level) => {
     if (level > upgrades[upgrade].maxLevel) return Infinity;
     return upgrades[upgrade].calculateCost(level);
   }
-  return 0;
+  return Infinity;
 };
