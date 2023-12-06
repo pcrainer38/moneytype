@@ -35,7 +35,9 @@ const resolvers = {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    words: async (parent, { difficulty }, context, info) => {
+    words: async (parent, { difficulty, minDifficulty = 1 }, context, info) => {
+      minDifficulty = Math.min(8, Math.max(1, minDifficulty));
+      difficulty = Math.min(10, Math.max(1, difficulty));
       const ast = parseResolveInfo(info);
       const fields = {};
       for (const field in ast.fieldsByTypeName.Word) {
@@ -46,6 +48,7 @@ const resolvers = {
           $match: {
             difficulty: {
               $lte: difficulty,
+              $gte: minDifficulty,
             },
           },
         },

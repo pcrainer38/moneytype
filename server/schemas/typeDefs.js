@@ -9,7 +9,7 @@ const typeDefs = `#graphql
         user: User
         userSettings: UserSettings
         userUpgrades: UserUpgrades
-        words(difficulty: Int!): [Word]
+        words(difficulty: Int!, minDifficulty: Int): [Word]
         leaderboard(page: Int): [PartialUser]
     }
     type Mutation {
