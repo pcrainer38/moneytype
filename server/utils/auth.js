@@ -37,6 +37,15 @@ export const AuthenticationError = new GraphQLError(
   }
 );
 
+export const AuthenticatedError = new GraphQLError(
+  "You are already logged in",
+  {
+    extensions: {
+      code: "UNAUTHENTICATED",
+    },
+  }
+);
+
 export const createToken = ({ username, _id }) => {
   const payload = { username, _id };
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
