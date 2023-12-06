@@ -131,6 +131,9 @@ const resolvers = {
     },
     updateUserSettings: async (parent, args, context) => {
       if (context.user) {
+        if (args.theme) {
+          if (!["dark", "light"].includes(args.theme)) args.theme = "dark";
+        }
         const updatedSettings = await UserSettings.findOneAndUpdate(
           { _id: context.user.userSettings },
           { $set: args },
