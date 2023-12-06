@@ -79,9 +79,14 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
+    addUser: async (parent, args, context) => {
       if (context.user) throw AuthenticatedError;
       const user = await User.create(args);
+      const upgrades = await UserUpgrades.create({});
+      const settings = await UserSettings.create({});
+      user.userUpgrades = upgrades._id;
+      user.userSettings = settings._id;
+      user.save();
       const token = createToken(user);
 
       return { token, user };
@@ -116,13 +121,7 @@ const resolvers = {
       if (!correctPw) {
         throw AuthenticationError;
       }
-      const token = createToken({
-        _id: user._id.toHexString(),
-        username: user.username,
-        email: user.email,
-        userUpgrades: user.userUpgrades,
-        userSettings: user.userSettings,
-      });
+      const token = createToken(user);
 
       return token;
     },
