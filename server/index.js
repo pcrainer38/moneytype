@@ -1,5 +1,6 @@
 import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@apollo/server/express4";
+import { ApolloServerPluginLandingPageDisabled } from "@apollo/server/plugin/disabled";
 import "dotenv/config";
 import express from "express";
 
@@ -16,7 +17,17 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-const server = new ApolloServer({ typeDefs, resolvers, cache: "bounded" });
+const plugins = [];
+if (process.env.NODE_ENV === "production")
+  plugins.push(ApolloServerPluginLandingPageDisabled());
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  cache: "bounded",
+  plugins,
+  introspection: process.env.NODE_ENV !== "production",
+});
 
 await server.start();
 
