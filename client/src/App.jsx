@@ -1,39 +1,53 @@
-import './App.css'
-import { Outlet } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
-import { Link } from 'react-router-dom';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import "./App.css";
+import { Outlet } from "react-router-dom";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import NavLink from "./components/NavLink.jsx";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+
+import Image from "react-bootstrap/Image";
+
+import moonSvg from "/Moon.svg?url";
+import sunSvg from "/Sun.svg?url";
+
+import { useThemeContext } from "./components/ThemeContext.jsx";
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
 function App() {
+  const { theme, setTheme } = useThemeContext();
+
   return (
     <ApolloProvider client={client}>
       <Navbar expand="lg" id="header">
         <Container>
-          <Link to={"/"}>
-            <img src='../public/MONEYTYPELOGO'></img>
-            <h1>Money Type</h1>
-          </Link>
+          <h1>Money Type</h1>
           <nav>
-            <Link to={"/leaderboard"}>
-              <button as="input" type='button' className='navbtn'>leaderboard</button>
-            </Link>
-            <Link to={`/signUp`} >
-              <button as="input" type='button' className='navbtn'>Sign Up</button>
-            </Link>
+            <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
+            <NavLink to={`/signUp`}>Sign Up</NavLink>
           </nav>
         </Container>
       </Navbar>
-        <div className='gameCard'>
-          <Outlet />
+      <div className="gameCard">
+        <Outlet />
+      </div>
+      <Container>
+        <div className="toggle d-flex justify-content-end">
+          <button
+            onClick={() => {
+              setTheme(theme === "dark" ? "light" : "dark");
+            }}
+            className="theme-switcher"
+          >
+            <Image src={theme === "dark" ? moonSvg : sunSvg} fluid></Image>
+          </button>
         </div>
+      </Container>
     </ApolloProvider>
-  )
+  );
 }
 
-export default App
+export default App;

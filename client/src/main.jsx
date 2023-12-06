@@ -1,36 +1,39 @@
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import App from './App.jsx';
-import Game from './pages/Game.jsx';
-import SignUp from './pages/SignUp.jsx';
-import NotFound from './pages/NotFound.jsx';
-import Scoreboard from './pages/Scoreboard.jsx';
+import App from "./App.jsx";
+import Game from "./pages/game.jsx";
+import SignUp from "./pages/signUp.jsx";
+import NotFound from "./pages/NotFound.jsx";
+import Scoreboard from "./pages/Scoreboard.jsx";
 
+import ThemeProvider from "./components/ThemeContext.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <Game />
+        element: <Game />,
       },
       {
-        path: '/signUp',
-        element: <SignUp />
+        path: "/signUp",
+        element: <SignUp />,
       },
       {
-        path: '/leaderboard',
-        element: <Scoreboard />
-      }
+        path: "/leaderboard",
+        element: <Scoreboard />,
+      },
     ],
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>
 );
