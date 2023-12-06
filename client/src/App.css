@@ -128,7 +128,7 @@ body {
   display: none;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --darkPrimary: #134074ff;
     --darkSecondary: #13315cff;
@@ -183,4 +183,4 @@ body {
   #rankings {
     color: var(--darkExtra);
   }
-} */
+}
