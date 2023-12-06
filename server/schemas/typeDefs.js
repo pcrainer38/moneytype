@@ -25,8 +25,8 @@ const typeDefs = `#graphql
         username: String
         email: String
         virtualMoney: Int
-        UserUpgrades: UserUpgrades
-        UserSettings: UserSettings
+        userUpgrades: UserUpgrades
+        userSettings: UserSettings
     }
 
     type PartialUser {
