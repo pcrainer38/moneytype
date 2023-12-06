@@ -3,6 +3,22 @@
 
 import Container from "react-bootstrap/Container";
 const Game = () => {
+  let userInput = "";
+  let wordTarget = "";
+  let wordTargetAllotedTime = 0.0;
+  let wordTargetTimeRemaining = 0.0;
+  let numOfMistakes = 0;
+  let numOfMistakesAllowed = 0;
+  let money = 0;
+  let tempWordBank = []; //Gets populated by the back-end (25 words)
+  let upgradeMoneyMultiplier = 0;
+  let upgradeWordDifficulty = 0;
+  let upgradeTimeExtender = 0;
+  let upgradeCostMoneyMultiplier = 0;
+  let upgradeCostWordDifficulty = 0;
+  let upgradeCostTimeExtender = 0;
+  
+
   return (
     <>
       <Container>
