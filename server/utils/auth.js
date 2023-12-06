@@ -46,7 +46,7 @@ export const AuthenticatedError = new GraphQLError(
   }
 );
 
-export const createToken = ({ username, _id }) => {
-  const payload = { username, _id };
+export const createToken = (user) => {
+  const payload = { user };
   return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
 };
