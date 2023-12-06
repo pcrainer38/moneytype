@@ -15,15 +15,18 @@ function App() {
     <ApolloProvider client={client}>
       <Navbar expand="lg" id="header">
         <Container>
-              <h1>Money Type</h1>
-              <nav>
-                <Link to={"/leaderboard"}>
-                  <button as="input" type='button' className='navbtn'>leaderboard</button>
-                </Link>
-                <Link to={`/signUp`} >
-                  <button as="input" type='button' className='navbtn'>Sign Up</button>
-                </Link>
-              </nav>
+          <Link to={"/"}>
+            <img src='../public/MONEYTYPELOGO'></img>
+            <h1>Money Type</h1>
+          </Link>
+          <nav>
+            <Link to={"/leaderboard"}>
+              <button as="input" type='button' className='navbtn'>leaderboard</button>
+            </Link>
+            <Link to={`/signUp`} >
+              <button as="input" type='button' className='navbtn'>Sign Up</button>
+            </Link>
+          </nav>
         </Container>
       </Navbar>
         <div className='gameCard'>
