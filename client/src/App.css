@@ -116,7 +116,8 @@ body {
 
 #username-warning,
 #email-warning,
-#password-warning {
+#password-warning,
+#authentication-warning {
   display: none;
 }
 
