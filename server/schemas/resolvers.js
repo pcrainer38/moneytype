@@ -153,7 +153,6 @@ const resolvers = {
         const user = await User.findById(context.user._id, { virtualMoney: 1 });
         for (let upgrade in args) {
           const cost = getUpgradeCost(upgrade, upgrades[upgrade]);
-          console.log(upgrade, upgrades[upgrade], user.virtualMoney, cost);
           if (user.virtualMoney < cost)
             throw new GraphQLError("Not enough money to upgrade.", {
               extensions: {
