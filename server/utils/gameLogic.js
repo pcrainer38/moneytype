@@ -9,6 +9,9 @@ const upgrades = {
 };
 
 export const getUpgradeCost = (upgrade, level) => {
-  if (upgrade in upgrades) return upgrades[upgrade].calculateCost(level);
+  if (upgrade in upgrades) {
+    if (level > upgrades[upgrade].maxLevel) return Infinity;
+    return upgrades[upgrade].calculateCost(level);
+  }
   return 0;
 };
