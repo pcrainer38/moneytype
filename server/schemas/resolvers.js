@@ -5,6 +5,7 @@ import {
   AuthenticationError,
   AuthenticatedError,
 } from "../utils/auth.js";
+import { getUpgradeCost } from "../utils/gameLogic.js";
 
 const resolvers = {
   Query: {
@@ -145,15 +146,22 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    updateUserUpgrades: async (parent, args) => {
+    updateUserUpgrades: async (parent, args, context) => {
       if (context.user) {
-        const updatedUpgrades = await UserUpgrades.findOneAndUpdate(
-          { _id: context.user.userUpgrades },
-          { $set: args },
-          { new: true }
-        );
+        const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
+        const user = await User.findById(context.user._id, { virtualMoney: 1 });
+        for (let upgrade in args) {
+          const cost = getUpgradeCost(upgrade, upgrades[upgrade]);
+          console.log(upgrade, user.virtualMoney, cost);
+          if (user.virtualMoney < cost)
+            throw new Error("Not enough money to upgrade.");
+          user.virtualMoney -= cost;
+          upgrades[upgrade]++;
+        }
+        await upgrades.save();
+        await user.save();
 
-        return updatedUpgrades;
+        return upgrades;
       }
 
       throw AuthenticationError;
