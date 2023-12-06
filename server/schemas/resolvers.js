@@ -6,6 +6,7 @@ import {
   AuthenticatedError,
 } from "../utils/auth.js";
 import { getUpgradeCost } from "../utils/gameLogic.js";
+import { GraphQLError } from "graphql";
 
 const resolvers = {
   Query: {
@@ -151,10 +152,14 @@ const resolvers = {
         const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
         const user = await User.findById(context.user._id, { virtualMoney: 1 });
         for (let upgrade in args) {
-          const cost = getUpgradeCost(upgrade, upgrades[upgrade]);
-          console.log(upgrade, user.virtualMoney, cost);
+          const cost = getUpgradeCost(upgrade, upgrades[upgrade] + 1);
+          console.log(upgrade, upgrades[upgrade], user.virtualMoney, cost);
           if (user.virtualMoney < cost)
-            throw new Error("Not enough money to upgrade.");
+            throw new GraphQLError("Not enough money to upgrade.", {
+              extensions: {
+                code: "UPGRADE_FAILED",
+              },
+            });
           user.virtualMoney -= cost;
           upgrades[upgrade]++;
         }
