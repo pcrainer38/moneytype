@@ -13,7 +13,7 @@ const typeDefs = `#graphql
         leaderboard(page: Int): [PartialUser]
     }
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): ID
         updatePassword(password: String!): User
         login(email: String!, password: String!): ID
         updateUserSettings(theme: String): UserSettings

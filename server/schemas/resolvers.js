@@ -89,7 +89,7 @@ const resolvers = {
       user.save();
       const token = createToken(user);
 
-      return { token, user };
+      return token;
     },
     updatePassword: async (parent, args, context) => {
       if (context.user) {
