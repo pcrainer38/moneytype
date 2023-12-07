@@ -11,9 +11,39 @@ import { useThemeContext } from "../components/ThemeContext.jsx";
 
 import Container from "react-bootstrap/Container";
 const Game = () => {
+  const [wordsBank, setWordsBank] = useState(
+    [
+      {word: "able", difficulty: 1},
+      {word: "actor", difficulty: 1},
+      {word: "zoo", difficulty: 1},
+      {word: "abroad", difficulty: 2},
+      {word: "proper", difficulty: 2},
+      {word: "single", difficulty: 2},
+      {word: "ability", difficulty: 3},
+      {word: "relaxed", difficulty: 3},
+      {word: "weekday", difficulty: 3},
+      {word: "bookcase", difficulty: 4},
+      {word: "campsite", difficulty: 4},
+      {word: "gorgeous", difficulty: 4},
+      {word: "interview", difficulty: 5},
+      {word: "secretary", difficulty: 5},
+      {word: "zamiaceae", difficulty: 5},
+      {word: "absolutely", difficulty: 6},
+      {word: "kilogramme", difficulty: 6},
+      {word: "businessman", difficulty: 7},
+      {word: "experienced", difficulty: 7},
+      {word: "photographer", difficulty: 8},
+      {word: "snowboarding", difficulty: 8},
+      {word: "extraordinary", difficulty: 9},
+      {word: "qualification", difficulty: 9},
+      {word: "commensurateness", difficulty: 10},
+      {word: "tatterdemalion", difficulty: 10},
+    ]
+  );
   const { theme, setTheme } = useThemeContext();
   const [word, setWord] = useState("");
-  const [wordTargetBounty, setWordTargetBounty] = useState("");
+  const [wordTarget, setWordTarget] = useState("");
+  
 
   useEffect(() => {
     function listener(e) {
@@ -28,9 +58,30 @@ const Game = () => {
     return () => window.removeEventListener("keydown", listener);
   }, [word]);
 
+  function nextWordAppear () {
+    /*This looks fine*/                       setWordTarget(wordsBank[wordsBank.length - 1].word);
+    /*This line is fine, but function isn't*/ wordAppearanceTimer( ( ( 1.5 + ( 0 * 0.1 ) + ( ( wordsBank[wordsBank.length - 1].difficulty ) * 0.25 ) ) ) * 1000 ) //Multiply by 1000 for milliseconds to seconds conversion
+  }
+
+  function wordAppearanceTimer(time) {
+    console.log(`${time} ${wordsBank}`);
+    setWordsBank(wordsBank.slice(0, -1));
+    setTimeout(nextWordAppear, time)
+  };
+
   useEffect(() => {
-    
-  }, [wordTargetBounty]);
+    return;
+  }, [wordTarget]);
+
+  useEffect(() => {
+    nextWordAppear()return;
+  }, [wordsBank]);
+
+  //Runs only on first load because the array is empty
+  useEffect(() => {
+    nextWordAppear();
+  }, []);
+  
 
   // These are just variables being declared. 
   // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object 
@@ -83,7 +134,7 @@ const Game = () => {
                 fluid
                 className="bounty-image"
               ></Image>
-               {wordTargetBounty}</p>
+               {wordTarget}</p>
               <p id="Word">{word}</p>
             </div>
           </div>
