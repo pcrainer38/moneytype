@@ -27,7 +27,7 @@ class User {
   }
 
   isLoggedIn() {
-    return !this.isLoggedIn();
+    return !this.isExpired();
   }
 
   isExpired() {
