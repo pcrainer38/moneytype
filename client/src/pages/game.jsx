@@ -40,7 +40,6 @@ const Game = () => {
           mistakes.current++;
           // console.log(mistakes.current);
           if (mistakes.current > 2) {
-            mistakes.current = 0;
             nextWordAppear();
             setWord("");
             return;
@@ -55,6 +54,7 @@ const Game = () => {
   }, [word]);
 
   function nextWordAppear() {
+    mistakes.current = 0;
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
       fetchWords();
@@ -137,14 +137,18 @@ const Game = () => {
         <div className="gameWindow d-inline-flex justify-content-between flex-d w-100">
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
             <div className="text-center d-flex flex-column align-items-center">
-              <p id="bounty">Bounty:
-              <Image
-                src={theme === "dark" ? darkDollarSign : dollarSign} 
-                fluid
-                className="bounty-image"
-              ></Image>
-               {wordTarget}</p>
-              <p id="Word" className="text-break">{word}</p>
+              <p id="bounty">
+                Bounty:
+                <Image
+                  src={theme === "dark" ? darkDollarSign : dollarSign}
+                  fluid
+                  className="bounty-image"
+                ></Image>
+                {wordTarget}
+              </p>
+              <p id="Word" className="text-break">
+                {word}
+              </p>
             </div>
           </div>
           <div className="UpgradesCard d-flex">
