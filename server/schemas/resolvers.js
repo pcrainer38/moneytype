@@ -5,6 +5,8 @@ import {
   AuthenticationError,
   AuthenticatedError,
 } from "../utils/auth.js";
+import { getUpgradeCost } from "../utils/gameLogic.js";
+import { GraphQLError } from "graphql";
 
 const resolvers = {
   Query: {
@@ -35,7 +37,17 @@ const resolvers = {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    words: async (parent, { difficulty }, context, info) => {
+    words: async (parent, { difficulty, minDifficulty = 1 }, context, info) => {
+      // TODO: Determine difficulty based on upgrades, not input
+      if (context.user) {
+        const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
+        difficulty = upgrades.wordDifficulty;
+      }
+      difficulty = Math.min(10, Math.max(1, difficulty));
+      minDifficulty = Math.min(
+        Math.min(8, difficulty),
+        Math.max(1, minDifficulty)
+      );
       const ast = parseResolveInfo(info);
       const fields = {};
       for (const field in ast.fieldsByTypeName.Word) {
@@ -46,6 +58,7 @@ const resolvers = {
           $match: {
             difficulty: {
               $lte: difficulty,
+              $gte: minDifficulty,
             },
           },
         },
@@ -72,14 +85,19 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
+    addUser: async (parent, args, context) => {
       if (context.user) throw AuthenticatedError;
       const user = await User.create(args);
+      const upgrades = await UserUpgrades.create({});
+      const settings = await UserSettings.create({});
+      user.userUpgrades = upgrades._id;
+      user.userSettings = settings._id;
+      user.save();
       const token = createToken(user);
 
-      return { token, user };
+      return token;
     },
-    updateUser: async (parent, args, context) => {
+    updatePassword: async (parent, args, context) => {
       if (context.user) {
         return await User.findByIdAndUpdate(context.user._id, args, {
           new: true,
@@ -88,9 +106,19 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    login: async (parent, { email, password }) => {
+    login: async (parent, { email, password }, context) => {
       if (context.user) throw AuthenticatedError;
-      const user = await User.findOne({ email });
+      const user = await User.findOne(
+        { email },
+        {
+          _id: 1,
+          username: 1,
+          password: 1,
+          email: 1,
+          userUpgrades: 1,
+          userSettings: 1,
+        }
+      );
       if (!user) {
         throw AuthenticationError;
       }
@@ -101,12 +129,15 @@ const resolvers = {
       }
       const token = createToken(user);
 
-      return { token, user };
+      return token;
     },
     updateUserSettings: async (parent, args, context) => {
       if (context.user) {
+        if (args.theme) {
+          if (!["dark", "light"].includes(args.theme)) args.theme = "dark";
+        }
         const updatedSettings = await UserSettings.findOneAndUpdate(
-          { user: context.user._id },
+          { _id: context.user.userSettings },
           { $set: args },
           { new: true }
         );
@@ -116,15 +147,25 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    updateUserUpgrades: async (parent, args) => {
+    updateUserUpgrades: async (parent, args, context) => {
       if (context.user) {
-        const updatedUpgrades = await UserUpgrades.findOneAndUpdate(
-          { user: context.user._id },
-          { $set: args },
-          { new: true }
-        );
+        const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
+        const user = await User.findById(context.user._id, { virtualMoney: 1 });
+        for (let upgrade in args) {
+          const cost = getUpgradeCost(upgrade, upgrades[upgrade]);
+          if (user.virtualMoney < cost)
+            throw new GraphQLError("Not enough money to upgrade.", {
+              extensions: {
+                code: "UPGRADE_FAILED",
+              },
+            });
+          user.virtualMoney -= cost;
+          upgrades[upgrade]++;
+        }
+        await upgrades.save();
+        await user.save();
 
-        return updatedUpgrades;
+        return upgrades;
       }
 
       throw AuthenticationError;

@@ -9,13 +9,13 @@ const typeDefs = `#graphql
         user: User
         userSettings: UserSettings
         userUpgrades: UserUpgrades
-        words(difficulty: Int!): [Word]
+        words(difficulty: Int!, minDifficulty: Int): [Word]
         leaderboard(page: Int): [PartialUser]
     }
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): Auth
-        updateUser(email: String, password: String): User
-        login(email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): ID
+        updatePassword(password: String!): User
+        login(email: String!, password: String!): ID
         updateUserSettings(theme: String): UserSettings
         updateUserUpgrades(moneyMultiplier: Int, wordLength: Int, wordDifficulty: Int, timeExtender: Int): UserUpgrades
     }
@@ -25,8 +25,8 @@ const typeDefs = `#graphql
         username: String
         email: String
         virtualMoney: Int
-        UserUpgrades: UserUpgrades
-        UserSettings: UserSettings
+        userUpgrades: UserUpgrades
+        userSettings: UserSettings
     }
 
     type PartialUser {

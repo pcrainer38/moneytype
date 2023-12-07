@@ -5,6 +5,8 @@ import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
+import { useQuery } from "@apollo/client";
+import { GET_LEADERBOARD } from "../utils/queries.js";
 
 let testUsers = [
   {
@@ -37,27 +39,29 @@ let testUsers = [
 const Scoreboard = () => {
   const { theme, setTheme } = useThemeContext();
 
+  const { loading, error, data } = useQuery(GET_LEADERBOARD);
   return (
     <>
       <Container>
         <div id="leaderboard">
           <h1 id="leadTitle">TYPE JOCKEYS</h1>
           <ul id="rankings">
-            {testUsers.map((user) => (
-              <li key={user._id} value={user.username}>
-                <div className="d-flex justify-content-between">
-                  <span>{user.username}</span>
-                  <span>
-                    <Image
-                      src={theme === "dark" ? darkDollarSign : dollarSign} 
-                      fluid
-                      className="leaderboard-image"
-                    ></Image>
-                    {user.virtualMoney.toLocaleString()}
-                  </span>
-                </div>
-              </li>
-            ))}
+            {loading
+              ? "Loading..."
+              : data.leaderboard.map((user) => (
+                  <li key={user._id} value={user.username}>
+                    <div className="d-flex justify-content-between">
+                      <span>{user.username}</span>
+                      <span>
+                        <Image
+                          src={dollarSign}
+                          className="leaderboard-image"
+                        ></Image>
+                        {user.virtualMoney.toLocaleString()}
+                      </span>
+                    </div>
+                  </li>
+                ))}
           </ul>
         </div>
       </Container>
