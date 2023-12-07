@@ -19,7 +19,8 @@ import sunSvg from "/Sun.svg?url";
 import Logo from "/moneyTypeLogo.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
-import { useUserContext } from "./components/UserContext.jsx";
+
+import User from "./utils/user.js";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -42,7 +43,6 @@ const client = new ApolloClient({
 
 function App() {
   const { theme, setTheme } = useThemeContext();
-  const { user } = useUserContext();
 
   return (
     <ApolloProvider client={client}>
@@ -57,7 +57,7 @@ function App() {
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            {user?._id ? "" : <NavLink to={`/signUp`}>Sign Up</NavLink>}
+            {User.isLoggedIn() ? "" : <NavLink to={`/signUp`}>Sign Up</NavLink>}
           </nav>
         </Container>
       </Navbar>
