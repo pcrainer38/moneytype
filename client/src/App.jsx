@@ -1,6 +1,13 @@
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
 import NavLink from "./components/NavLink.jsx";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -14,8 +21,22 @@ import Logo from "/moneyTypeLogo.svg?url";
 import { useThemeContext } from "./components/ThemeContext.jsx";
 import { useUserContext } from "./components/UserContext.jsx";
 
-const client = new ApolloClient({
+const httpLink = createHttpLink({
   uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("auth_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
