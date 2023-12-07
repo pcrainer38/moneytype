@@ -1,6 +1,6 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Image from "react-bootstrap/Image";
 
@@ -41,6 +41,7 @@ const Game = () => {
   const { theme, setTheme } = useThemeContext();
   const [word, setWord] = useState("");
   const [wordTarget, setWordTarget] = useState("");
+  let mistakes = useRef(0);
 
   useEffect(() => {
     function listener(e) {
@@ -48,7 +49,17 @@ const Game = () => {
         setWord(word.slice(0, -1));
       } else if (/[0-9a-zA-Z]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[word.length];
-        // if (!correct) // increment num mistakes
+        if (!correct) {
+          // increment num mistakes
+          mistakes.current++;
+          // console.log(mistakes.current);
+          if (mistakes.current > 2) {
+            mistakes.current = 0;
+            nextWordAppear();
+            setWord("");
+            return;
+          }
+        }
         // if num mistakes > 3, move to next word
         setWord(word + e.key.toUpperCase());
       }
@@ -58,13 +69,14 @@ const Game = () => {
   }, [word]);
 
   function nextWordAppear() {
+    // if less than 5 words left, fetch new words
     setWordTarget(wordsBank[wordsBank.length - 1].word);
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  useEffect(() => {
-    return;
-  }, [wordTarget]);
+  // useEffect(() => {
+  //   return;
+  // }, [wordTarget]);
 
   useEffect(() => {
     if (!wordsBank.length) return;
