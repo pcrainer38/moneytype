@@ -1,6 +1,13 @@
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
-import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
 import NavLink from "./components/NavLink.jsx";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
@@ -14,25 +21,61 @@ import darkLogo from "/moneyTypeLogoDark.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
 
-const client = new ApolloClient({
+import User from "./utils/user.js";
+import { useUserContext } from "./components/UserContext.jsx";
+import { useEffect } from "react";
+
+const httpLink = createHttpLink({
   uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("auth_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
 function App() {
   const { theme, setTheme } = useThemeContext();
+  const { user, setUser } = useUserContext();
 
   return (
     <ApolloProvider client={client}>
       <Navbar expand="lg" id="header">
         <Container>
-          <Link to={"/"} className="d-flex align-items-center text-decoration-none">
-          <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
+          <Link
+            to={"/"}
+            className="d-flex align-items-center text-decoration-none"
+          >
+            <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
             <h1>Money Type</h1>
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            <NavLink to={`/signUp`}>Sign Up</NavLink>
+            {user._id && User.isLoggedIn() ? (
+              <button
+                as="input"
+                type="button"
+                className="navbtn"
+                onClick={() => {
+                  User.logout();
+                  setUser({});
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <NavLink to={`/signUp`}>Sign Up</NavLink>
+            )}
           </nav>
         </Container>
       </Navbar>

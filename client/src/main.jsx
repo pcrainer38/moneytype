@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound.jsx";
 import Scoreboard from "./pages/Scoreboard.jsx";
 
 import ThemeProvider from "./components/ThemeContext.jsx";
+import UserProvider from "./components/UserContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </ThemeProvider>
 );
