@@ -17,7 +17,7 @@ export default function SignUp(props) {
   const { user, setUser } = useUserContext();
 
   useEffect(() => {
-    redirect("/");
+    if (user._id) redirect("/");
   }, [user]);
 
   if (user._id) return "";
