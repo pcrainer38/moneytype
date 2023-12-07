@@ -20,7 +20,10 @@ import Logo from "/moneyTypeLogo.svg?url";
 import darkLogo from "/moneyTypeLogoDark.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
+
+import User from "./utils/user.js";
 import { useUserContext } from "./components/UserContext.jsx";
+import { useEffect } from "react";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -43,7 +46,7 @@ const client = new ApolloClient({
 
 function App() {
   const { theme, setTheme } = useThemeContext();
-  const { user } = useUserContext();
+  const { user, setUser } = useUserContext();
 
   return (
     <ApolloProvider client={client}>
@@ -58,7 +61,21 @@ function App() {
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            {user?._id ? "" : <NavLink to={`/signUp`}>Sign Up</NavLink>}
+            {user._id && User.isLoggedIn() ? (
+              <button
+                as="input"
+                type="button"
+                className="navbtn"
+                onClick={() => {
+                  User.logout();
+                  setUser({});
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <NavLink to={`/signUp`}>Sign Up</NavLink>
+            )}
           </nav>
         </Container>
       </Navbar>
