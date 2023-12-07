@@ -19,6 +19,8 @@ import sunSvg from "/Sun.svg?url";
 import Logo from "/moneyTypeLogo.svg?url";
 import darkLogo from "/moneyTypeLogoDark.svg?url";
 
+import User from "./utils/user.js";
+
 import { useThemeContext } from "./components/ThemeContext.jsx";
 import { useUserContext } from "./components/UserContext.jsx";
 
@@ -43,7 +45,7 @@ const client = new ApolloClient({
 
 function App() {
   const { theme, setTheme } = useThemeContext();
-  const { user } = useUserContext();
+  const { user, setUser } = useUserContext();
 
   return (
     <ApolloProvider client={client}>
@@ -58,7 +60,21 @@ function App() {
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            {user?._id ? "" : <NavLink to={`/signUp`}>Sign Up</NavLink>}
+            {user._id && User.isLoggedIn() ? (
+              <button
+                as="input"
+                type="button"
+                className="navbtn"
+                onClick={() => {
+                  User.logout();
+                  setUser({});
+                }}
+              >
+                Logout
+              </button>
+            ) : (
+              <NavLink to={`/signUp`}>Sign Up</NavLink>
+            )}
           </nav>
         </Container>
       </Navbar>
