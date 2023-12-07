@@ -12,6 +12,7 @@ import sunSvg from "/Sun.svg?url";
 import Logo from "/moneyTypeLogo.svg?url";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
+import { useUserContext } from "./components/UserContext.jsx";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -20,21 +21,22 @@ const client = new ApolloClient({
 
 function App() {
   const { theme, setTheme } = useThemeContext();
+  const { user } = useUserContext();
 
   return (
     <ApolloProvider client={client}>
       <Navbar expand="lg" id="header">
         <Container>
-          <Link to={"/"} className="d-flex align-items-center text-decoration-none">
-          <Image
-            src={Logo}
-            className="Logo"
-          ></Image>
+          <Link
+            to={"/"}
+            className="d-flex align-items-center text-decoration-none"
+          >
+            <Image src={Logo} className="Logo"></Image>
             <h1>Money Type</h1>
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            <NavLink to={`/signUp`}>Sign Up</NavLink>
+            {user?._id ? "" : <NavLink to={`/signUp`}>Sign Up</NavLink>}
           </nav>
         </Container>
       </Navbar>
