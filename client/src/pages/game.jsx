@@ -9,35 +9,21 @@ import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
+import { GET_WORDS } from "../utils/queries.js";
+
 import Container from "react-bootstrap/Container";
+import { useQuery } from "@apollo/client";
 const Game = () => {
-  const [wordsBank, setWordsBank] = useState([
-    { word: "able", difficulty: 1 },
-    { word: "actor", difficulty: 1 },
-    { word: "zoo", difficulty: 1 },
-    { word: "abroad", difficulty: 2 },
-    { word: "proper", difficulty: 2 },
-    { word: "single", difficulty: 2 },
-    { word: "ability", difficulty: 3 },
-    { word: "relaxed", difficulty: 3 },
-    { word: "weekday", difficulty: 3 },
-    { word: "bookcase", difficulty: 4 },
-    { word: "campsite", difficulty: 4 },
-    { word: "gorgeous", difficulty: 4 },
-    { word: "interview", difficulty: 5 },
-    { word: "secretary", difficulty: 5 },
-    { word: "zamiaceae", difficulty: 5 },
-    { word: "absolutely", difficulty: 6 },
-    { word: "kilogramme", difficulty: 6 },
-    { word: "businessman", difficulty: 7 },
-    { word: "experienced", difficulty: 7 },
-    { word: "photographer", difficulty: 8 },
-    { word: "snowboarding", difficulty: 8 },
-    { word: "extraordinary", difficulty: 9 },
-    { word: "qualification", difficulty: 9 },
-    { word: "commensurateness", difficulty: 10 },
-    { word: "tatterdemalion", difficulty: 10 },
-  ]);
+  const [wordsBank, setWordsBank] = useState([]);
+  const {
+    data: serverWords,
+    loading: loadingWords,
+    refetch: fetchWords,
+  } = useQuery(GET_WORDS, {
+    variables: {
+      difficulty: 2,
+    },
+  });
   const { theme, setTheme } = useThemeContext();
   const [word, setWord] = useState("");
   const [wordTarget, setWordTarget] = useState("");
@@ -70,6 +56,11 @@ const Game = () => {
 
   function nextWordAppear() {
     // if less than 5 words left, fetch new words
+    if (wordsBank.length < 5 && !loadingWords) {
+      fetchWords();
+      return;
+    }
+    if (!wordsBank.length) return;
     setWordTarget(wordsBank[wordsBank.length - 1].word);
     setWordsBank(wordsBank.slice(0, -1));
   }
@@ -77,6 +68,15 @@ const Game = () => {
   // useEffect(() => {
   //   return;
   // }, [wordTarget]);
+
+  useEffect(() => {
+    if (serverWords?.words.length) {
+      console.log("Updated words", serverWords.words);
+      setWordsBank([...wordsBank, ...serverWords.words]);
+    }
+    // console.log("got new words");
+    // console.log(serverWords);
+  }, [serverWords]);
 
   useEffect(() => {
     if (!wordsBank.length) return;
