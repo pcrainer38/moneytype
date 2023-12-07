@@ -20,8 +20,6 @@ export default function SignUp(props) {
     if (user._id) redirect("/");
   }, [user]);
 
-  if (user._id) return "";
-
   let [auth, setAuth] = useState("signin");
 
   const changeAuth = () => {

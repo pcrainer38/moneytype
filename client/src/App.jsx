@@ -22,6 +22,7 @@ import { useThemeContext } from "./components/ThemeContext.jsx";
 
 import User from "./utils/user.js";
 import { useUserContext } from "./components/UserContext.jsx";
+import { useEffect } from "react";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -59,7 +60,7 @@ function App() {
           </Link>
           <nav>
             <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            {User.isLoggedIn() ? (
+            {user._id && User.isLoggedIn() ? (
               <button
                 as="input"
                 type="button"
