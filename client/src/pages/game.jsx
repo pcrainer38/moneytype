@@ -74,9 +74,9 @@ const Game = () => {
   return (
     <>
       <Container>
-        <div className="gameWindow d-flex justify-content-between">
+        <div className="gameWindow d-inline-flex justify-content-between flex-d w-100">
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
-            <div className="text-center">
+            <div className="text-center d-flex flex-column align-items-center">
               <p id="bounty">Bounty:
               <Image
                 src={theme === "dark" ? darkDollarSign : dollarSign} 
@@ -84,10 +84,10 @@ const Game = () => {
                 className="bounty-image"
               ></Image>
                {wordTargetBounty}</p>
-              <p id="Word">{word}</p>
+              <p id="Word" className='text-break'>{word}</p>
             </div>
           </div>
-          <div className="UpgradesCard">
+          <div className="UpgradesCard d-flex">
             <h3>upgrades</h3>
 
             <div className="upgrades d-flex">
