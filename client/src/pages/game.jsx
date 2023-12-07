@@ -1,8 +1,17 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
 
+import Image from "react-bootstrap/Image";
+
+import dollarSign from "/moneyTypeDollarSign.svg?url";
+import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
+import { useThemeContext } from "../components/ThemeContext.jsx";
+
 import Container from "react-bootstrap/Container";
 const Game = () => {
+  const { theme, setTheme } = useThemeContext();
+
   let userInput = "";
   let wordTarget = "";
   let wordTargetAllotedTime = 0.0;
@@ -19,12 +28,23 @@ const Game = () => {
   let upgradeCostTimeExtender = 0;
 
 
+
+
   return (
     <>
       <Container>
         <div className="gameWindow d-flex justify-content-between">
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
-            <p id="Word">word</p>
+            <div className="text-center">
+              <p id="bounty">Bounty:
+              <Image
+                src={theme === "dark" ? darkDollarSign : dollarSign} 
+                fluid
+                className="bounty-image"
+              ></Image>
+               wordTargetBounty</p>
+              <p id="Word">word</p>
+            </div>
           </div>
           <div className="UpgradesCard">
             <h3>upgrades</h3>

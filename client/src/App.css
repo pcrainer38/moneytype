@@ -77,6 +77,11 @@ body {
   margin-top: 20px;
 }
 
+.bounty-image{
+  width: 50px;
+  margin: 5px;
+}
+
 #leadTitle {
   font-size: 60px;
 }
@@ -121,6 +126,15 @@ body {
   border-color: var(--quatiary);
 }
 
+#bounty {
+  font-size: 30px;
+  margin-top: -70px;
+  color: var(--secondary);
+  background-color: var(--quatiary);
+  padding: 5px 25px 5px 25px;
+  border-radius: 10px;
+}
+
 #username-warning,
 #email-warning,
 #password-warning,
@@ -128,7 +142,7 @@ body {
   display: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --darkPrimary: #134074ff;
     --darkSecondary: #13315cff;
@@ -183,4 +197,4 @@ body {
   #rankings {
     color: var(--darkExtra);
   }
-}
+} */
