@@ -53,7 +53,7 @@ function App() {
             to={"/"}
             className="d-flex align-items-center text-decoration-none"
           >
-            <Image src={Logo} className="Logo"></Image>
+            <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
             <h1>Money Type</h1>
           </Link>
           <nav>
