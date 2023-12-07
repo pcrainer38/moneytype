@@ -2,6 +2,9 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
+import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
+import { useThemeContext } from "../components/ThemeContext.jsx";
 import { useQuery } from "@apollo/client";
 import { GET_LEADERBOARD } from "../utils/queries.js";
 
@@ -34,6 +37,8 @@ let testUsers = [
 ];
 
 const Scoreboard = () => {
+  const { theme, setTheme } = useThemeContext();
+
   const { loading, error, data } = useQuery(GET_LEADERBOARD);
   return (
     <>

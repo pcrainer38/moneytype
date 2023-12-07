@@ -1,11 +1,19 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
 
+import Image from "react-bootstrap/Image";
+
+import dollarSign from "/moneyTypeDollarSign.svg?url";
+import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
+import { useThemeContext } from "../components/ThemeContext.jsx";
+
 import Container from "react-bootstrap/Container";
 const Game = () => {
+  const { theme, setTheme } = useThemeContext();
   // These are just variables being declared. 
   // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object 
-  //                        // Word object, when called to appear, will set the wordTargetAllotedTime to the formula
+                         // Word object, when called to appear, will set the wordTargetAllotedTime to the formula
   // let userInput = "";
   // let wordTarget = tempWordBank[0].word;
   // let wordDifficulty = tempWordBank[0].difficulty;
@@ -32,15 +40,14 @@ const Game = () => {
   //     return mistakes;
   //   }
   
-  // //Each time we type
+  //Each time we type
   // if ( getNumMistakes (userInput, wordTarget) > 2 ) {
-  //     //delete the word out of existence and go to the next one.
+      //delete the word out of existence and go to the next one.
   // };
 
-  // //
   // if ( tempWordBank.length < 5 ) {
-  //   //call the server to repopulate tempWordBank[] with 50 new word objects.
-  //   //will need an await/promise
+    //call the server to repopulate tempWordBank[] with 50 new word objects.
+    //will need an await/promise
   // }
   
   
@@ -50,7 +57,16 @@ const Game = () => {
       <Container>
         <div className="gameWindow d-flex justify-content-between">
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
-            <p id="Word">word</p>
+            <div className="text-center">
+              <p id="bounty">Bounty:
+              <Image
+                src={theme === "dark" ? darkDollarSign : dollarSign} 
+                fluid
+                className="bounty-image"
+              ></Image>
+               wordTargetBounty</p>
+              <p id="Word">word</p>
+            </div>
           </div>
           <div className="UpgradesCard">
             <h3>upgrades</h3>
