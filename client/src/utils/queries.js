@@ -9,3 +9,12 @@ export const GET_LEADERBOARD = gql`
     }
   }
 `;
+
+export const GET_WORDS = gql`
+  query Words($difficulty: Int!) {
+    words(difficulty: $difficulty) {
+      difficulty
+      word
+    }
+  }
+`;
