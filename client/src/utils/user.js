@@ -19,7 +19,6 @@ class User {
   }
 
   getData() {
-    console.log(this._changed, this._cache);
     if (!this._changed) return this._cache;
     this._cache = this.getDecodedToken();
     this._changed = false;
