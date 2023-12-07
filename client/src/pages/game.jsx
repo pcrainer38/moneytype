@@ -47,6 +47,9 @@ const Game = () => {
       if (e.key == "Backspace") {
         setWord(word.slice(0, -1));
       } else if (/[0-9a-zA-Z]/.test(e.key) && e.key.length == 1) {
+        const correct = e.key === wordTarget[word.length];
+        // if (!correct) // increment num mistakes
+        // if num mistakes > 3, move to next word
         setWord(word + e.key.toUpperCase());
       }
     }
@@ -55,9 +58,7 @@ const Game = () => {
   }, [word]);
 
   function nextWordAppear() {
-    /*This looks fine*/ setWordTarget(wordsBank[wordsBank.length - 1].word);
-    /*This line is fine, but function isn't*/
-    //Multiply by 1000 for milliseconds to seconds conversion
+    setWordTarget(wordsBank[wordsBank.length - 1].word);
     setWordsBank(wordsBank.slice(0, -1));
   }
 
