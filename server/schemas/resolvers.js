@@ -37,12 +37,14 @@ const resolvers = {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    words: async (parent, { difficulty, minDifficulty = 1 }, context, info) => {
+    words: async (parent, { difficulty }, context, info) => {
       // TODO: Determine difficulty based on upgrades, not input
       if (context.user) {
         const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
         difficulty = upgrades.wordDifficulty;
       }
+
+      let minDifficulty = difficulty - 5;
       difficulty = Math.min(10, Math.max(1, difficulty));
       minDifficulty = Math.min(
         Math.min(8, difficulty),
