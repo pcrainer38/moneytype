@@ -33,7 +33,7 @@ const Game = () => {
     function listener(e) {
       if (e.key == "Backspace") {
         setWord(word.slice(0, -1));
-      } else if (/[0-9a-zA-Z]/.test(e.key) && e.key.length == 1) {
+      } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[word.length];
         if (!correct) {
           // increment num mistakes
