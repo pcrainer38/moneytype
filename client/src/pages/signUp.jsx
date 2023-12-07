@@ -1,6 +1,6 @@
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
@@ -15,6 +15,12 @@ export default function SignUp(props) {
   const redirect = useNavigate();
 
   const { user, setUser } = useUserContext();
+
+  useEffect(() => {
+    redirect("/");
+  }, [user]);
+
+  if (user._id) return "";
 
   let [auth, setAuth] = useState("signin");
 
@@ -73,8 +79,6 @@ export default function SignUp(props) {
       User.setToken(response.data.login);
       setUser(User.getUser());
 
-      redirect("/");
-
       console.log("Successful!");
       document.getElementById("authentication-warning").style.display = "none";
     } catch (err) {
@@ -101,7 +105,6 @@ export default function SignUp(props) {
       console.log("Successful!");
       User.setToken(response.data.login);
       setUser(User.getUser());
-      redirect("/");
     } else {
       console.log("Error! Check Network tab.");
       console.log(response.errors);
