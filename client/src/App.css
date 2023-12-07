@@ -131,6 +131,7 @@ body {
 }
 
 #bounty {
+  width: 475px;
   font-size: 30px;
   margin-top: -70px;
   color: var(--secondary);

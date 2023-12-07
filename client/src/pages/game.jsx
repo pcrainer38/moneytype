@@ -13,17 +13,24 @@ import Container from "react-bootstrap/Container";
 const Game = () => {
   const { theme, setTheme } = useThemeContext();
   const [word, setWord] = useState("");
+  const [wordTargetBounty, setWordTargetBounty] = useState("");
 
   useEffect(() => {
     function listener(e) {
+      if (e.key == "Backspace") {
+        setWord(word.slice(0, -1));
+      } else
       if (/[0-9a-zA-Z]/.test(e.key) && e.key.length == 1) {
         setWord(word + e.key.toUpperCase());
-        console.log(word);
       }
     }
     window.addEventListener("keydown", listener);
     return () => window.removeEventListener("keydown", listener);
   }, [word]);
+
+  useEffect(() => {
+    
+  }, [wordTargetBounty]);
 
   // These are just variables being declared. 
   // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object 
@@ -76,7 +83,7 @@ const Game = () => {
                 fluid
                 className="bounty-image"
               ></Image>
-               wordTargetBounty</p>
+               {wordTargetBounty}</p>
               <p id="Word">{word}</p>
             </div>
           </div>
