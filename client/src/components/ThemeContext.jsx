@@ -10,7 +10,13 @@ export const useThemeContext = () => useContext(ThemeContext);
 
 function ThemeProvider(props) {
   const hasSetTheme = useRef(false);
-  const { loading, data, error } = useQuery(GET_SETTINGS);
+  const saveFetchedTheme = useRef(false);
+  const {
+    loading,
+    data,
+    error,
+    refetch: refetchTheme,
+  } = useQuery(GET_SETTINGS);
   const [updateSettings] = useMutation(UPDATE_SETTINGS);
   const [theme, setThemeInternal] = useState(localStorage?.theme ?? "light");
 
@@ -20,12 +26,21 @@ function ThemeProvider(props) {
     localStorage.setItem("theme", theme);
   }
 
+  function queryTheme() {
+    hasSetTheme.current = false;
+    saveFetchedTheme.current = true;
+    refetchTheme();
+  }
+
   if (!error && !loading && !hasSetTheme.current) {
-    setThemeInternal(data.userSettings.theme);
+    if (saveFetchedTheme.current) setTheme(data.userSettings.theme);
+    else setThemeInternal(data.userSettings.theme);
     hasSetTheme.current = true;
   }
 
-  return <ThemeContext.Provider value={{ theme, setTheme }} {...props} />;
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme, queryTheme }} {...props} />
+  );
 }
 
 export default ThemeProvider;
