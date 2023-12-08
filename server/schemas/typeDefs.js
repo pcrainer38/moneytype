@@ -9,6 +9,7 @@ const typeDefs = `#graphql
         user: User
         userSettings: UserSettings
         userUpgrades: UserUpgrades
+        virtualMoney: Int
         words(difficulty: Int!): [Word]
         leaderboard(page: Int): [PartialUser]
     }
@@ -18,6 +19,7 @@ const typeDefs = `#graphql
         login(email: String!, password: String!): ID
         updateUserSettings(theme: String): UserSettings
         updateUserUpgrades(moneyMultiplier: Int, wordLength: Int, wordDifficulty: Int, timeExtender: Int): UserUpgrades
+        addMoney(money: Int!): Int
     }
 
     type User {

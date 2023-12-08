@@ -13,32 +13,60 @@ const resolvers = {
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id)
-          .populate("UserSettings")
-          .populate("UserUpgrades");
+          .populate("userSettings")
+          .populate("userUpgrades");
 
         return user;
       }
 
       throw AuthenticationError;
     },
-    userSettings: async (parent, { userSettingsId }) => {
+    userSettings: async (parent, args, context, info) => {
+      if (!context.user) throw AuthenticationError;
+      const ast = parseResolveInfo(info);
+      const fields = {};
+      for (const field in ast.fieldsByTypeName.UserSettings) {
+        fields[field] = 1;
+      }
       try {
-        const settings = await UserSettings.findById(userSettingsId);
+        const settings = await UserSettings.findById(
+          context.user.userSettings,
+          fields
+        );
         return settings;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    userUpgrades: async (parent, { userUpgradesId }) => {
+    userUpgrades: async (parent, args, context, info) => {
+      if (!context.user) throw AuthenticationError;
+      const ast = parseResolveInfo(info);
+      const fields = {};
+      for (const field in ast.fieldsByTypeName.UserUpgrades) {
+        fields[field] = 1;
+      }
       try {
-        const upgrades = await UserUpgrades.findById(userUpgradesId);
+        const upgrades = await UserUpgrades.findById(
+          context.user.userUpgrades,
+          fields
+        );
         return upgrades;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
       }
     },
+    virtualMoney: async (parent, args, context) => {
+      if (!context.user) throw AuthenticationError;
+      try {
+        const user = await User.findById(context.user._id, {
+          virtualMoney: 1,
+        });
+        return user.virtualMoney;
+      } catch (error) {
+        throw new Error(`Error: ${error.message}`);
+      }
+    },
     words: async (parent, { difficulty }, context, info) => {
-      // TODO: Determine difficulty based on upgrades, not input
       if (context.user) {
         const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
         difficulty = upgrades.wordDifficulty;
@@ -171,6 +199,28 @@ const resolvers = {
       }
 
       throw AuthenticationError;
+    },
+    addMoney: async (parent, { money }, context) => {
+      if (!context.user) throw AuthenticationError;
+      if (money < 1)
+        throw new GraphQLError("Invalid money amount.", {
+          extensions: {
+            code: "INVALID_MONEY_AMOUNT",
+          },
+        });
+      const user = await User.findByIdAndUpdate(
+        context.user._id,
+        {
+          $inc: { virtualMoney: money },
+        },
+        {
+          new: true,
+          fields: {
+            virtualMoney: 1,
+          },
+        }
+      );
+      return user.virtualMoney;
     },
   },
 };
