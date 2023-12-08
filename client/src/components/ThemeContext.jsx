@@ -9,7 +9,7 @@ export const useThemeContext = () => useContext(ThemeContext);
 
 function ThemeProvider(props) {
   const hasSetTheme = useRef(false);
-  const { loading, data, previousData } = useQuery(GET_SETTINGS);
+  const { loading, data, error } = useQuery(GET_SETTINGS);
   const [updateSettings] = useMutation(UPDATE_SETTINGS);
   const [theme, setThemeInternal] = useState("light");
 
@@ -18,7 +18,7 @@ function ThemeProvider(props) {
     setThemeInternal(theme);
   }
 
-  if (!loading && !hasSetTheme.current) {
+  if (!error && !loading && !hasSetTheme.current) {
     setThemeInternal(data.userSettings.theme);
     hasSetTheme.current = true;
   }
