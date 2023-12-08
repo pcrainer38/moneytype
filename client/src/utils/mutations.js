@@ -25,3 +25,21 @@ export const UPDATE_SETTINGS = gql`
     }
   }
 `;
+
+export const UPDATE_UPGRADES = gql`
+  mutation UpdateUserUpgrades(
+    $moneyMultiplier: Int
+    $wordDifficulty: Int
+    $timeExtender: Int
+  ) {
+    updateUserUpgrades(
+      moneyMultiplier: $moneyMultiplier
+      wordDifficulty: $wordDifficulty
+      timeExtender: $timeExtender
+    ) {
+      moneyMultiplier
+      timeExtender
+      wordDifficulty
+    }
+  }
+`;
