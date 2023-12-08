@@ -9,6 +9,7 @@ const typeDefs = `#graphql
         user: User
         userSettings: UserSettings
         userUpgrades: UserUpgrades
+        virtualMoney: Int
         words(difficulty: Int!): [Word]
         leaderboard(page: Int): [PartialUser]
     }

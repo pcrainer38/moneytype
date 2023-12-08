@@ -55,6 +55,17 @@ const resolvers = {
         throw new Error(`Error: ${error.message}`);
       }
     },
+    virtualMoney: async (parent, args, context) => {
+      if (!context.user) throw AuthenticationError;
+      try {
+        const user = await User.findById(context.user._id, {
+          virtualMoney: 1,
+        });
+        return user.virtualMoney;
+      } catch (error) {
+        throw new Error(`Error: ${error.message}`);
+      }
+    },
     words: async (parent, { difficulty }, context, info) => {
       if (context.user) {
         const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
