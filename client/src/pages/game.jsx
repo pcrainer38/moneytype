@@ -19,7 +19,7 @@ import { GET_UPGRADES, GET_WORDS, GET_MONEY } from "../utils/queries.js";
 
 import Container from "react-bootstrap/Container";
 import { useMutation, useQuery } from "@apollo/client";
-import { UPDATE_UPGRADES } from "../utils/mutations.js";
+import { ADD_MONEY, UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
 import User from "../utils/user.js";
@@ -51,6 +51,7 @@ const Game = () => {
   let hasLoadedMoney = useRef(false);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
+  const [addMoney] = useMutation(ADD_MONEY);
   // Get upgrades
   const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
   // Get money
@@ -102,17 +103,19 @@ const Game = () => {
   function nextWordAppear() {
     // lets calculate the money gained before resetting mistakes to 0
     if (word.current.length !== 0 && mistakes.current < 3) {
-      setUserMoney(
-        userMoney +
-          Math.floor(
-            /*wordTargetBounty*/ (wordTarget.length *
-              (1 + wordDifficulty.current * 0.5) +
-              wordTargetTimeRemaining.current *
-                2 *
-                (1 - mistakes.current * 0.33)) *
-              (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
-          )
+      const moneyToAdd = Math.floor(
+        /*wordTargetBounty*/ (wordTarget.length *
+          (1 + wordDifficulty.current * 0.5) +
+          wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
+          (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
       );
+      setUserMoney(userMoney + moneyToAdd);
+      if (User.isLoggedIn())
+        addMoney({
+          variables: {
+            money: moneyToAdd,
+          },
+        });
     }
     setUserWord("");
     mistakes.current = 0;
