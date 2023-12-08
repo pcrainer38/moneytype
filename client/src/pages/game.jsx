@@ -189,7 +189,7 @@ const Game = () => {
   useEffect(() => {
     if (serverWords?.words.length) {
       //console.log("Updated words", serverWords.words);
-      setWordsBank([...wordsBank, ...serverWords.words]);
+      setWordsBank([...serverWords.words, ...wordsBank]);
     }
     // console.log("got new words");
     // console.log(serverWords);
