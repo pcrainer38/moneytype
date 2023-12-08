@@ -9,6 +9,9 @@ import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 import difficulty from "/upgradeDifficulty.svg?url";
 import timeExtender from "/upgradeTimeExtender.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
+import darkDifficulty from "/upgradeDifficultyDark.svg?url"
+import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url"
+import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url"
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
@@ -228,7 +231,7 @@ const Game = () => {
                   onClick={() => applyUpgrade("moneyMultiplier")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={multiplier} fluid className="icon"></Image>
+                    <Image src={theme === "dark" ? darkMultiplier : multiplier} fluid className="icon"></Image>
                     Multiplier
                     <p>
                       Level "{upgradeMoneyMultiplier}" | Cost: "
@@ -245,7 +248,7 @@ const Game = () => {
                   onClick={() => applyUpgrade("timeExtender")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={timeExtender} fluid className="icon"></Image>
+                    <Image src={theme === "dark" ? darkTimeExtender : timeExtender} fluid className="icon"></Image>
                     Time Extender
                     <p>
                       Level "{upgradeTimeExtender}" | Cost: "
@@ -258,7 +261,7 @@ const Game = () => {
                   onClick={() => applyUpgrade("wordDifficulty")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={difficulty} fluid className="icon"></Image>
+                    <Image src={theme === "dark" ? darkDifficulty : difficulty} fluid className="icon"></Image>
                     Word difficulty
                     <p>
                       Level "{upgradeWordDifficulty}" | Cost: "
