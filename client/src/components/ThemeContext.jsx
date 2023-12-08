@@ -11,11 +11,12 @@ function ThemeProvider(props) {
   const hasSetTheme = useRef(false);
   const { loading, data, error } = useQuery(GET_SETTINGS);
   const [updateSettings] = useMutation(UPDATE_SETTINGS);
-  const [theme, setThemeInternal] = useState("light");
+  const [theme, setThemeInternal] = useState(localStorage?.theme ?? "light");
 
   function setTheme(theme) {
     updateSettings({ variables: { theme } });
     setThemeInternal(theme);
+    localStorage.setItem("theme", theme);
   }
 
   if (!error && !loading && !hasSetTheme.current) {
