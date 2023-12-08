@@ -47,7 +47,8 @@ const Game = () => {
   let word = useRef("");
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordDifficulty = useRef(0);
-  let wordTimeAlloted = useRef(0);
+  let wordTimeAlloted = useRef(0.0);
+  let wordTimeAllotedUnix = useRef(0.0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
   let firstLoad = useRef(true);
@@ -125,6 +126,9 @@ const Game = () => {
       const percentageTyped = 1 - remainingChars / wordTarget.length;
 
       return Math.floor(
+      console.log(Date.now() - wordTimeAllotedUnix.current);
+      // if (remainingChars/wordTarget.length)
+      const moneyToAdd = Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
           wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
@@ -139,6 +143,7 @@ const Game = () => {
     // lets calculate the money gained before resetting mistakes to 0
     if (word.current.length !== 0 && mistakes.current < 3) {
       const moneyToAdd = calculateMoneyGained();
+      //console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
       if (User.isLoggedIn())
         addMoney({
@@ -148,6 +153,7 @@ const Game = () => {
         });
     }
     setUserWord("");
+    wordTimeAllotedUnix.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
