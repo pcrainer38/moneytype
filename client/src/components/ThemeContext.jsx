@@ -2,6 +2,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { createContext, useContext, useRef, useState } from "react";
 import { GET_SETTINGS } from "../utils/queries.js";
 import { UPDATE_SETTINGS } from "../utils/mutations.js";
+import User from "../utils/user.js";
 
 const ThemeContext = createContext();
 
@@ -14,7 +15,7 @@ function ThemeProvider(props) {
   const [theme, setThemeInternal] = useState(localStorage?.theme ?? "light");
 
   function setTheme(theme) {
-    updateSettings({ variables: { theme } });
+    if (User.isLoggedIn()) updateSettings({ variables: { theme } });
     setThemeInternal(theme);
     localStorage.setItem("theme", theme);
   }
