@@ -140,9 +140,8 @@ const Game = () => {
     mistakes.current = 0;
     console.log(`Money: ${userMoney}`);
     // if less than 5 words left, fetch new words
-    if (wordsBank.length < 5 && !loadingWords) {
+    if (wordsBank.length == 4 && !loadingWords) {
       fetchWords();
-      return;
     }
     if (!wordsBank.length) return;
     setWordTarget(wordsBank[wordsBank.length - 1].word);
@@ -189,7 +188,9 @@ const Game = () => {
   useEffect(() => {
     if (serverWords?.words.length) {
       //console.log("Updated words", serverWords.words);
-      setWordsBank([...wordsBank, ...serverWords.words]);
+      // console.log([...new Set([...serverWords.words, ...wordsBank])]);
+      console.log([...serverWords.words, ...wordsBank]);
+      setWordsBank([...serverWords.words, ...wordsBank]);
     }
     // console.log("got new words");
     // console.log(serverWords);
