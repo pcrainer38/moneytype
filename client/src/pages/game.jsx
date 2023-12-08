@@ -40,7 +40,7 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTargetTimeRemaining, setWordTargetTimeRemaining] = useState(0);
+  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] = useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
@@ -48,6 +48,7 @@ const Game = () => {
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordDifficulty = useRef(0);
   let wordTimeAlloted = useRef(0.0);
+  let wordTargetTimeRemaining = useRef(0.0);
   let wordTimeAllotedUnix = useRef(0.0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
@@ -124,14 +125,13 @@ const Game = () => {
     if (word.current.length !== 0 && mistakes.current < 3) {
       const remainingChars = wordTarget.length - word.current.length;
       const percentageTyped = 1 - remainingChars / wordTarget.length;
+      wordTargetTimeRemaining.current = (Date.now() - wordTimeAllotedUnix.current) / 1000;
 
-      return Math.floor(
-      console.log(Date.now() - wordTimeAllotedUnix.current);
       // if (remainingChars/wordTarget.length)
-      const moneyToAdd = Math.floor(
+      return Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
-          wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
+          wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
           percentageTyped
       );
@@ -240,7 +240,7 @@ const Game = () => {
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
-    setWordTargetTimeRemaining(wordTimeAlloted.current);
+    setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
