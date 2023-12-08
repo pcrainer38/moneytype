@@ -106,6 +106,8 @@ body {
 
 .clear {
   background-color: transparent;
+  color: var(--secondary);
+  width: 220px;
 }
 
 #leadTitle {
