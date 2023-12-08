@@ -217,59 +217,62 @@ const Game = () => {
               </p>
             </div>
           </div>
-          <div className="UpgradesCard d-flex w-25">
-            <h3>Upgrades</h3>
-            <div className="upgrades d-flex w-100 justify-content-center">
-              <ul id="upgradelist">
-                {/* {upgradeschema.map((upgrade) => {
-                                <li key={upgrade._id} value={upgrade.name}>
-                                    {upgrade._id}
-                                </li>  
-                            })} */}
-                <li
-                  className="upgradebtn"
-                  onClick={() => applyUpgrade("moneyMultiplier")}
-                >
-                  <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkMultiplier : multiplier} fluid className="icon"></Image>
-                    Multiplier
-                    <p>
-                      Level "{upgradeMoneyMultiplier}" | Cost: "
-                      {getUpgradeCost(
-                        "moneyMultiplier",
-                        upgradeMoneyMultiplier
-                      )}
-                      "
-                    </p>
-                  </button>
-                </li>
-                <li
-                  className="upgradebtn"
-                  onClick={() => applyUpgrade("timeExtender")}
-                >
-                  <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkTimeExtender : timeExtender} fluid className="icon"></Image>
-                    Time Extender
-                    <p>
-                      Level "{upgradeTimeExtender}" | Cost: "
-                      {getUpgradeCost("timeExtender", upgradeTimeExtender)}"
-                    </p>
-                  </button>
-                </li>
-                <li
-                  className="upgradebtn"
-                  onClick={() => applyUpgrade("wordDifficulty")}
-                >
-                  <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkDifficulty : difficulty} fluid className="icon"></Image>
-                    Word difficulty
-                    <p>
-                      Level "{upgradeWordDifficulty}" | Cost: "
-                      {getUpgradeCost("wordDifficulty", upgradeWordDifficulty)}"
-                    </p>
-                  </button>
-                </li>
-              </ul>
+          <div className="trackers d-flex flex-column align-items-center">
+            <p id="money" className="w-100">Money: 100000000000000000000000</p>
+            <div className="UpgradesCard d-flex w-100">
+              <h3>Upgrades</h3>
+              <div className="upgrades d-flex w-100 justify-content-center">
+                <ul id="upgradelist">
+                  {/* {upgradeschema.map((upgrade) => {
+                                  <li key={upgrade._id} value={upgrade.name}>
+                                      {upgrade._id}
+                                  </li>  
+                              })} */}
+                  <li
+                    className="upgradebtn"
+                    onClick={() => applyUpgrade("moneyMultiplier")}
+                  >
+                    <button as="input" type="button" className="clear">
+                      <Image src={theme === "dark" ? darkMultiplier : multiplier} fluid className="icon"></Image>
+                      Multiplier
+                      <p>
+                        Level "{upgradeMoneyMultiplier}" | Cost: "
+                        {getUpgradeCost(
+                          "moneyMultiplier",
+                          upgradeMoneyMultiplier
+                        )}
+                        "
+                      </p>
+                    </button>
+                  </li>
+                  <li
+                    className="upgradebtn"
+                    onClick={() => applyUpgrade("timeExtender")}
+                  >
+                    <button as="input" type="button" className="clear">
+                      <Image src={theme === "dark" ? darkTimeExtender : timeExtender} fluid className="icon"></Image>
+                      Time Extender
+                      <p>
+                        Level "{upgradeTimeExtender}" | Cost: "
+                        {getUpgradeCost("timeExtender", upgradeTimeExtender)}"
+                      </p>
+                    </button>
+                  </li>
+                  <li
+                    className="upgradebtn"
+                    onClick={() => applyUpgrade("wordDifficulty")}
+                  >
+                    <button as="input" type="button" className="clear">
+                      <Image src={theme === "dark" ? darkDifficulty : difficulty} fluid className="icon"></Image>
+                      Word Difficulty
+                      <p>
+                        Level "{upgradeWordDifficulty}" | Cost: "
+                        {getUpgradeCost("wordDifficulty", upgradeWordDifficulty)}"
+                      </p>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
