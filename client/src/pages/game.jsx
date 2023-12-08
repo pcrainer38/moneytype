@@ -118,20 +118,26 @@ const Game = () => {
     word.current = str1;
   }
 
-  function nextWordAppear() {
-    // lets calculate the money gained before resetting mistakes to 0
+  function calculateMoneyGained() {
     if (word.current.length !== 0 && mistakes.current < 3) {
       const remainingChars = wordTarget.length - word.current.length;
       const percentageTyped = 1 - remainingChars / wordTarget.length;
-      // console.log(wordTarget.length, word.current.length, remainingChars);
-      // if (remainingChars/wordTarget.length)
-      const moneyToAdd = Math.floor(
+
+      return Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
           wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
           percentageTyped
       );
+    }
+    return 0;
+  }
+
+  function nextWordAppear() {
+    // lets calculate the money gained before resetting mistakes to 0
+    if (word.current.length !== 0 && mistakes.current < 3) {
+      const moneyToAdd = calculateMoneyGained();
       console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
       if (User.isLoggedIn())
@@ -271,13 +277,13 @@ const Game = () => {
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
             <div className="text-center d-flex flex-column align-items-center">
               <p id="bounty">
-                Bounty:
+                Prize:
                 <Image
                   src={theme === "dark" ? darkDollarSign : dollarSign}
                   fluid
                   className="bounty-image"
                 ></Image>
-                {wordTarget}
+                {calculateMoneyGained().toLocaleString()}
               </p>
               <p id="Word" className="text-break">
                 {wordDisplay}
