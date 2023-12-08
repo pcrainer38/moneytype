@@ -258,6 +258,9 @@ const Game = () => {
               </p>
               <p id="Word" className="text-break">
                 {wordDisplay}
+                <span className="word-to-type">
+                  {wordTarget.slice(wordDisplay.length).toUpperCase()}
+                </span>
               </p>
             </div>
           </div>
