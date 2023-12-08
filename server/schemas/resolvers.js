@@ -56,7 +56,6 @@ const resolvers = {
       }
     },
     words: async (parent, { difficulty }, context, info) => {
-      // TODO: Determine difficulty based on upgrades, not input
       if (context.user) {
         const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
         difficulty = upgrades.wordDifficulty;
