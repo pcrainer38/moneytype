@@ -85,6 +85,29 @@ body {
   cursor: pointer;
 }
 
+.icons {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.upgradebtn {
+  padding: 0px 30px 0px 30px;
+  background-color: var(--extra);
+  margin: 10px;
+  border-radius: 10px;
+}
+.upgradebtn:hover {
+  background-color: var(--quatiary);
+}
+
+.clear {
+  background-color: transparent;
+}
+
 #leadTitle {
   font-size: 60px;
 }
@@ -117,6 +140,8 @@ body {
 
 #upgradelist {
   list-style-type: none;
+  padding-left: 0;
+  color: var(--secondary);
 }
 
 #Word {
