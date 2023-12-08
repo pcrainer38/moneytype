@@ -40,7 +40,8 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] = useState(0);
+  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] =
+    useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
@@ -49,7 +50,7 @@ const Game = () => {
   let wordDifficulty = useRef(0);
   let wordTimeAlloted = useRef(0.0);
   let wordTargetTimeRemaining = useRef(0.0);
-  let wordTimeAllotedUnix = useRef(0.0);
+  let wordTimeStarted = useRef(0.0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
   let firstLoad = useRef(true);
@@ -125,7 +126,9 @@ const Game = () => {
     if (word.current.length !== 0 && mistakes.current < 3) {
       const remainingChars = wordTarget.length - word.current.length;
       const percentageTyped = 1 - remainingChars / wordTarget.length;
-      wordTargetTimeRemaining.current = (Date.now() - wordTimeAllotedUnix.current) / 1000;
+
+      const timeTaken = (Date.now() - wordTimeStarted.current) / 1000;
+      wordTargetTimeRemaining.current = wordTimeAlloted.current - timeTaken;
 
       // if (remainingChars/wordTarget.length)
       return Math.floor(
@@ -153,7 +156,7 @@ const Game = () => {
         });
     }
     setUserWord("");
-    wordTimeAllotedUnix.current = Date.now();
+    wordTimeStarted.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
@@ -164,13 +167,12 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  function newTimerCountdownAppear() {
-    //console.log(Date());
-    let timer = setTimeout(() => {
-      newTimerCountdownAppear();
-    }, wordTimeAlloted.current * 100);
-    return () => clearTimeout(timer);
-  }
+  // useEffect(() => {
+  //   let timer = setTimeout(() => {
+  //     console.log((Date.now() - wordTimeStarted.current) / 1000);
+  //   }, 100);
+  //   return () => clearTimeout(timer);
+  // });
 
   function generateDisplayWord() {
     let display = [];
@@ -241,55 +243,13 @@ const Game = () => {
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
     setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
+    setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
     }, wordTimeAlloted.current * 1000);
     return () => clearTimeout(timer);
   }, [wordsBank]);
-
-  // useEffect((num) => {
-
-  // }, [userMoney])
-
-  // These are just variables being declared.
-  // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object
-  // Word object, when called to appear, will set the wordTargetAllotedTime to the formula
-  // let userInput = "";
-  // let wordTarget = tempWordBank[0].word;
-  // let wordDifficulty = tempWordBank[0].difficulty;
-  // let wordTargetAllotedTime = /*(in seconds)*/ ( 1.5 + ( upgradeTimeExtender * 0.1 ) + ( ( wordDifficulty ) * 0.25 ) );
-  // let wordTargetTimeRemaining = 0.0; // = wordTargetAllotedTime - wordTargetTimeRemaining
-  // let numOfMistakes = 0; //Reset to 0 when new word appears
-  // let numOfMistakesAllowed = 3; //This can be changed and dependent on getNumMistakes()
-  // let money = 0; //This is the money that the player has (money += moneyTotalGained)
-  // let wordTargetBounty = wordTarget.length * ( ( 1 + ( wordDifficulty ) * 0.5 ) ); //The money gained from typing the word correctly
-  // let moneyMultiplier = 1 += upgradeMoneyMultiplier * 0.1;
-  // let moneyTotalGained = ( ( ( wordTargetBounty ) + ( wordTargetTimeRemaining * 2 * ( 1 - ( numOfMistakes * .33 ) ) ) ) * ( moneyMultiplier + ( ( wordDifficulty ) * .25 ) ) );
-  // let upgradeMoneyMultiplier = 0; //Starts at Level 0
-  // let upgradeWordDifficulty = 0; //Level 1 is at 0 --- Level 2 is at 1 --- Level 3 is at 2 --- etc...
-  // let upgradeTimeExtender = 0; //Start at Level 0
-  // let upgradeCostMoneyMultiplier = 120 * ( 1 + ( upgradeMoneyMultiplier ** 2 ) ); //Cost to upgrade
-  // let upgradeCostWordDifficulty = 250 + ( ( upgradeWordDifficulty ) * 750 ); //Cost to upgrade
-  // let upgradeCostTimeExtender = 175 * ( 1 + ( upgradeCostMoneyMultiplier ** 2 ) ) ; //Cost to upgrade
-
-  // function getNumMistakes(word, targetWord) {
-  //     let mistakes = 0;
-  //     for (let i = 0; i < targetWord.length; i++) {
-  //       if (word[i] !== targetWord[i]) mistakes++;
-  //     }
-  //     return mistakes;
-  //   }
-
-  //Each time we type
-  // if ( getNumMistakes (userInput, wordTarget) > 2 ) {
-  //delete the word out of existence and go to the next one.
-  // };
-
-  // if ( tempWordBank.length < 5 ) {
-  //call the server to repopulate tempWordBank[] with 50 new word objects.
-  //will need an await/promise
-  // }
 
   return (
     <>
