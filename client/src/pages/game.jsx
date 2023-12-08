@@ -71,11 +71,12 @@ const Game = () => {
   function applyUpgrade(upgrade) {
     const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
     if (userMoney >= cost) {
-      setUpgrades({
-        variables: {
-          [upgrade]: 1,
-        },
-      });
+      if (User.isLoggedIn())
+        setUpgrades({
+          variables: {
+            [upgrade]: 1,
+          },
+        });
       setUserMoney(userMoney - cost);
       setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
     }
