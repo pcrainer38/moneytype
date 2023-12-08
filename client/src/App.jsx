@@ -1,12 +1,5 @@
 import "./App.css";
 import { Link, Outlet } from "react-router-dom";
-import {
-  ApolloClient,
-  ApolloProvider,
-  InMemoryCache,
-  createHttpLink,
-} from "@apollo/client";
-import { setContext } from "@apollo/client/link/context";
 
 import NavLink from "./components/NavLink.jsx";
 import Navbar from "react-bootstrap/Navbar";
@@ -24,31 +17,12 @@ import User from "./utils/user.js";
 import { useThemeContext } from "./components/ThemeContext.jsx";
 import { useUserContext } from "./components/UserContext.jsx";
 
-const httpLink = createHttpLink({
-  uri: "/graphql",
-});
-
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("auth_token");
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : "",
-    },
-  };
-});
-
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
 function App() {
   const { theme, setTheme } = useThemeContext();
   const { user, setUser } = useUserContext();
 
   return (
-    <ApolloProvider client={client}>
+    <div className={theme}>
       <Navbar expand="lg" id="header">
         <Container>
           <Link
@@ -93,7 +67,7 @@ function App() {
           </button>
         </div>
       </Container>
-    </ApolloProvider>
+    </div>
   );
 }
 

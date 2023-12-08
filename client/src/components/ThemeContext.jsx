@@ -1,11 +1,29 @@
-import { createContext, useContext, useState } from "react";
+import { useMutation, useQuery } from "@apollo/client";
+import { createContext, useContext, useRef, useState } from "react";
+import { GET_SETTINGS } from "../utils/queries.js";
+import { UPDATE_SETTINGS } from "../utils/mutations.js";
+import User from "../utils/user.js";
 
 const ThemeContext = createContext();
 
 export const useThemeContext = () => useContext(ThemeContext);
 
 function ThemeProvider(props) {
-  const [theme, setTheme] = useState("light");
+  const hasSetTheme = useRef(false);
+  const { loading, data, error } = useQuery(GET_SETTINGS);
+  const [updateSettings] = useMutation(UPDATE_SETTINGS);
+  const [theme, setThemeInternal] = useState(localStorage?.theme ?? "light");
+
+  function setTheme(theme) {
+    if (User.isLoggedIn()) updateSettings({ variables: { theme } });
+    setThemeInternal(theme);
+    localStorage.setItem("theme", theme);
+  }
+
+  if (!error && !loading && !hasSetTheme.current) {
+    setThemeInternal(data.userSettings.theme);
+    hasSetTheme.current = true;
+  }
 
   return <ThemeContext.Provider value={{ theme, setTheme }} {...props} />;
 }
