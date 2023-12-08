@@ -19,6 +19,7 @@ import { useMutation, useQuery } from "@apollo/client";
 import { UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
+import User from "../utils/user.js";
 
 const Game = () => {
   const [wordsBank, setWordsBank] = useState([]);
@@ -59,7 +60,7 @@ const Game = () => {
     wordDifficulty: setUpgradeWordDifficulty,
   };
 
-  if (!hasLoadedUpgrades.current && !upgradesLoading) {
+  if (!hasLoadedUpgrades.current && User.isLoggedIn() && !upgradesLoading) {
     for (let upgrade in dbUpgrades.userUpgrades) {
       if (upgrade.startsWith("_")) continue;
       setUpgradeMappings[upgrade](dbUpgrades.userUpgrades[upgrade]);
