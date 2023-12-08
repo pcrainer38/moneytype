@@ -9,13 +9,13 @@ import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 import difficulty from "/upgradeDifficulty.svg?url";
 import timeExtender from "/upgradeTimeExtender.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
-import darkDifficulty from "/upgradeDifficultyDark.svg?url"
-import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url"
-import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url"
+import darkDifficulty from "/upgradeDifficultyDark.svg?url";
+import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
+import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
-import { GET_UPGRADES, GET_WORDS } from "../utils/queries.js";
+import { GET_UPGRADES, GET_WORDS, GET_MONEY } from "../utils/queries.js";
 
 import Container from "react-bootstrap/Container";
 import { useMutation, useQuery } from "@apollo/client";
@@ -48,9 +48,13 @@ const Game = () => {
   let wordTargetTimeRemaining = useRef(0);
   let wordDifficulty = useRef(0);
   let hasLoadedUpgrades = useRef(false);
+  let hasLoadedMoney = useRef(false);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
+  // Get upgrades
   const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
+  // Get money
+  const { data: dbMoney, loading: moneyLoading } = useQuery(GET_MONEY);
 
   const upgradeLevelMappings = {
     moneyMultiplier: upgradeMoneyMultiplier,
@@ -69,6 +73,11 @@ const Game = () => {
       setUpgradeMappings[upgrade](dbUpgrades.userUpgrades[upgrade]);
     }
     hasLoadedUpgrades.current = true;
+  }
+
+  if (!hasLoadedMoney.current && User.isLoggedIn() && !moneyLoading) {
+    setUserMoney(dbMoney.virtualMoney);
+    hasLoadedMoney.current = true;
   }
 
   function applyUpgrade(upgrade) {
@@ -244,7 +253,11 @@ const Game = () => {
                   onClick={() => applyUpgrade("moneyMultiplier")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkMultiplier : multiplier} fluid className="icon"></Image>
+                    <Image
+                      src={theme === "dark" ? darkMultiplier : multiplier}
+                      fluid
+                      className="icon"
+                    ></Image>
                     Multiplier
                     <p>
                       Level "{upgradeMoneyMultiplier}" | Cost: "
@@ -261,7 +274,11 @@ const Game = () => {
                   onClick={() => applyUpgrade("timeExtender")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkTimeExtender : timeExtender} fluid className="icon"></Image>
+                    <Image
+                      src={theme === "dark" ? darkTimeExtender : timeExtender}
+                      fluid
+                      className="icon"
+                    ></Image>
                     Time Extender
                     <p>
                       Level "{upgradeTimeExtender}" | Cost: "
@@ -274,7 +291,11 @@ const Game = () => {
                   onClick={() => applyUpgrade("wordDifficulty")}
                 >
                   <button as="input" type="button" className="clear">
-                    <Image src={theme === "dark" ? darkDifficulty : difficulty} fluid className="icon"></Image>
+                    <Image
+                      src={theme === "dark" ? darkDifficulty : difficulty}
+                      fluid
+                      className="icon"
+                    ></Image>
                     Word difficulty
                     <p>
                       Level "{upgradeWordDifficulty}" | Cost: "
