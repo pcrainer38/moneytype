@@ -5,6 +5,7 @@
   --quatiary: #695649;
   --extra: #534741;
   --text-display: var(--tertiary);
+  --bad-text-display: #f44336;
 
   color-scheme: light dark;
 }
@@ -172,6 +173,11 @@ body {
 
 .word-to-type {
   color: var(--text-display);
+}
+
+.bad-word {
+  color: var(--bad-text-display);
+  text-decoration: underline;
 }
 
 #header {

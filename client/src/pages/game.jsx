@@ -50,6 +50,7 @@ const Game = () => {
   let wordTimeAlloted = useRef(0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
+  let firstLoad = useRef(true);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
   const [addMoney] = useMutation(ADD_MONEY);
@@ -118,21 +119,26 @@ const Game = () => {
     word.current = str1;
   }
 
-  function nextWordAppear() {
-    // lets calculate the money gained before resetting mistakes to 0
+  function calculateMoneyGained() {
     if (word.current.length !== 0 && mistakes.current < 3) {
       const remainingChars = wordTarget.length - word.current.length;
       const percentageTyped = 1 - remainingChars / wordTarget.length;
-      // console.log(wordTarget.length, word.current.length, remainingChars);
-      // if (remainingChars/wordTarget.length)
-      const moneyToAdd = Math.floor(
+
+      return Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
           wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
           percentageTyped
       );
-      console.log(userMoney);
+    }
+    return 0;
+  }
+
+  function nextWordAppear() {
+    // lets calculate the money gained before resetting mistakes to 0
+    if (word.current.length !== 0 && mistakes.current < 3) {
+      const moneyToAdd = calculateMoneyGained();
       setUserMoney(userMoney + moneyToAdd);
       if (User.isLoggedIn())
         addMoney({
@@ -143,7 +149,6 @@ const Game = () => {
     }
     setUserWord("");
     mistakes.current = 0;
-    console.log(`Money: ${userMoney}`);
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
       fetchWords();
@@ -161,12 +166,33 @@ const Game = () => {
     return () => clearTimeout(timer);
   }
 
+  function generateDisplayWord() {
+    let display = [];
+    for (let char in word.current) {
+      if (word.current[char] === wordTarget[char]?.toUpperCase())
+        display.push(<span key={char}>{word.current[char]}</span>);
+      else
+        display.push(
+          <span className="bad-word" key={char}>
+            {word.current[char]}
+          </span>
+        );
+    }
+    display.push(
+      <span className="word-to-type" key="lastPart">
+        {wordTarget.slice(wordDisplay.length).toUpperCase()}
+      </span>
+    );
+    return display;
+  }
+
   useEffect(() => {
     function listener(e) {
       if (e.key == "Backspace") {
         setUserWord(wordDisplay.slice(0, -1));
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
+        if (!correct && word.current.length === 0) return;
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
@@ -189,13 +215,10 @@ const Game = () => {
     }
     window.addEventListener("keydown", listener);
     return () => window.removeEventListener("keydown", listener);
-  }, [wordDisplay]);
+  }, [wordDisplay, wordTarget]);
 
   useEffect(() => {
     if (serverWords?.words.length) {
-      //console.log("Updated words", serverWords.words);
-      // console.log([...new Set([...serverWords.words, ...wordsBank])]);
-      console.log([...serverWords.words, ...wordsBank]);
       setWordsBank([...serverWords.words, ...wordsBank]);
     }
     // console.log("got new words");
@@ -204,6 +227,10 @@ const Game = () => {
 
   useEffect(() => {
     if (!wordsBank.length) return;
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return nextWordAppear();
+    }
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
@@ -218,12 +245,6 @@ const Game = () => {
   // useEffect((num) => {
 
   // }, [userMoney])
-
-  //Runs only on first load because the array is empty
-  useEffect(() => {
-    nextWordAppear();
-    newTimerCountdownAppear();
-  }, []);
 
   // These are just variables being declared.
   // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object
@@ -271,19 +292,16 @@ const Game = () => {
           <div className="wordCard d-flex align-items-center justify-content-center w-75">
             <div className="text-center d-flex flex-column align-items-center">
               <p id="bounty">
-                Bounty:
+                Prize:
                 <Image
                   src={theme === "dark" ? darkDollarSign : dollarSign}
                   fluid
                   className="bounty-image"
                 ></Image>
-                {wordTarget}
+                {calculateMoneyGained().toLocaleString()}
               </p>
               <p id="Word" className="text-break">
-                {wordDisplay}
-                <span className="word-to-type">
-                  {wordTarget.slice(wordDisplay.length).toUpperCase()}
-                </span>
+                {generateDisplayWord()}
               </p>
             </div>
           </div>
