@@ -12,7 +12,7 @@ import multiplier from "/upgradeMoneyMultiplier.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
-import { GET_WORDS } from "../utils/queries.js";
+import { GET_UPGRADES, GET_WORDS } from "../utils/queries.js";
 
 import Container from "react-bootstrap/Container";
 import { useMutation, useQuery } from "@apollo/client";
@@ -43,8 +43,11 @@ const Game = () => {
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordTargetTimeRemaining = useRef(0);
   let wordDifficulty = useRef(0);
+  let hasLoadedUpgrades = useRef(false);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
+  const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
+
   const upgradeLevelMappings = {
     moneyMultiplier: upgradeMoneyMultiplier,
     timeExtender: upgradeTimeExtender,
@@ -55,6 +58,14 @@ const Game = () => {
     timeExtender: setUpgradeTimeExtender,
     wordDifficulty: setUpgradeWordDifficulty,
   };
+
+  if (!hasLoadedUpgrades.current && !upgradesLoading) {
+    for (let upgrade in dbUpgrades.userUpgrades) {
+      if (upgrade.startsWith("_")) continue;
+      setUpgradeMappings[upgrade](dbUpgrades.userUpgrades[upgrade]);
+    }
+    hasLoadedUpgrades.current = true;
+  }
 
   function applyUpgrade(upgrade) {
     const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
