@@ -17,3 +17,29 @@ export const ADD_MONEY = gql`
     addMoney(money: $money)
   }
 `;
+
+export const UPDATE_SETTINGS = gql`
+  mutation Mutation($theme: String) {
+    updateUserSettings(theme: $theme) {
+      theme
+    }
+  }
+`;
+
+export const UPDATE_UPGRADES = gql`
+  mutation UpdateUserUpgrades(
+    $moneyMultiplier: Int
+    $wordDifficulty: Int
+    $timeExtender: Int
+  ) {
+    updateUserUpgrades(
+      moneyMultiplier: $moneyMultiplier
+      wordDifficulty: $wordDifficulty
+      timeExtender: $timeExtender
+    ) {
+      moneyMultiplier
+      timeExtender
+      wordDifficulty
+    }
+  }
+`;

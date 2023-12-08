@@ -7,6 +7,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER, LOGIN_USER } from "../utils/mutations";
 import { useUserContext } from "../components/UserContext.jsx";
 import User from "../utils/user.js";
+import { useThemeContext } from "../components/ThemeContext.jsx";
 
 export default function SignUp(props) {
   const [addUser] = useMutation(ADD_USER);
@@ -15,6 +16,7 @@ export default function SignUp(props) {
   const redirect = useNavigate();
 
   const { user, setUser } = useUserContext();
+  const { queryTheme } = useThemeContext();
 
   useEffect(() => {
     if (user._id) redirect("/");
@@ -76,6 +78,7 @@ export default function SignUp(props) {
 
       User.setToken(response.data.login);
       setUser(User.getUser());
+      queryTheme();
 
       console.log("Successful!");
       document.getElementById("authentication-warning").style.display = "none";

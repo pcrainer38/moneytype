@@ -54,7 +54,7 @@ const Scoreboard = () => {
                       <span>{user.username}</span>
                       <span>
                         <Image
-                          src={dollarSign}
+                          src={theme === "dark" ? darkDollarSign : dollarSign}
                           className="leaderboard-image"
                         ></Image>
                         {user.virtualMoney.toLocaleString()}
