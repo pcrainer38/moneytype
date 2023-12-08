@@ -21,17 +21,19 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    userSettings: async (parent, { userSettingsId }) => {
+    userSettings: async (parent, args, context) => {
+      if (!context.user) throw AuthenticationError;
       try {
-        const settings = await UserSettings.findById(userSettingsId);
+        const settings = await UserSettings.findById(context.user.userSettings);
         return settings;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    userUpgrades: async (parent, { userUpgradesId }) => {
+    userUpgrades: async (parent, args, context) => {
+      if (!context.user) throw AuthenticationError;
       try {
-        const upgrades = await UserUpgrades.findById(userUpgradesId);
+        const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
         return upgrades;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
