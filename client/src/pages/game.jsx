@@ -15,13 +15,14 @@ import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url"
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
-import { GET_WORDS } from "../utils/queries.js";
+import { GET_UPGRADES, GET_WORDS } from "../utils/queries.js";
 
 import Container from "react-bootstrap/Container";
 import { useMutation, useQuery } from "@apollo/client";
 import { UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
+import User from "../utils/user.js";
 
 const Game = () => {
   const [wordsBank, setWordsBank] = useState([]);
@@ -46,8 +47,11 @@ const Game = () => {
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordTargetTimeRemaining = useRef(0);
   let wordDifficulty = useRef(0);
+  let hasLoadedUpgrades = useRef(false);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
+  const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
+
   const upgradeLevelMappings = {
     moneyMultiplier: upgradeMoneyMultiplier,
     timeExtender: upgradeTimeExtender,
@@ -59,14 +63,23 @@ const Game = () => {
     wordDifficulty: setUpgradeWordDifficulty,
   };
 
+  if (!hasLoadedUpgrades.current && User.isLoggedIn() && !upgradesLoading) {
+    for (let upgrade in dbUpgrades.userUpgrades) {
+      if (upgrade.startsWith("_")) continue;
+      setUpgradeMappings[upgrade](dbUpgrades.userUpgrades[upgrade]);
+    }
+    hasLoadedUpgrades.current = true;
+  }
+
   function applyUpgrade(upgrade) {
     const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
     if (userMoney >= cost) {
-      setUpgrades({
-        variables: {
-          [upgrade]: 1,
-        },
-      });
+      if (User.isLoggedIn())
+        setUpgrades({
+          variables: {
+            [upgrade]: 1,
+          },
+        });
       setUserMoney(userMoney - cost);
       setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
     }
