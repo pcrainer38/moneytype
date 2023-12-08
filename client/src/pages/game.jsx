@@ -40,7 +40,8 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] = useState(0);
+  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] =
+    useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
@@ -133,7 +134,6 @@ const Game = () => {
       return Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
-          wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
           wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
           percentageTyped
