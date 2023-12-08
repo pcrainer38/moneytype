@@ -28,3 +28,11 @@ export const GET_UPGRADES = gql`
     }
   }
 `;
+
+export const GET_SETTINGS = gql`
+  query UserSettings {
+    userSettings {
+      theme
+    }
+  }
+`;
