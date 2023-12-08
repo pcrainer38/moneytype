@@ -269,11 +269,6 @@ const Game = () => {
               <h3>Upgrades</h3>
               <div className="upgrades d-flex w-100 justify-content-center">
                 <ul id="upgradelist">
-                  {/* {upgradeschema.map((upgrade) => {
-                                  <li key={upgrade._id} value={upgrade.name}>
-                                      {upgrade._id}
-                                  </li>  
-                              })} */}
                   <li
                     className="upgradebtn"
                     onClick={() => applyUpgrade("moneyMultiplier")}
