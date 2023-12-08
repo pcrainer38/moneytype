@@ -50,6 +50,7 @@ const Game = () => {
   let wordTimeAlloted = useRef(0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
+  let firstLoad = useRef(true);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
   const [addMoney] = useMutation(ADD_MONEY);
@@ -188,6 +189,7 @@ const Game = () => {
         setUserWord(wordDisplay.slice(0, -1));
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
+        if (!correct && word.current.length === 0) return;
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
@@ -210,12 +212,10 @@ const Game = () => {
     }
     window.addEventListener("keydown", listener);
     return () => window.removeEventListener("keydown", listener);
-  }, [wordDisplay]);
+  }, [wordDisplay, wordTarget]);
 
   useEffect(() => {
     if (serverWords?.words.length) {
-      //console.log("Updated words", serverWords.words);
-      // console.log([...new Set([...serverWords.words, ...wordsBank])]);
       console.log([...serverWords.words, ...wordsBank]);
       setWordsBank([...serverWords.words, ...wordsBank]);
     }
@@ -225,6 +225,10 @@ const Game = () => {
 
   useEffect(() => {
     if (!wordsBank.length) return;
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      return nextWordAppear();
+    }
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
@@ -239,12 +243,6 @@ const Game = () => {
   // useEffect((num) => {
 
   // }, [userMoney])
-
-  //Runs only on first load because the array is empty
-  useEffect(() => {
-    nextWordAppear();
-    newTimerCountdownAppear();
-  }, []);
 
   // These are just variables being declared.
   // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object
