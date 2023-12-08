@@ -139,7 +139,6 @@ const Game = () => {
     // lets calculate the money gained before resetting mistakes to 0
     if (word.current.length !== 0 && mistakes.current < 3) {
       const moneyToAdd = calculateMoneyGained();
-      console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
       if (User.isLoggedIn())
         addMoney({
@@ -150,7 +149,6 @@ const Game = () => {
     }
     setUserWord("");
     mistakes.current = 0;
-    console.log(`Money: ${userMoney}`);
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
       fetchWords();
@@ -172,11 +170,16 @@ const Game = () => {
     let display = [];
     for (let char in word.current) {
       if (word.current[char] === wordTarget[char]?.toUpperCase())
-        display.push(word.current[char]);
-      else display.push(<span className="bad-word">{word.current[char]}</span>);
+        display.push(<span key={char}>{word.current[char]}</span>);
+      else
+        display.push(
+          <span className="bad-word" key={char}>
+            {word.current[char]}
+          </span>
+        );
     }
     display.push(
-      <span className="word-to-type">
+      <span className="word-to-type" key="lastPart">
         {wordTarget.slice(wordDisplay.length).toUpperCase()}
       </span>
     );
@@ -216,7 +219,6 @@ const Game = () => {
 
   useEffect(() => {
     if (serverWords?.words.length) {
-      console.log([...serverWords.words, ...wordsBank]);
       setWordsBank([...serverWords.words, ...wordsBank]);
     }
     // console.log("got new words");
