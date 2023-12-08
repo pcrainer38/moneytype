@@ -29,6 +29,12 @@ export const GET_UPGRADES = gql`
   }
 `;
 
+export const GET_MONEY = gql`
+  query VirtualMoney {
+    virtualMoney
+  }
+`;
+
 export const GET_SETTINGS = gql`
   query UserSettings {
     userSettings {
