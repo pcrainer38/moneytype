@@ -51,7 +51,7 @@ const Game = () => {
       setUserMoney(
         userMoney +
           Math.floor(
-            (/*wordTargetBounty*/ wordTarget.length *
+            /*wordTargetBounty*/ (wordTarget.length *
               (1 + wordDifficulty.current * 0.5) +
               wordTargetTimeRemaining.current *
                 2 *
@@ -198,18 +198,21 @@ const Game = () => {
                   <button as="input" type="button" className="clear">
                     <Image src={multiplier} fluid className="icon"></Image>
                     Multiplier
+                    <p>Level "1" | Cost: "1000"</p>
                   </button>
                 </li>
-                <li className="upgradebtn">
+                <li className="upgradebtn ">
                   <button as="input" type="button" className="clear">
                     <Image src={timeExtender} fluid className="icon"></Image>
                     Time Extender
+                    <p>Level "1" | Cost: "1000"</p>
                   </button>
                 </li>
                 <li className="upgradebtn">
                   <button as="input" type="button" className="clear">
                     <Image src={difficulty} fluid className="icon"></Image>
                     Word difficulty
+                    <p>Level "1" | Cost: "1000"</p>
                   </button>
                 </li>
               </ul>
