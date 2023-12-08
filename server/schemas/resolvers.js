@@ -21,19 +21,35 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    userSettings: async (parent, args, context) => {
+    userSettings: async (parent, args, context, info) => {
       if (!context.user) throw AuthenticationError;
+      const ast = parseResolveInfo(info);
+      const fields = {};
+      for (const field in ast.fieldsByTypeName.UserSettings) {
+        fields[field] = 1;
+      }
       try {
-        const settings = await UserSettings.findById(context.user.userSettings);
+        const settings = await UserSettings.findById(
+          context.user.userSettings,
+          fields
+        );
         return settings;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
       }
     },
-    userUpgrades: async (parent, args, context) => {
+    userUpgrades: async (parent, args, context, info) => {
       if (!context.user) throw AuthenticationError;
+      const ast = parseResolveInfo(info);
+      const fields = {};
+      for (const field in ast.fieldsByTypeName.UserUpgrades) {
+        fields[field] = 1;
+      }
       try {
-        const upgrades = await UserUpgrades.findById(context.user.userUpgrades);
+        const upgrades = await UserUpgrades.findById(
+          context.user.userUpgrades,
+          fields
+        );
         return upgrades;
       } catch (error) {
         throw new Error(`Error: ${error.message}`);
