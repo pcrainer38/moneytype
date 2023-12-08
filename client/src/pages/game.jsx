@@ -9,6 +9,7 @@ import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 import difficulty from "/upgradeDifficulty.svg?url";
 import timeExtender from "/upgradeTimeExtender.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
+
 import darkDifficulty from "/upgradeDifficultyDark.svg?url";
 import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
 import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url";
