@@ -172,11 +172,12 @@ const Game = () => {
                     <Image src={multiplier}
                       fluid
                       className="icon">
-                      </Image>                  
-                  Multiplier
+                    </Image>                  
+                    Multiplier 
+                    <p>Level "1" | Cost: "1000"</p>
                   </button>
                 </li>
-                <li className="upgradebtn">
+                <li className="upgradebtn ">
                   <button
                     as="input"
                     type="button"
@@ -187,6 +188,7 @@ const Game = () => {
                       className="icon">
                     </Image>
                     Time Extender
+                    <p>Level "1" | Cost: "1000"</p>
                   </button>
                 </li>
                 <li className="upgradebtn">
@@ -200,6 +202,7 @@ const Game = () => {
                     className="icon">
                   </Image>
                   Word difficulty
+                  <p>Level "1" | Cost: "1000"</p>
                 </button>  
               </li>
               </ul>
