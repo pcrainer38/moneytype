@@ -36,7 +36,6 @@ button.active {
   background-color: var(--quatiary);
 }
 
-
 body {
   background-color: var(--secondary);
 }
@@ -77,7 +76,7 @@ body {
   margin-top: 20px;
 }
 
-.bounty-image{
+.bounty-image {
   width: 50px;
   margin: 5px;
 }
@@ -146,8 +145,7 @@ body {
 }
 
 #Word {
-  font-size:75px ;
-
+  font-size: 75px;
 }
 
 #header {
@@ -173,60 +171,12 @@ body {
   display: none;
 }
 
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --darkPrimary: #134074ff;
-    --darkSecondary: #13315cff;
-    --darkTertiary: #0b2545ff;
-    --darkQuatiary: #8da9c4ff;
-    --darkExtra: #eef4edff;
-  }
-
-  h1 {
-    color: var(--darkExtra);
-  }
-
-  button {
-    background-color: var(--darkTertiary);
-  }
-  button:hover {
-    border-color: var(--darkQuatiary);
-  }
-  button.active {
-    background-color: var(--darkQuatiary);
-  }
-
-  body {
-    background-color: var(--darkSecondary);
-  }
-
-  .gameWindow {
-    background-color: var(--darkPrimary);
-    border-color: var(--darkQuatiary);
-  }
-
-  .UpgradesCard {
-    background-color: var(--darkTertiary);
-      color: var(--darkExtra);
-  }
-
-  .signin {
-    color: var(--darkExtra);
-  }
-
-  #leaderboard {
-    background-color: var(--darkTertiary);
-    border-color: var(--darkExtra);
-  }
-
-  #header {
-    background-color: var(--darkPrimary);
-    border-bottom: solid;
-    border-color: var(--darkQuatiary);
-  }
-
-  #rankings {
-    color: var(--darkExtra);
-  }
-} */
+.dark {
+  --primary: #134074ff !important;
+  --secondary: #13315cff !important;
+  --tertiary: #0b2545ff !important;
+  --quatiary: #8da9c4ff !important;
+  --extra: #eef4edff !important;
+  background-color: var(--secondary);
+  min-height: 100vh;
+}

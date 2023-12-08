@@ -17,3 +17,11 @@ export const ADD_MONEY = gql`
     addMoney(money: $money)
   }
 `;
+
+export const UPDATE_SETTINGS = gql`
+  mutation Mutation($theme: String) {
+    updateUserSettings(theme: $theme) {
+      theme
+    }
+  }
+`;
