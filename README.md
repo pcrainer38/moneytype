@@ -1,11 +1,11 @@
-# MoneyType
+# Money Type
 
   ## Badge
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description 
   
-  Interactive game where you type and earn MoneyType cash. The faster and more accurately you type, the more cash you win. Keep practicing to improve your typing skills and increase your position on the leaderboard! 
+  Interactive game where you type and earn Money Type cash. The faster and more accurately you type, the more cash you win. Keep practicing to improve your typing skills and increase your position on the leaderboard! 
 
   ## Link
 
@@ -13,6 +13,9 @@
 
   ## MoneyType
 
+![Alt text](client/public/MoneyType.png)
+
+![Alt text](<client/public/MoneyType Dark.png>)
 
 
   ## Table of Contents 
@@ -29,16 +32,16 @@
 
   ## Usage 
  
-  Type to earn MoneyType cash.  The faster and more accurately you type the more cash you win.  
+  Type to earn Money Type cash.  The faster and more accurately you type the more cash you win.  
 
   ## Contributors   
  
-  Andrew Shoener https://github.com/ashoener 
-  Brenden Le https://github.com/B-R-Ls 
-  Emmanuel Exiga https://github.com/aPersonIsHere
-  Kevin Omwega https://github.com/kevin6314
-  Pam Crainer https://github.com/pcrainer38
-  Pam worked with tutor, Joem Casusi, on the SignUp page
+  - Andrew Shoener https://github.com/ashoener
+  - Brenden Le https://github.com/B-R-Ls 
+  - Emmanuel Exiga https://github.com/aPersonIsHere
+  - Kevin Omwega https://github.com/kevin6314
+  - Pam Crainer https://github.com/pcrainer38
+  - Pam worked with tutor, Joem Casusi, on the SignUp page
 
 ## License 
  
