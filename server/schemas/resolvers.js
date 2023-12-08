@@ -200,6 +200,28 @@ const resolvers = {
 
       throw AuthenticationError;
     },
+    addMoney: async (parent, { money }, context) => {
+      if (!context.user) throw AuthenticationError;
+      if (money < 1)
+        throw new GraphQLError("Invalid money amount.", {
+          extensions: {
+            code: "INVALID_MONEY_AMOUNT",
+          },
+        });
+      const user = await User.findByIdAndUpdate(
+        context.user._id,
+        {
+          $inc: { virtualMoney: money },
+        },
+        {
+          new: true,
+          fields: {
+            virtualMoney: 1,
+          },
+        }
+      );
+      return user.virtualMoney;
+    },
   },
 };
 
