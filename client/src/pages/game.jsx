@@ -6,6 +6,9 @@ import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+import difficulty from "/upgradeDifficulty.svg?url";
+import timeExtender from "/upgradeTimeExtender.svg?url";
+import multiplier from "/upgradeMoneyMultiplier.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
@@ -151,36 +154,54 @@ const Game = () => {
               </p>
             </div>
           </div>
-          <div className="UpgradesCard d-flex">
+          <div className="UpgradesCard d-flex w-25">
             <h3>upgrades</h3>
-
-            <div className="upgrades d-flex">
-              <div className="icons">
-                <ul>
-                  <li>
-                    <img></img>
-                  </li>
-                  <li>
-                    <img></img>
-                  </li>
-                  <li>
-                    <img></img>
-                  </li>
-                  <li>
-                    <img></img>
-                  </li>
-                </ul>
-              </div>
+            <div className="upgrades d-flex w-100 justify-content-center">
               <ul id="upgradelist">
                 {/* {upgradeschema.map((upgrade) => {
                                 <li key={upgrade._id} value={upgrade.name}>
                                     {upgrade._id}
                                 </li>  
                             })} */}
-                <li>upgrade1</li>
-                <li>upgrade2</li>
-                <li>upgrade3</li>
-                <li>upgrade4</li>
+                <li className="upgradebtn">
+                  <button
+                    as="input"
+                    type="button"
+                    className="clear"
+                  >
+                    <Image src={multiplier}
+                      fluid
+                      className="icon">
+                      </Image>                  
+                  Multiplier
+                  </button>
+                </li>
+                <li className="upgradebtn">
+                  <button
+                    as="input"
+                    type="button"
+                    className="clear"
+                  >
+                    <Image src={timeExtender}
+                      fluid
+                      className="icon">
+                    </Image>
+                    Time Extender
+                  </button>
+                </li>
+                <li className="upgradebtn">
+                <button
+                    as="input"
+                    type="button"
+                    className="clear"
+                > 
+                  <Image src={difficulty}
+                    fluid
+                    className="icon">
+                  </Image>
+                  Word difficulty
+                </button>  
+              </li>
               </ul>
             </div>
           </div>
