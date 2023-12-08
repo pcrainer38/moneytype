@@ -140,7 +140,7 @@ const Game = () => {
     mistakes.current = 0;
     console.log(`Money: ${userMoney}`);
     // if less than 5 words left, fetch new words
-    if (wordsBank.length == 4 && !loadingWords) {
+    if (wordsBank.length < 5 && !loadingWords) {
       fetchWords();
     }
     if (!wordsBank.length) return;
