@@ -48,52 +48,54 @@ function App() {
   const { user, setUser } = useUserContext();
 
   return (
-    <ApolloProvider client={client}>
-      <Navbar expand="lg" id="header">
-        <Container>
-          <Link
-            to={"/"}
-            className="d-flex align-items-center text-decoration-none"
-          >
-            <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
-            <h1>Money Type</h1>
-          </Link>
-          <nav>
-            <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
-            {user._id && User.isLoggedIn() ? (
-              <button
-                as="input"
-                type="button"
-                className="navbtn"
-                onClick={() => {
-                  User.logout();
-                  setUser({});
-                }}
-              >
-                Logout
-              </button>
-            ) : (
-              <NavLink to={`/signUp`}>Sign Up</NavLink>
-            )}
-          </nav>
-        </Container>
-      </Navbar>
-      <div className="gameCard">
-        <Outlet />
-      </div>
-      <Container>
-        <div className="toggle d-flex justify-content-end">
-          <button
-            onClick={() => {
-              setTheme(theme === "dark" ? "light" : "dark");
-            }}
-            className="theme-switcher"
-          >
-            <Image src={theme === "dark" ? moonSvg : sunSvg} fluid></Image>
-          </button>
+    <div className={theme}>
+      <ApolloProvider client={client}>
+        <Navbar expand="lg" id="header">
+          <Container>
+            <Link
+              to={"/"}
+              className="d-flex align-items-center text-decoration-none"
+            >
+              <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
+              <h1>Money Type</h1>
+            </Link>
+            <nav>
+              <NavLink to={"/leaderboard"}>Leaderboard</NavLink>
+              {user._id && User.isLoggedIn() ? (
+                <button
+                  as="input"
+                  type="button"
+                  className="navbtn"
+                  onClick={() => {
+                    User.logout();
+                    setUser({});
+                  }}
+                >
+                  Logout
+                </button>
+              ) : (
+                <NavLink to={`/signUp`}>Sign Up</NavLink>
+              )}
+            </nav>
+          </Container>
+        </Navbar>
+        <div className="gameCard">
+          <Outlet />
         </div>
-      </Container>
-    </ApolloProvider>
+        <Container>
+          <div className="toggle d-flex justify-content-end">
+            <button
+              onClick={() => {
+                setTheme(theme === "dark" ? "light" : "dark");
+              }}
+              className="theme-switcher"
+            >
+              <Image src={theme === "dark" ? moonSvg : sunSvg} fluid></Image>
+            </button>
+          </div>
+        </Container>
+      </ApolloProvider>
+    </div>
   );
 }
 
