@@ -25,36 +25,31 @@ const Game = () => {
     },
   });
   const { theme, setTheme } = useThemeContext();
-  const [word, setWord] = useState("");
-  const [wordTarget, setWordTarget] = useState("");
-  let mistakes = useRef(0);
+  const [wordDisplay, setWordDisplay] = useState("");
+  const [userMoney, setUserMoney] = useState(0);
+  const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
+  const [wordTimer, setWordTimer] = useState("");
+  const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
+  const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
+  const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
+  let word = useRef("");
+  let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
+  let wordTargetTimeRemaining = useRef(0);
+  let wordDifficulty = useRef(0);
 
-  useEffect(() => {
-    function listener(e) {
-      if (e.key == "Backspace") {
-        setWord(word.slice(0, -1));
-      } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
-        const correct = e.key === wordTarget[word.length];
-        if (!correct) {
-          // increment num mistakes
-          mistakes.current++;
-          // console.log(mistakes.current);
-          if (mistakes.current > 2) {
-            nextWordAppear();
-            setWord("");
-            return;
-          }
-        }
-        // if num mistakes > 3, move to next word
-        setWord(word + e.key.toUpperCase());
-      }
-    }
-    window.addEventListener("keydown", listener);
-    return () => window.removeEventListener("keydown", listener);
-  }, [word]);
+  function setUserWord (str1) {
+    setWordDisplay(str1);
+    word.current = str1;
+  }
 
   function nextWordAppear() {
+    // lets calculate the money gained before resetting mistakes to 0
+    if ( word.current.length !== 0 && mistakes.current < 3 ) {
+      setUserMoney( userMoney + Math.floor( ( ( ( /*wordTargetBounty*/ wordTarget.length * ( ( 1 + ( wordDifficulty.current ) * 0.5 ) ) ) + ( wordTargetTimeRemaining.current * 2 * ( 1 - ( mistakes.current * .33 ) ) ) ) * ( upgradeMoneyMultiplier + ( ( wordDifficulty.current ) * .25 ) ) ) ) );
+    }
+    setUserWord("");
     mistakes.current = 0;
+    console.log(`Money: ${userMoney}`);
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
       fetchWords();
@@ -65,13 +60,32 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  // useEffect(() => {
-  //   return;
-  // }, [wordTarget]);
+  useEffect(() => {
+    function listener(e) {
+      if (e.key == "Backspace") {
+        setUserWord(wordDisplay.slice(0, -1));
+      } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
+        const correct = e.key === wordTarget[wordDisplay.length];
+        if (!correct) {
+          // increment num mistakes
+          mistakes.current++;
+          // console.log(mistakes.current);
+          if (mistakes.current > 2) {
+            nextWordAppear();
+            return;
+          }
+        }
+        // if num mistakes > 3, move to next word
+        setUserWord(wordDisplay + e.key.toUpperCase());
+      }
+    }
+    window.addEventListener("keydown", listener);
+    return () => window.removeEventListener("keydown", listener);
+  }, [wordDisplay]);
 
   useEffect(() => {
     if (serverWords?.words.length) {
-      console.log("Updated words", serverWords.words);
+      //console.log("Updated words", serverWords.words);
       setWordsBank([...wordsBank, ...serverWords.words]);
     }
     // console.log("got new words");
@@ -80,12 +94,18 @@ const Game = () => {
 
   useEffect(() => {
     if (!wordsBank.length) return;
+    wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty
+    wordTargetTimeRemaining.current = (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25) * 1000;
+    //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
-      setWord("");
-    }, (1.25 + 0 * 0.1 + wordsBank[wordsBank.length - 1].difficulty * 0.25) * 1000);
+    }, wordTargetTimeRemaining.current);
     return () => clearTimeout(timer);
   }, [wordsBank]);
+
+  // useEffect((num) => {
+
+  // }, [userMoney])
 
   //Runs only on first load because the array is empty
   useEffect(() => {
@@ -147,7 +167,7 @@ const Game = () => {
                 {wordTarget}
               </p>
               <p id="Word" className="text-break">
-                {word}
+                {wordDisplay}
               </p>
             </div>
           </div>
