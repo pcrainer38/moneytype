@@ -230,7 +230,14 @@ const Game = () => {
                   <button as="input" type="button" className="clear">
                     <Image src={multiplier} fluid className="icon"></Image>
                     Multiplier
-                    <p>Level "1" | Cost: "1000"</p>
+                    <p>
+                      Level "{upgradeMoneyMultiplier}" | Cost: "
+                      {getUpgradeCost(
+                        "moneyMultiplier",
+                        upgradeMoneyMultiplier
+                      )}
+                      "
+                    </p>
                   </button>
                 </li>
                 <li
@@ -240,7 +247,10 @@ const Game = () => {
                   <button as="input" type="button" className="clear">
                     <Image src={timeExtender} fluid className="icon"></Image>
                     Time Extender
-                    <p>Level "1" | Cost: "1000"</p>
+                    <p>
+                      Level "{upgradeTimeExtender}" | Cost: "
+                      {getUpgradeCost("timeExtender", upgradeTimeExtender)}"
+                    </p>
                   </button>
                 </li>
                 <li
@@ -250,7 +260,10 @@ const Game = () => {
                   <button as="input" type="button" className="clear">
                     <Image src={difficulty} fluid className="icon"></Image>
                     Word difficulty
-                    <p>Level "1" | Cost: "1000"</p>
+                    <p>
+                      Level "{upgradeWordDifficulty}" | Cost: "
+                      {getUpgradeCost("wordDifficulty", upgradeWordDifficulty)}"
+                    </p>
                   </button>
                 </li>
               </ul>
