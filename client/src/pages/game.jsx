@@ -155,9 +155,12 @@ const Game = () => {
             nextWordAppear();
             return;
           }
-        } else if (mistakes.current == 0 && wordTarget.length == ( wordDisplay.length + 1) ) {
-            nextWordAppear();
-            return;
+        } else if (
+          mistakes.current == 0 &&
+          wordTarget.length == wordDisplay.length + 1
+        ) {
+          nextWordAppear();
+          return;
         }
         //Above code will run when the word is successfully typed
         setUserWord(wordDisplay + e.key.toUpperCase());
@@ -180,7 +183,7 @@ const Game = () => {
     if (!wordsBank.length) return;
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
-      (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25);
+      1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
     setWordTargetTimeRemaining(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
@@ -259,7 +262,9 @@ const Game = () => {
             </div>
           </div>
           <div className="trackers d-flex flex-column align-items-center">
-            <p id="money" className="w-100">Money: 100000000000000000000000</p>
+            <p id="money" className="w-100">
+              Money: {userMoney.toLocaleString()}
+            </p>
             <div className="UpgradesCard d-flex w-100">
               <h3>Upgrades</h3>
               <div className="upgrades d-flex w-100 justify-content-center">
@@ -274,15 +279,18 @@ const Game = () => {
                     onClick={() => applyUpgrade("moneyMultiplier")}
                   >
                     <button as="input" type="button" className="clear">
-                      <Image src={theme === "dark" ? darkMultiplier : multiplier} fluid className="icon"></Image>
+                      <Image
+                        src={theme === "dark" ? darkMultiplier : multiplier}
+                        fluid
+                        className="icon"
+                      ></Image>
                       Multiplier
                       <p>
-                        Level "{upgradeMoneyMultiplier}" | Cost: "
+                        Level {upgradeMoneyMultiplier} | Cost:{" "}
                         {getUpgradeCost(
                           "moneyMultiplier",
                           upgradeMoneyMultiplier
-                        )}
-                        "
+                        ).toLocaleString()}
                       </p>
                     </button>
                   </li>
@@ -291,11 +299,18 @@ const Game = () => {
                     onClick={() => applyUpgrade("timeExtender")}
                   >
                     <button as="input" type="button" className="clear">
-                      <Image src={theme === "dark" ? darkTimeExtender : timeExtender} fluid className="icon"></Image>
+                      <Image
+                        src={theme === "dark" ? darkTimeExtender : timeExtender}
+                        fluid
+                        className="icon"
+                      ></Image>
                       Time Extender
                       <p>
-                        Level "{upgradeTimeExtender}" | Cost: "
-                        {getUpgradeCost("timeExtender", upgradeTimeExtender)}"
+                        Level {upgradeTimeExtender} | Cost:{" "}
+                        {getUpgradeCost(
+                          "timeExtender",
+                          upgradeTimeExtender
+                        ).toLocaleString()}
                       </p>
                     </button>
                   </li>
@@ -304,11 +319,18 @@ const Game = () => {
                     onClick={() => applyUpgrade("wordDifficulty")}
                   >
                     <button as="input" type="button" className="clear">
-                      <Image src={theme === "dark" ? darkDifficulty : difficulty} fluid className="icon"></Image>
+                      <Image
+                        src={theme === "dark" ? darkDifficulty : difficulty}
+                        fluid
+                        className="icon"
+                      ></Image>
                       Word Difficulty
                       <p>
-                        Level "{upgradeWordDifficulty}" | Cost: "
-                        {getUpgradeCost("wordDifficulty", upgradeWordDifficulty)}"
+                        Level {upgradeWordDifficulty} | Cost:{" "}
+                        {getUpgradeCost(
+                          "wordDifficulty",
+                          upgradeWordDifficulty
+                        ).toLocaleString()}
                       </p>
                     </button>
                   </li>
