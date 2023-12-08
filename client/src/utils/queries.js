@@ -18,3 +18,13 @@ export const GET_WORDS = gql`
     }
   }
 `;
+
+export const GET_UPGRADES = gql`
+  query UserUpgrades {
+    userUpgrades {
+      moneyMultiplier
+      timeExtender
+      wordDifficulty
+    }
+  }
+`;
