@@ -167,6 +167,21 @@ const Game = () => {
     return () => clearTimeout(timer);
   }
 
+  function generateDisplayWord() {
+    let display = [];
+    for (let char in word.current) {
+      if (word.current[char] === wordTarget[char]?.toUpperCase())
+        display.push(word.current[char]);
+      else display.push(<span className="bad-word">{word.current[char]}</span>);
+    }
+    display.push(
+      <span className="word-to-type">
+        {wordTarget.slice(wordDisplay.length).toUpperCase()}
+      </span>
+    );
+    return display;
+  }
+
   useEffect(() => {
     function listener(e) {
       if (e.key == "Backspace") {
@@ -286,10 +301,7 @@ const Game = () => {
                 {calculateMoneyGained().toLocaleString()}
               </p>
               <p id="Word" className="text-break">
-                {wordDisplay}
-                <span className="word-to-type">
-                  {wordTarget.slice(wordDisplay.length).toUpperCase()}
-                </span>
+                {generateDisplayWord()}
               </p>
             </div>
           </div>
