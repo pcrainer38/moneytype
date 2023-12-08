@@ -40,14 +40,17 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTargetTimeRemaining, setWordTargetTimeRemaining] = useState(0);
+  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] =
+    useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
   let word = useRef("");
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordDifficulty = useRef(0);
-  let wordTimeAlloted = useRef(0);
+  let wordTimeAlloted = useRef(0.0);
+  let wordTargetTimeRemaining = useRef(0.0);
+  let wordTimeStarted = useRef(0.0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
   let firstLoad = useRef(true);
@@ -124,10 +127,13 @@ const Game = () => {
       const remainingChars = wordTarget.length - word.current.length;
       const percentageTyped = 1 - remainingChars / wordTarget.length;
 
+      const timeTaken = (Date.now() - wordTimeStarted.current) / 1000;
+      wordTargetTimeRemaining.current = wordTimeAlloted.current - timeTaken;
+
       return Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
-          wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
+          wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
           percentageTyped
       );
@@ -148,6 +154,7 @@ const Game = () => {
         });
     }
     setUserWord("");
+    wordTimeStarted.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
     if (wordsBank.length < 5 && !loadingWords) {
@@ -158,13 +165,12 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  function newTimerCountdownAppear() {
-    //console.log(Date());
-    let timer = setTimeout(() => {
-      newTimerCountdownAppear();
-    }, wordTimeAlloted.current * 100);
-    return () => clearTimeout(timer);
-  }
+  // useEffect(() => {
+  //   let timer = setTimeout(() => {
+  //     console.log((Date.now() - wordTimeStarted.current) / 1000);
+  //   }, 100);
+  //   return () => clearTimeout(timer);
+  // });
 
   function generateDisplayWord() {
     let display = [];
@@ -234,7 +240,7 @@ const Game = () => {
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
-    setWordTargetTimeRemaining(wordTimeAlloted.current);
+    setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
