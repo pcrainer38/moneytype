@@ -40,14 +40,14 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTimer, setWordTimer] = useState("");
+  const [wordTargetTimeRemaining, setWordTargetTimeRemaining] = useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
   let word = useRef("");
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
-  let wordTargetTimeRemaining = useRef(0);
   let wordDifficulty = useRef(0);
+  let wordTimeAlloted = useRef(0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
 
@@ -131,22 +131,34 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
+  function newTimerCountdownAppear() {
+    //console.log(Date());
+    let timer = setTimeout(() => {
+      newTimerCountdownAppear();
+    }, wordTimeAlloted.current * 100);
+    return () => clearTimeout(timer);
+  }
+
   useEffect(() => {
     function listener(e) {
       if (e.key == "Backspace") {
         setUserWord(wordDisplay.slice(0, -1));
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
+        console.log(wordDisplay.length, wordTarget.length);
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
-          // console.log(mistakes.current);
+          //if number of mistakes is greater than 3, then move to next word
           if (mistakes.current > 2) {
             nextWordAppear();
             return;
           }
+        } else if (mistakes.current == 0 && wordTarget.length == ( wordDisplay.length + 1) ) {
+            nextWordAppear();
+            return;
         }
-        // if num mistakes > 3, move to next word
+        //Above code will run when the word is successfully typed
         setUserWord(wordDisplay + e.key.toUpperCase());
       }
     }
@@ -166,12 +178,13 @@ const Game = () => {
   useEffect(() => {
     if (!wordsBank.length) return;
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
-    wordTargetTimeRemaining.current =
-      (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25) * 1000;
+    wordTimeAlloted.current =
+      (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25);
+    setWordTargetTimeRemaining(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
-    }, wordTargetTimeRemaining.current);
+    }, wordTimeAlloted.current * 1000);
     return () => clearTimeout(timer);
   }, [wordsBank]);
 
@@ -182,6 +195,7 @@ const Game = () => {
   //Runs only on first load because the array is empty
   useEffect(() => {
     nextWordAppear();
+    newTimerCountdownAppear();
   }, []);
 
   // These are just variables being declared.
