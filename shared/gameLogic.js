@@ -1,21 +1,21 @@
 const upgrades = {
   moneyMultiplier: {
     baseCost: 120,
-    maxLevel: 100,
+    maxLevel: 99,
     calculateCost(level) {
       return this.baseCost * (1 + level ** 2);
     },
   },
   wordDifficulty: {
     baseCost: 250,
-    maxLevel: 10,
+    maxLevel: 9,
     calculateCost(level) {
       return this.baseCost + level * 750;
     },
   },
   timeExtender: {
     baseCost: 175,
-    maxLevel: 30,
+    maxLevel: 29,
     calculateCost(level) {
       return this.baseCost * (1 + level ** 2);
     },
