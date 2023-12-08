@@ -107,9 +107,10 @@ const Game = () => {
       const moneyToAdd = Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
-          wordTargetTimeRemaining.current * 2 * (1 - mistakes.current * 0.33)) *
+          wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
           (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
       );
+      console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
       if (User.isLoggedIn())
         addMoney({
