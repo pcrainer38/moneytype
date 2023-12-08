@@ -11,3 +11,9 @@ export const LOGIN_USER = gql`
     login(email: $email, password: $password)
   }
 `;
+
+export const ADD_MONEY = gql`
+  mutation Mutation($money: Int!) {
+    addMoney(money: $money)
+  }
+`;
