@@ -2,6 +2,14 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
 import App from "./App.jsx";
 import Game from "./pages/game.jsx";
 import SignUp from "./pages/signUp.jsx";
@@ -33,10 +41,31 @@ const router = createBrowserRouter([
   },
 ]);
 
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("auth_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ThemeProvider>
-    <UserProvider>
-      <RouterProvider router={router} />
-    </UserProvider>
-  </ThemeProvider>
+  <ApolloProvider client={client}>
+    <ThemeProvider>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </ThemeProvider>
+  </ApolloProvider>
 );
