@@ -124,7 +124,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   font-size: 20px;
-  font-weight:700;
+  font-weight: 700;
   white-space: nowrap;
   overflow-y: auto;
 }
@@ -167,6 +167,10 @@ body {
 
 #Word {
   font-size: 75px;
+}
+
+.word-to-type {
+  color: var(--secondary);
 }
 
 #header {
