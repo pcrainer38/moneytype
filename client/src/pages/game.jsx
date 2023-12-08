@@ -146,7 +146,6 @@ const Game = () => {
         setUserWord(wordDisplay.slice(0, -1));
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
-        console.log(wordDisplay.length, wordTarget.length);
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
@@ -155,7 +154,7 @@ const Game = () => {
             nextWordAppear();
             return;
           }
-        } else if (mistakes.current == 0 && wordTarget.length == ( wordDisplay.length + 1) ) {
+        } else if (wordTarget.toUpperCase() == (wordDisplay.toUpperCase() + e.key.toUpperCase())) {
             nextWordAppear();
             return;
         }
