@@ -56,7 +56,12 @@ const Game = () => {
   // Get upgrades
   const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
   // Get money
-  const { data: dbMoney, loading: moneyLoading } = useQuery(GET_MONEY);
+  const {
+    data: dbMoney,
+    previousData: prevDbMoney,
+    loading: moneyLoading,
+    refetch: refreshMoney,
+  } = useQuery(GET_MONEY, { fetchPolicy: "no-cache" });
 
   const upgradeLevelMappings = {
     moneyMultiplier: upgradeMoneyMultiplier,
@@ -78,21 +83,33 @@ const Game = () => {
   }
 
   if (!hasLoadedMoney.current && User.isLoggedIn() && !moneyLoading) {
+    console.log("Refreshed user money to %s", dbMoney.virtualMoney);
     setUserMoney(dbMoney.virtualMoney);
     hasLoadedMoney.current = true;
   }
 
-  function applyUpgrade(upgrade) {
+  async function applyUpgrade(upgrade) {
     const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
     if (userMoney >= cost) {
-      if (User.isLoggedIn())
-        setUpgrades({
-          variables: {
-            [upgrade]: 1,
-          },
-        });
-      setUserMoney(userMoney - cost);
-      setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
+      let didUpgrade = true;
+      if (User.isLoggedIn()) {
+        try {
+          await setUpgrades({
+            variables: {
+              [upgrade]: 1,
+            },
+          });
+          didUpgrade = true;
+        } catch (e) {
+          const newMoney = await refreshMoney();
+          setUserMoney(newMoney.data.virtualMoney);
+          didUpgrade = false;
+        }
+      }
+      if (didUpgrade) {
+        setUserMoney(userMoney - cost);
+        setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
+      }
     }
   }
 
@@ -154,9 +171,12 @@ const Game = () => {
             nextWordAppear();
             return;
           }
-        } else if (wordTarget.toUpperCase() == (wordDisplay.toUpperCase() + e.key.toUpperCase())) {
-            nextWordAppear();
-            return;
+        } else if (
+          wordTarget.toUpperCase() ==
+          wordDisplay.toUpperCase() + e.key.toUpperCase()
+        ) {
+          nextWordAppear();
+          return;
         }
         //Above code will run when the word is successfully typed
         setUserWord(wordDisplay + e.key.toUpperCase());
