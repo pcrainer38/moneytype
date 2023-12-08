@@ -121,11 +121,16 @@ const Game = () => {
   function nextWordAppear() {
     // lets calculate the money gained before resetting mistakes to 0
     if (word.current.length !== 0 && mistakes.current < 3) {
+      const remainingChars = wordTarget.length - word.current.length;
+      const percentageTyped = 1 - remainingChars / wordTarget.length;
+      // console.log(wordTarget.length, word.current.length, remainingChars);
+      // if (remainingChars/wordTarget.length)
       const moneyToAdd = Math.floor(
         /*wordTargetBounty*/ (wordTarget.length *
           (1 + wordDifficulty.current * 0.5) +
           wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
-          (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
+          (upgradeMoneyMultiplier + wordDifficulty.current * 0.25) *
+          percentageTyped
       );
       console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
@@ -174,6 +179,7 @@ const Game = () => {
           wordTarget.toUpperCase() ==
           wordDisplay.toUpperCase() + e.key.toUpperCase()
         ) {
+          word.current += e.key.toUpperCase();
           nextWordAppear();
           return;
         }
