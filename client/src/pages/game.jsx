@@ -15,7 +15,11 @@ import { useThemeContext } from "../components/ThemeContext.jsx";
 import { GET_WORDS } from "../utils/queries.js";
 
 import Container from "react-bootstrap/Container";
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
+import { UPDATE_UPGRADES } from "../utils/mutations.js";
+
+import { getUpgradeCost } from "../../../shared/gameLogic.js";
+
 const Game = () => {
   const [wordsBank, setWordsBank] = useState([]);
   const {
@@ -40,15 +44,50 @@ const Game = () => {
   let wordTargetTimeRemaining = useRef(0);
   let wordDifficulty = useRef(0);
 
-  function setUserWord (str1) {
+  const [setUpgrades] = useMutation(UPDATE_UPGRADES);
+  const upgradeLevelMappings = {
+    moneyMultiplier: upgradeMoneyMultiplier,
+    timeExtender: upgradeTimeExtender,
+    wordDifficulty: upgradeWordDifficulty,
+  };
+  const setUpgradeMappings = {
+    moneyMultiplier: setUpgradeMoneyMultiplier,
+    timeExtender: setUpgradeTimeExtender,
+    wordDifficulty: setUpgradeWordDifficulty,
+  };
+
+  function applyUpgrade(upgrade) {
+    const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
+    if (userMoney >= cost) {
+      setUpgrades({
+        variables: {
+          [upgrade]: 1,
+        },
+      });
+      setUserMoney(userMoney - cost);
+      setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
+    }
+  }
+
+  function setUserWord(str1) {
     setWordDisplay(str1);
     word.current = str1;
   }
 
   function nextWordAppear() {
     // lets calculate the money gained before resetting mistakes to 0
-    if ( word.current.length !== 0 && mistakes.current < 3 ) {
-      setUserMoney( userMoney + Math.floor( ( ( ( /*wordTargetBounty*/ wordTarget.length * ( ( 1 + ( wordDifficulty.current ) * 0.5 ) ) ) + ( wordTargetTimeRemaining.current * 2 * ( 1 - ( mistakes.current * .33 ) ) ) ) * ( upgradeMoneyMultiplier + ( ( wordDifficulty.current ) * .25 ) ) ) ) );
+    if (word.current.length !== 0 && mistakes.current < 3) {
+      setUserMoney(
+        userMoney +
+          Math.floor(
+            /*wordTargetBounty*/ (wordTarget.length *
+              (1 + wordDifficulty.current * 0.5) +
+              wordTargetTimeRemaining.current *
+                2 *
+                (1 - mistakes.current * 0.33)) *
+              (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
+          )
+      );
     }
     setUserWord("");
     mistakes.current = 0;
@@ -97,8 +136,9 @@ const Game = () => {
 
   useEffect(() => {
     if (!wordsBank.length) return;
-    wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty
-    wordTargetTimeRemaining.current = (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25) * 1000;
+    wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
+    wordTargetTimeRemaining.current =
+      (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25) * 1000;
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
@@ -175,7 +215,7 @@ const Game = () => {
             </div>
           </div>
           <div className="UpgradesCard d-flex w-25">
-            <h3>upgrades</h3>
+            <h3>Upgrades</h3>
             <div className="upgrades d-flex w-100 justify-content-center">
               <ul id="upgradelist">
                 {/* {upgradeschema.map((upgrade) => {
@@ -183,48 +223,49 @@ const Game = () => {
                                     {upgrade._id}
                                 </li>  
                             })} */}
-                <li className="upgradebtn">
-                  <button
-                    as="input"
-                    type="button"
-                    className="clear"
-                  >
-                    <Image src={multiplier}
-                      fluid
-                      className="icon">
-                    </Image>                  
-                    Multiplier 
-                    <p>Level "1" | Cost: "1000"</p>
+                <li
+                  className="upgradebtn"
+                  onClick={() => applyUpgrade("moneyMultiplier")}
+                >
+                  <button as="input" type="button" className="clear">
+                    <Image src={multiplier} fluid className="icon"></Image>
+                    Multiplier
+                    <p>
+                      Level "{upgradeMoneyMultiplier}" | Cost: "
+                      {getUpgradeCost(
+                        "moneyMultiplier",
+                        upgradeMoneyMultiplier
+                      )}
+                      "
+                    </p>
                   </button>
                 </li>
-                <li className="upgradebtn ">
-                  <button
-                    as="input"
-                    type="button"
-                    className="clear"
-                  >
-                    <Image src={timeExtender}
-                      fluid
-                      className="icon">
-                    </Image>
+                <li
+                  className="upgradebtn"
+                  onClick={() => applyUpgrade("timeExtender")}
+                >
+                  <button as="input" type="button" className="clear">
+                    <Image src={timeExtender} fluid className="icon"></Image>
                     Time Extender
-                    <p>Level "1" | Cost: "1000"</p>
+                    <p>
+                      Level "{upgradeTimeExtender}" | Cost: "
+                      {getUpgradeCost("timeExtender", upgradeTimeExtender)}"
+                    </p>
                   </button>
                 </li>
-                <li className="upgradebtn">
-                <button
-                    as="input"
-                    type="button"
-                    className="clear"
-                > 
-                  <Image src={difficulty}
-                    fluid
-                    className="icon">
-                  </Image>
-                  Word difficulty
-                  <p>Level "1" | Cost: "1000"</p>
-                </button>  
-              </li>
+                <li
+                  className="upgradebtn"
+                  onClick={() => applyUpgrade("wordDifficulty")}
+                >
+                  <button as="input" type="button" className="clear">
+                    <Image src={difficulty} fluid className="icon"></Image>
+                    Word difficulty
+                    <p>
+                      Level "{upgradeWordDifficulty}" | Cost: "
+                      {getUpgradeCost("wordDifficulty", upgradeWordDifficulty)}"
+                    </p>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>

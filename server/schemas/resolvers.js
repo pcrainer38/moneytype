@@ -5,7 +5,7 @@ import {
   AuthenticationError,
   AuthenticatedError,
 } from "../utils/auth.js";
-import { getUpgradeCost } from "../utils/gameLogic.js";
+import { getUpgradeCost } from "../../shared/gameLogic.js";
 import { GraphQLError } from "graphql";
 
 const resolvers = {
