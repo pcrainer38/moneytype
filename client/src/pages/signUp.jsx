@@ -64,7 +64,8 @@ export default function SignUp(props) {
     }
   }
 
-  async function submitLogin() {
+  async function submitLogin(e) {
+    e.preventDefault();
     let emailValue = document.getElementById("email").value;
     let passwordValue = document.getElementById("password").value;
 
@@ -89,32 +90,40 @@ export default function SignUp(props) {
     }
   }
 
-  async function submitSignup() {
+  async function submitSignup(e) {
+    e.preventDefault();
     let usernameValue = document.getElementById("username").value;
     let emailValue = document.getElementById("email").value;
     let passwordValue = document.getElementById("password").value;
-
-    const response = await addUser({
-      variables: {
-        username: usernameValue,
-        email: emailValue,
-        password: passwordValue,
-      },
-    });
-
-    if (!response?.errors) {
+    let response;
+    let err;
+    try {
+      response = await addUser({
+        variables: {
+          username: usernameValue,
+          email: emailValue,
+          password: passwordValue,
+        },
+      });
+    } catch (e) {
+      err = e;
+    }
+    if (!err && !response?.errors) {
       console.log("Successful!");
       User.setToken(response.data.login);
       setUser(User.getUser());
     } else {
       console.log("Error! Check Network tab.");
-      console.log(response.errors);
+      console.log(err ?? response?.errors);
     }
   }
 
   if (auth === "signin") {
     return (
-      <div className="signin col-4 mt-5 text-center mx-auto">
+      <form
+        className="signin col-4 mt-5 text-center mx-auto"
+        onSubmit={submitLogin}
+      >
         <div>
           <h3>Sign In</h3>
         </div>
@@ -155,21 +164,20 @@ export default function SignUp(props) {
         </div>
 
         <div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={submitLogin}
-          >
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
-      </div>
+      </form>
     );
   }
 
   return (
     <div>
-      <div className="signin col-4 mt-5 text-center mx-auto">
+      <form
+        className="signin col-4 mt-5 text-center mx-auto"
+        onSubmit={submitSignup}
+      >
         <h3>Sign Up</h3>
         <div className="text-center">
           Already registered?{" "}
@@ -217,15 +225,11 @@ export default function SignUp(props) {
           Password must be between 8 and 20 characters.
         </p>
         <div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onClick={submitSignup}
-          >
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
