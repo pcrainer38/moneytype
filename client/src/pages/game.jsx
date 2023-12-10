@@ -1,31 +1,33 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 import difficulty from "/upgradeDifficulty.svg?url";
-import timeExtender from "/upgradeTimeExtender.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
+import timeExtender from "/upgradeTimeExtender.svg?url";
 
 import darkDifficulty from "/upgradeDifficultyDark.svg?url";
-import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
 import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url";
+import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
-import { GET_UPGRADES, GET_WORDS, GET_MONEY } from "../utils/queries.js";
+import { GET_MONEY, GET_UPGRADES, GET_WORDS } from "../utils/queries.js";
 
-import Container from "react-bootstrap/Container";
 import { useMutation, useQuery } from "@apollo/client";
+import Container from "react-bootstrap/Container";
 import { ADD_MONEY, UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
+import { useUserContext } from "../components/UserContext.jsx";
 import User from "../utils/user.js";
 
 const Game = () => {
+  const { user, setUser } = useUserContext();
   const [wordsBank, setWordsBank] = useState([]);
   const {
     data: serverWords,
@@ -250,6 +252,18 @@ const Game = () => {
     }, wordTimeAlloted.current * 1000);
     return () => clearTimeout(timer);
   }, [wordsBank]);
+
+  useEffect(() => {
+    if (!user?._id) {
+      // Reset upgrades
+      for (let upgrade in setUpgradeMappings) {
+        setUpgradeMappings[upgrade](0);
+      }
+      setUserMoney(0);
+      setWordsBank([]);
+      fetchWords();
+    }
+  }, [user]);
 
   return (
     <>
