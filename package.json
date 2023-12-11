@@ -22,13 +22,9 @@
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build",
-    "vite": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\""
+    "build": "cd client && npm run build"
   },
   "dependencies": {
     "dotenv": "^16.3.1"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
