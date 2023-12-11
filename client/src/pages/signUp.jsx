@@ -30,37 +30,25 @@ export default function SignUp(props) {
 
   function blurHandler(event) {
     let target = event.target.id;
-    console.log(target);
 
     let textValue = document.getElementById(target).value;
 
-    console.log(document.getElementById(target));
+    // if (textValue === "") {
+    //   document.getElementById(target + "-warning").style.display = "block";
+    // } else {
+    //   document.getElementById(target + "-warning").style.display = "none";
+    // }
 
-    if (textValue === "") {
-      document.getElementById(target + "-warning").style.display = "block";
-    } else {
-      document.getElementById(target + "-warning").style.display = "none";
-    }
+    document.getElementById(target + "-warning").style.display = `${textValue === "" ? "block": "none"}`;
+
     if (target === "email") {
       let regex = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,3}/;
-      console.log(textValue);
       let result = regex.test(textValue);
-      console.log(result);
-      if (result === true) {
-        document.getElementById(target + "-warning").style.display = "none";
-      } else {
-        document.getElementById(target + "-warning").style.display = "block";
-      }
-    }
-
-    if (target === "password") {
+      document.getElementById(target + "-warning").style.display = `${result ? "none": "block"}`;
+    } else if (target === "password") {
       let pwregex = /^.{8,20}$/;
       let pwresult = pwregex.test(textValue);
-      if (pwresult === true) {
-        document.getElementById("password-warning").style.display = "none";
-      } else {
-        document.getElementById("password-warning").style.display = "block";
-      }
+      document.getElementById(target + "-warning").style.display = `${pwresult ? "none": "block"}`;
     }
   }
 
@@ -143,7 +131,7 @@ export default function SignUp(props) {
               onBlur={blurHandler}
             />
           </InputGroup>
-          <p id="email-warning">Email is required</p>
+          <p id="email-warning">Email is required.</p>
         </div>
 
         <div className="password">
@@ -196,7 +184,7 @@ export default function SignUp(props) {
             />
           </InputGroup>
         </div>
-        <p id="username-warning">Username is required</p>
+        <p id="username-warning">Username is required.</p>
         <div>
           <InputGroup className="mb-3">
             <Form.Control
@@ -208,7 +196,7 @@ export default function SignUp(props) {
             />
           </InputGroup>
         </div>
-        <p id="email-warning">Email is invalid</p>
+        <p id="email-warning">Email is invalid.</p>
         <div>
           <InputGroup className="mb-3">
             <Form.Control
