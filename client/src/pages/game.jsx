@@ -1,16 +1,17 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
-import sfxNewWordAppear from "../assets/newWordAppear.wav"
-import sfxMoneyGained1 from "../assets/moneyGained1.wav"
-import sfxMoneyGained2 from "../assets/moneyGained2.wav"
-import sfxMoneyGained3 from "../assets/moneyGained3.wav"
-import sfxMoneyGained4 from "../assets/moneyGained4.wav"
-import sfxMoneyGained5 from "../assets/moneyGained5.wav"
-import sfxMistype from "../assets/mistype.wav"
-import sfxUpgradeMoneyMultiplier from "../assets/upgradeMoneyMultiplier.wav"
-import sfxUpgradeTimeExtender from "../assets/upgradeTimeExtender.wav"
-import sfxUpgradeWordDifficulty from "../assets/upgradeWordDifficulty.wav"
-import sfxUpgradeDenied from "../assets/upgradeDenied.wav"
+import sfxNewWordAppear from "../assets/newWordAppear.wav";
+import sfxMoneyGained1 from "../assets/moneyGained1.wav";
+import sfxMoneyGained2 from "../assets/moneyGained2.wav";
+import sfxMoneyGained3 from "../assets/moneyGained3.wav";
+import sfxMoneyGained4 from "../assets/moneyGained4.wav";
+import sfxMoneyGained5 from "../assets/moneyGained5.wav";
+import sfxKeyPress from "../assets/keyPress.wav";
+import sfxMistype from "../assets/mistype.wav";
+import sfxUpgradeMoneyMultiplier from "../assets/upgradeMoneyMultiplier.wav";
+import sfxUpgradeTimeExtender from "../assets/upgradeTimeExtender.wav";
+import sfxUpgradeWordDifficulty from "../assets/upgradeWordDifficulty.wav";
+import sfxUpgradeDenied from "../assets/upgradeDenied.wav";
 
 
 import { useEffect, useRef, useState } from "react";
@@ -270,9 +271,14 @@ const Game = () => {
     function listener(e) {
       if (e.key == "Backspace") {
         setUserWord(wordDisplay.slice(0, -1));
+        playSfx(sfxKeyPress);
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
-        if (!correct && word.current.length === 0) return;
+        if (!correct && word.current.length === 0) {
+          //This sound will play when you mistype the first letter
+          //playSfx(sfxKeyPress);
+          return;
+        };
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
@@ -286,11 +292,13 @@ const Game = () => {
           wordTarget.toUpperCase() ==
           wordDisplay.toUpperCase() + e.key.toUpperCase()
         ) {
+          playSfx(sfxKeyPress);
           word.current += e.key.toUpperCase();
           nextWordAppear();
           return;
         }
         //Above code will run when the word is successfully typed
+        playSfx(sfxKeyPress);
         setUserWord(wordDisplay + e.key.toUpperCase());
       }
     }
