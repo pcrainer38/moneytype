@@ -213,12 +213,38 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  // useEffect(() => {
-  //   let timer = setTimeout(() => {
-  //     console.log((Date.now() - wordTimeStarted.current) / 1000);
-  //   }, 100);
-  //   return () => clearTimeout(timer);
-  // });
+  function updateTimer() {
+    let timer = setTimeout(() => {
+      let timerDisplayNumber = Math.floor( wordTimeAlloted.current * 10 - ( Date.now() - wordTimeStarted.current )/100)/10;
+      timerDisplayNumber > 0 ? setWordTargetTimeRemainingDisplay(`${timerDisplayNumber}s`) : setWordTargetTimeRemainingDisplay("0s");
+      setTimeout(updateTimer, 50);
+    }, 50);
+    return () => clearTimeout(timer);
+  }
+
+  useEffect(() => {
+    updateTimer();
+  }, []);
+
+  function generateDisplayWord() {
+    let display = [];
+    for (let char in word.current) {
+      if (word.current[char] === wordTarget[char]?.toUpperCase())
+        display.push(<span key={char}>{word.current[char]}</span>);
+      else
+        display.push(
+          <span className="bad-word" key={char}>
+            {word.current[char]}
+          </span>
+        );
+    }
+    display.push(
+      <span className="word-to-type" key="lastPart">
+        {wordTarget.slice(wordDisplay.length).toUpperCase()}
+      </span>
+    );
+    return display;
+  }
 
   function generateDisplayWord() {
     let display = [];
@@ -289,8 +315,6 @@ const Game = () => {
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
       1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
-    setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
-    setWordTargetTimeRemainingDisplay(wordTimeAlloted.current);
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
@@ -314,8 +338,11 @@ const Game = () => {
     <>
       <Container>
         <div className="gameWindow d-inline-flex justify-content-between flex-d w-100">
-          <div className="wordCard d-flex align-items-center justify-content-center w-75">
-            <div className="text-center d-flex flex-column align-items-center">
+          <div className="wordCard d-flex align-items-center justify-content-center w-75 row">
+            <div className="text-center d-flex flex-column align-items-center column">
+              <p id="timer">
+                {wordTargetTimeRemainingDisplay}
+              </p>
               <p id="bounty">
                 Prize:
                 <Image
