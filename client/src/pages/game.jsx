@@ -1,5 +1,18 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
+import sfxNewWordAppear from "../assets/newWordAppear.wav"
+import sfxMoneyGained1 from "../assets/moneyGained1.wav"
+import sfxMoneyGained2 from "../assets/moneyGained2.wav"
+import sfxMoneyGained3 from "../assets/moneyGained3.wav"
+import sfxMoneyGained4 from "../assets/moneyGained4.wav"
+import sfxMoneyGained5 from "../assets/moneyGained5.wav"
+import sfxMistype from "../assets/mistype.wav"
+import sfxUpgradeMoneyMultiplier from "../assets/upgradeMoneyMultiplier.wav"
+import sfxUpgradeTimeExtender from "../assets/upgradeTimeExtender.wav"
+import sfxUpgradeWordDifficulty from "../assets/upgradeWordDifficulty.wav"
+import sfxUpgradeDenied from "../assets/upgradeDenied.wav"
+
+
 import { useEffect, useRef, useState } from "react";
 
 import Image from "react-bootstrap/Image";
@@ -107,15 +120,35 @@ const Game = () => {
           });
           didUpgrade = true;
         } catch (e) {
+          playSfx(sfxUpgradeDenied);
           const newMoney = await refreshMoney();
           setUserMoney(newMoney.data.virtualMoney);
           didUpgrade = false;
         }
       }
       if (didUpgrade) {
+        if (upgrade == "moneyMultiplier") {
+          playSfx(sfxUpgradeMoneyMultiplier);
+        } else if (upgrade == "timeExtender") {
+          playSfx(sfxUpgradeTimeExtender);
+        } else if (upgrade == "wordDifficulty") {
+          playSfx(sfxUpgradeWordDifficulty);
+        }
         setUserMoney(userMoney - cost);
         setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
       }
+    } else {
+      playSfx(sfxUpgradeDenied);
+    }
+  }
+
+  async function playSfx(sound) {
+    var audio = new Audio(sound);
+
+    try {
+      await audio.play();
+    } catch (e) {
+      console.log(`ERROR PLAYING SOUND: ${e}`);
     }
   }
 
@@ -150,6 +183,16 @@ const Game = () => {
       const moneyToAdd = calculateMoneyGained();
       //console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
+      if (moneyToAdd > 0) {
+        let randomMoneyGainedSfx = [
+          sfxMoneyGained1,
+          sfxMoneyGained2,
+          sfxMoneyGained3,
+          sfxMoneyGained4,
+          sfxMoneyGained5
+        ]
+        playSfx(randomMoneyGainedSfx[Math.floor(Math.random() * randomMoneyGainedSfx.length)]);
+      }
       if (User.isLoggedIn())
         addMoney({
           variables: {
@@ -158,6 +201,7 @@ const Game = () => {
         });
     }
     setUserWord("");
+    playSfx(sfxNewWordAppear);
     wordTimeStarted.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
@@ -206,6 +250,7 @@ const Game = () => {
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
+          playSfx(sfxMistype);
           //if number of mistakes is greater than 3, then move to next word
           if (mistakes.current > 2) {
             nextWordAppear();
