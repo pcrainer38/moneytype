@@ -1,3 +1,4 @@
+aardvark
 ability
 able
 about
@@ -9,6 +10,7 @@ accept
 access
 accessory
 accident
+accismus
 accommodate
 accommodation
 accompany
@@ -28,6 +30,7 @@ activity
 actor
 actress
 actually
+acumen
 ad
 add
 addition
@@ -87,6 +90,7 @@ among
 amount
 amusing
 an
+anachronistic
 ancient
 and
 angry
@@ -102,6 +106,7 @@ answer
 answerphone
 ant
 antediluvian
+anthropomorphize
 anticipation
 antidisestablishmentarianism
 antiestablishmentarianism
@@ -122,12 +127,14 @@ apology
 appear
 appearance
 apple
+appliance
 application
 apply
 appoggiatura
 appointment
 approach
 approve
+apricate
 architect
 architecture
 area
@@ -206,6 +213,7 @@ basic
 basin
 basket
 basketball
+bastion
 bat
 bath
 bathroom
@@ -233,7 +241,9 @@ beginning
 behave
 behaviour
 behind
+behoove
 believe
+belittle
 belong
 below
 belt
@@ -279,6 +289,9 @@ boiled
 bold
 bomb
 bone
+bonfire
+boogie
+boogie-woogie
 book
 bookcase
 booking
@@ -331,6 +344,7 @@ bulb
 bull
 bunch
 bureaucratic
+burgeon
 burger
 burn
 burning
@@ -354,11 +368,13 @@ cabbage
 cabin
 cabinet
 cable
+cacophony
 cafe
 cafeteria
 cage
 cake
 calculator
+calculus
 calf
 call
 calm
@@ -425,6 +441,7 @@ change
 channel
 chapter
 character
+characterization
 characterize
 charcuterie
 charge
@@ -454,6 +471,7 @@ chocolate
 choice
 choose
 chrysanthemum
+chrysopoeia
 cinema
 circle
 circumference
@@ -521,6 +539,7 @@ complaint
 complementary
 complete
 complicated
+composite
 composition
 comprehensive
 computer
@@ -555,14 +574,17 @@ contradiction
 contribution
 control
 controversial
+conundrum
 convenient
 conversation
 convince
+convivial
 cook
 cooker
 cookie
 cooking
 cool
+copious
 copy
 corn
 corner
@@ -570,6 +592,7 @@ correct
 correction
 correspondence
 correspondent
+corridor
 cost
 costume
 cosy
@@ -607,6 +630,8 @@ create
 creative
 creature
 credit
+credulity
+crepuscular
 crew
 cricket
 crime
@@ -619,6 +644,7 @@ crowd
 crowded
 cruel
 cruise
+crumb
 cry
 cucumber
 cultural
@@ -643,6 +669,7 @@ cv
 cycle
 cycling
 cyclist
+cyst
 dad
 daily
 damage
@@ -650,6 +677,7 @@ damaged
 dance
 dancer
 dancing
+dandelion
 danger
 dangerous
 dark
@@ -663,12 +691,15 @@ death
 decide
 decision
 declare
+decompose
 decorate
 decrease
 deep
 defeat
 defence
 defend
+defenestrate
+defenestration
 definitely
 degree
 delay
@@ -736,6 +767,7 @@ disappoint
 disappointed
 disappointing
 disappointment
+discord
 discount
 discover
 discrimination
@@ -796,6 +828,7 @@ drum
 dry
 duck
 dull
+duo
 during
 dustbin
 dusty
@@ -817,11 +850,14 @@ eat
 eccentricity
 economics
 edge
+edify
 education
 educational
 effect
+effete
 effort
 egg
+egregious
 eight
 either
 elaboration
@@ -876,6 +912,7 @@ equal
 equipment
 eraser
 escape
+eschew
 especially
 essay
 essential
@@ -952,6 +989,7 @@ fast
 fasten
 fat
 father
+fatuous
 fault
 favour
 favourite
@@ -1031,6 +1069,7 @@ former
 fortnight
 fortunately
 fountain
+fractious
 frame
 free
 freeze
@@ -1067,6 +1106,7 @@ furthest
 future
 gain
 gallery
+galvanize
 game
 gap
 garage
@@ -1074,6 +1114,7 @@ garden
 garlic
 gas
 gate
+gear
 general
 generally
 generation
@@ -1094,15 +1135,18 @@ glass
 glasses
 glove
 gnaw
+gnome
 go
 goal
 goalkeeper
 goat
+goggle
 gold
 golden
 golf
 good
 good-looking
+googol
 gorgeous
 government
 grab
@@ -1130,6 +1174,8 @@ greeting
 grey
 grill
 grilled
+grisly
+grizzly
 groom
 ground
 group
@@ -1218,6 +1264,7 @@ home
 honestly
 honey
 honeymoon
+honorific
 hope
 hopeful
 hopefully
@@ -1245,6 +1292,7 @@ hut
 hyperconsciousnesses
 hyperpigmentation
 i
+icicle
 icy
 id
 idea
@@ -1252,11 +1300,14 @@ identification
 if
 ill
 illness
+illusion
 illustration
 imagination
 imagine
 immediately
 immigration
+imperious
+impetus
 implementation
 importance
 important
@@ -1297,6 +1348,7 @@ inquisitive
 insect
 inside
 insist
+insouciant
 inspiration
 install
 instance
@@ -1311,6 +1363,7 @@ intend
 interest
 interested
 interesting
+interlocutor
 intermediate
 international
 internationalization
@@ -1448,6 +1501,7 @@ limited
 line
 link
 lion
+lionize
 lip
 liquefy
 liquid
@@ -1467,6 +1521,7 @@ location
 lock
 locker
 logo
+lollipop
 lonely
 long
 look
@@ -1485,9 +1540,12 @@ luggage
 lunch
 lunchtime
 luxury
+macaron
+macaroon
 machine
 mad
 madam
+maestro
 magazine
 magic
 magnification
@@ -1505,6 +1563,7 @@ mango
 manipulation
 many
 map
+marimba
 mark
 market
 marriage
@@ -1530,6 +1589,7 @@ medicine
 medium
 meet
 meeting
+melange
 melon
 member
 membership
@@ -1541,6 +1601,7 @@ mess
 message
 messy
 metal
+metanoia
 method
 metre
 microelectronically
@@ -1568,6 +1629,7 @@ miserable
 miss
 missing
 mistake
+mistletoe
 mix
 mobile
 model
@@ -1602,6 +1664,7 @@ mug
 multifaceted
 multiply
 mum
+murmur
 museum
 mushroom
 music
@@ -1609,6 +1672,7 @@ musical
 musician
 must
 my
+myriad
 myself
 mystery
 name
@@ -1617,6 +1681,7 @@ narrow
 nasty
 national
 nationality
+nativity
 natural
 nature
 nauseous
@@ -1650,9 +1715,11 @@ nightmare
 no
 nobody
 noise
+noisome
 noisy
 none
 noninterventionists
+nontet
 noon
 normal
 normally
@@ -1661,6 +1728,7 @@ northeast
 northern
 northwest
 nose
+nostalgia
 not
 note
 notebook
@@ -1672,8 +1740,10 @@ novel
 now
 nowadays
 nowhere
+numb
 number
 nurse
+obfuscate
 object
 obstruction
 obvious
@@ -1681,6 +1751,10 @@ obviously
 occasion
 occupation
 ocean
+octet
+odd
+oddity
+odious
 of
 off
 offer
@@ -1719,6 +1793,7 @@ organisation
 organise
 organization
 original
+ostensibly
 other
 otherwise
 ought
@@ -1738,6 +1813,9 @@ overspecializations
 owe
 own
 owner
+ox
+oxen
+oxtail
 pack
 packet
 paint
@@ -1775,6 +1853,7 @@ pasta
 path
 patient
 pattern
+paucity
 pause
 pavement
 pay
@@ -1794,6 +1873,7 @@ pencil
 penfriend
 penguin
 penny
+penultimate
 people
 pepper
 per
@@ -1807,15 +1887,18 @@ period
 permanent
 permit
 permitted
+pernicious
 person
 personal
 personally
+perspicacious
 persuade
 persuasion
 pet
 petrol
 pharmacy
 phenomenalistically
+philistine
 philosophizations
 phlegm
 phone
@@ -1825,6 +1908,7 @@ photographer
 photography
 phrase
 physics
+pi
 piano
 pick
 picnic
@@ -1839,6 +1923,7 @@ pilot
 pin
 pineapple
 pink
+pious
 pipe
 pirate
 pity
@@ -1877,6 +1962,7 @@ politics
 pollution
 pool
 pop
+popsicle
 popular
 port
 position
@@ -1915,6 +2001,7 @@ preservation
 president
 press
 pretty
+prevaricate
 prevent
 previous
 previously
@@ -1971,12 +2058,14 @@ qualified
 quality
 quantity
 quarter
+quartet
 queen
 question
 queue
 quick
 quickly
 quiet
+quintet
 quit
 quite
 quiz
@@ -1992,6 +2081,7 @@ rainforest
 raise
 range
 rap
+rapscallion
 rare
 rarely
 rather
@@ -2127,6 +2217,7 @@ running
 sacrilegious
 safe
 safely
+sagacious
 sail
 sailing
 salad
@@ -2139,6 +2230,7 @@ same
 sand
 sandal
 sandwich
+sanguine
 satisfaction
 satisfactory
 satisfied
@@ -2186,6 +2278,8 @@ sense
 sensible
 sentence
 separate
+septet
+serendipity
 series
 serious
 seriously
@@ -2196,6 +2290,7 @@ session
 set
 several
 sew
+sextet
 shade
 shadow
 shake
@@ -2301,6 +2396,9 @@ sofa
 soft
 software
 soldier
+solipsism
+solipsist
+solipsistic
 solution
 solve
 some
@@ -2397,6 +2495,7 @@ studies
 studio
 study
 stuff
+stuntperson
 stupid
 style
 stylish
@@ -2453,6 +2552,7 @@ swim
 swimming
 swimsuit
 switch
+synecdoche
 system
 t-shirt
 table
@@ -2468,6 +2568,7 @@ tap
 taste
 tasty
 tatterdemalion
+tau
 tax
 taxi
 tea
@@ -2510,6 +2611,7 @@ themselves
 then
 there
 therefore
+theremin
 these
 they
 thick
@@ -2538,6 +2640,7 @@ tights
 till
 time
 timetable
+timorous
 tin
 tiny
 tip
@@ -2589,6 +2692,7 @@ transport
 tree
 trend
 trick
+trio
 trip
 trouble
 trousers
@@ -2611,7 +2715,11 @@ type
 typical
 typically
 tyre
+ubiquitous
 ugly
+uhtceare
+ulotrichous
+ultracrepidarian
 ultrarevolutionaries
 umbrella
 unable
@@ -2699,6 +2807,8 @@ versus
 very
 vet
 via
+vibraphone
+vibraslap
 video
 view
 village
@@ -2706,6 +2816,7 @@ vindication
 violin
 virus
 visa
+visceral
 visit
 visitor
 vocabulary
@@ -2815,6 +2926,14 @@ writer
 writing
 written
 wrong
+x-ray
+xenon
+xi
+xiphoid
+xylem
+xylocarp
+xylograph
+xylophone
 yard
 yeah
 year
@@ -2833,6 +2952,7 @@ youth
 zamiaceae
 zebra
 zero
+zeugma
 zone
 zoo
 zucchini
