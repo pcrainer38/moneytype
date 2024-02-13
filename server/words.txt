@@ -56,7 +56,7 @@ advertise
 advertisement
 advice
 advise
-adélie penguin
+adelie penguin
 aeroplane
 aesculapian snake
 affenpinscher
@@ -3804,7 +3804,7 @@ peruvian guinea pig
 peruvian inca orchid
 pesquet’s parrot
 pet
-petit basset griffon vendéen
+petit basset griffon vendeen
 petite goldendoodle
 petrol
 pharaoh hound
