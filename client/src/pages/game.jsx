@@ -272,7 +272,7 @@ const Game = () => {
       if (e.key == "Backspace") {
         setUserWord(wordDisplay.slice(0, -1));
         playSfx(sfxKeyPress);
-      } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
+      } else if (/[0-9a-zA-Z-' ]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
         if (!correct && word.current.length === 0) {
           //This sound will play when you mistype the first letter
