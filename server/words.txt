@@ -1,4 +1,5 @@
 aardvark
+aardwolf
 ability
 able
 about
@@ -6,6 +7,9 @@ above
 abroad
 absent
 absolutely
+abyssinian
+abyssinian guinea pig
+acadian flycatcher
 accept
 access
 accessory
@@ -19,6 +23,8 @@ accountant
 accurate
 ache
 achieve
+achrioptera manga
+ackie monitor
 acknowledgment
 acquaintance
 acquiesce
@@ -33,8 +39,10 @@ actually
 acumen
 ad
 add
+addax
 addition
 address
+admiral butterfly
 admire
 admission
 admit
@@ -48,68 +56,168 @@ advertise
 advertisement
 advice
 advise
+adélie penguin
 aeroplane
+aesculapian snake
+affenpinscher
 afford
+afghan hound
 afraid
+african bullfrog
+african bush elephant
+african civet
+african clawed frog
+african elephant
+african fish eagle
+african forest elephant
+african golden cat
+african grey parrot
+african jacana
+african palm civet
+african penguin
+african sugarcane borer
+african tree toad
+african wild dog
+africanized bee
 after
 afternoon
 afterwards
 again
 against
+agama lizard
 age
 agency
+agkistrodon contortrix
 ago
+agouti
 agree
 ahead
+aidi
 aim
+ainu
 air
+airedale terrier
+airedoodle
 airline
 airport
+akbash
+akita
+akita shepherd
+alabai
 alarm
+alaskan husky
+alaskan klee kai
+alaskan malamute
+alaskan pollock
+alaskan shepherd
+albacore tuna
+albatross
+albertonectes
+albino corn snake
 album
+aldabra giant tortoise
 alike
 alive
 all
+alligator gar
+allosaurus
 allow
 almost
 alone
 along
 aloud
+alpaca
 alphabet
+alpine dachsbracke
+alpine goat
 already
 alright
 also
 although
 altogether
+alusky
 always
+amano shrimp
+amargasaurus
 amazed
 amazing
+amazon parrot
+amazon river dolphin
+amazon tree boa
+amazonian royal flycatcher
+amberjack
 ambition
+ambrosia beetle
 ambulance
+american alligator
+american alsatian
+american bulldog
+american bully
+american cocker spaniel
+american cockroach
+american coonhound
+american dog tick
+american eel
+american eskimo dog
+american foxhound
+american hairless terrier
+american leopard hound
+american lion
+american paddlefish
+american pit bull terrier
+american pugabull
+american pygmy goat
+american robin
+american staffordshire terrier
+american toad
+american water spaniel
+american wirehair
+amethystine python
 among
 amount
+amphicoelias fragillimus
+amur leopard
 amusing
 an
 anachronistic
+anaconda
+anatolian shepherd dog
+anchovies
 ancient
 and
+andrewsarchus
+angelfish
+angelshark
+angled sunbeam caterpillar
+anglerfish
+angora ferret
+angora goat
 angry
+anhinga
 animal
 ankle
+anna’s hummingbird
 anniversary
 announce
 announcement
 annoy
 annual
+anole lizard
+anomalocaris
 another
 answer
 answerphone
 ant
+antarctic scale worm
+anteater
 antediluvian
+antelope
+anteosaurus
 anthropomorphize
 anticipation
 antidisestablishmentarianism
 antiestablishmentarianism
+antiguan racer snake
 antique
 antirevolutionaries
 anxious
@@ -120,13 +228,19 @@ anyone
 anything
 anyway
 anywhere
+aoudad sheep
 apart
 apartment
+ape
+apennine wolf
 apologise
 apology
 appear
 appearance
+appenzeller dog
 apple
+apple head chihuahua
+apple moth
 appliance
 application
 apply
@@ -135,32 +249,86 @@ appointment
 approach
 approve
 apricate
+arabian cobra
+arabian wolf
+arafura file snake
+arambourgiania
+arapaima
+archaeoindris
+archaeopteryx
+archaeotherium
+archelon turtle
+archerfish
 architect
 architecture
+arctic char
+arctic fox
+arctic hare
+arctic wolf
+arctodus
+arctotherium
 area
+argentavis magnificens
+argentine black and white tegu
+argentine horned frog
+argentinosaurus
 argue
 argument
+arizona bark scorpion
+arizona black rattlesnake
+arizona blonde tarantula
+arizona coral snake
 arm
+armadillo
+armadillo lizard
 armchair
+armenian gampr
+armored catfish
 army
+armyworm
 around
 arrange
 arrangement
 arrest
 arrival
 arrive
+arsinoitherium
 art
+arthropleura
 article
 artist
+aruba rattlesnake
 as
+ascalaphidae
 ashamed
+ashy mining bee
+asian arowana
+asian carp
+asian cockroach
+asian elephant
+asian giant hornet
+asian lady beetle
+asian longhorn beetle
+asian palm civet
+asian vine snake
+asian water monitor
+asiatic black bear
 ask
 asleep
+asp
+asp caterpillar
 aspirin
+assassin bug
+assassin snail
 asthma
 at
 athlete
 athletics
+atlantic cod
+atlantic salmon
+atlantic sturgeon
+atlas beetle
+atlas moth
 atmosphere
 attach
 attack
@@ -173,15 +341,42 @@ attraction
 attractive
 audience
 aunt
+aurochs
+aussiedoodle
+aussiedor
+aussiepom
+australian bulldog
+australian cattle dog
+australian cockroach
+australian firehawk
+australian flathead perch
+australian gecko
+australian kelpie dog
+australian labradoodle
+australian mist
+australian retriever
+australian shepherd
+australian shepherd mix
+australian terrier
+australopithecus
+australorp chicken
 author
 authorization
 autochthonous
 autumn
 available
 average
+avocet
 avoid
 awake
 away
+axanthic ball python
+axolotl
+ayam cemani
+aye-aye
+azawakh
+babirusa
+baboon
 baby
 babysit
 babysitter
@@ -189,51 +384,132 @@ back
 backpack
 backpacking
 backwards
+bactrian camel
 bad
+badger
 badly
 badminton
 bag
 baggage
+bagle – basset hound mix
+bagworm moth
+bagworm moth caterpillar
+baiji
+baird’s rat snake
 bake
 baker
 balcony
 bald
+bald eagle
+baleen whale
+balinese
+balkan lynx
 ball
+ball python
 ballet
 balloon
+bamboo
+bamboo rat
+bamboo shark
+bamboo viper
+bamboo worms
 banana
+banana ball python
+banana cinnamon ball python
+banana eel
+banana spider
 band
 bandage
+banded krait
+banded palm civet
+banded water snake
+bandicoot
+banjo catfish
 bank
 banking
 bar
+barb
 barbecue
+barbet
+barbut’s cuckoo bumblebee
+barinasuchus
+bark beetle
+bark scorpion
+barn owl
+barn spider
+barn swallow
+barnacle
+barnevelder
+barosaurus
+barracuda
+barramundi fish
+barred owl
+barrel eye
+barreleye fish
+barylambda
 baseball
+basenji dog
+basenji mix
 basic
+basilisk lizard
+basilosaurus
 basin
 basket
 basketball
+basking shark
+bass
+bassador
+basset fauve de bretagne
+basset hound
+bassetoodle
 bastion
 bat
+bat-eared fox
+batfish
 bath
 bathroom
 bathtub
 battery
 battle
+bavarian mountain hound
 bay
+baya
 be
+bea-tzu
+beabull
 beach
+beagador
+beagle
+beagle mix
+beagle shepherd
+beaglier
+beago
 bean
+bear
 beard
+bearded collie
+bearded dragon
+bearded fireworm
+bearded vulture
+beaski
 beat
+beauceron
 beautiful
 beauty
+beauty rat snake
+beaver
 because
 become
 bed
+bed bugs
+bedlington terrier
 bedroom
 bee
+bee-eater
 beef
+beefalo
+beetle
+beewolf wasp
 before
 begin
 beginner
@@ -242,54 +518,172 @@ behave
 behaviour
 behind
 behoove
+belgian canary
+belgian laekenois
+belgian malinois
+belgian malinois mix
+belgian sheepdog
+belgian shepherd
+belgian tervuren
 believe
 belittle
 belong
 below
 belt
+belted kingfisher
+beluga sturgeon
 benefit
+bengal tiger
+bergamasco
+berger blanc suisse
+berger picard
+bernedoodle
+bernese mountain dog
+bernese mountain dog mix
+bernese shepherd
 beside
 besides
 best
+betta fish
 better
 between
 beyond
+bhutan takin
+bichir
+bichon frise
+bichpoo
 bicycle
+biewer terrier
 big
+bigfin reef squid
+bighorn sheep
 bike
+bilby
 bill
 bin
+binturong
 biography
 biology
 bird
+bird of paradise
+bird snake
+birman
 birth
 birthday
 biscuit
+biscuit beetle
+bismarck ringed python
+bison
 bit
 bite
 bitter
 black
+black and tan coonhound
+black and white warbler
+black aphids
+black bass
+black crappie
+black dragon lizard
+black german shepherd
+black mamba
+black marlin
+black mouth cur
+black pastel ball python
+black rat snake
+black rhinoceros
+black russian terrier
+black sea bass
+black swallowtail
+black swallowtail caterpillar
+black tarantula
+black throat monitor
+black wasp
+black widow spider
+black witch moth
+black-bellied whistling duck
+black-capped chickadee
+black-footed ferret
+black-headed python
+black-tailed rattlesnake
 blackboard
+blackburnian warbler
+blackfin tuna
+blacknose shark
+blackpoll warbler
+blacktip reef shark
+blacktip shark
+bladefin basslet
 blame
 blank
 blanket
+blanket octopus
 bleed
 blind
+blind snake
+blister beetle
+blobfish
 block
 blog
 blood
+blood python
+bloodhound
 blouse
 blow
+blowfly
 blue
+blue andalusian
+blue belly lizard
+blue catfish
+blue death feigning beetle
+blue dragon sea slug
+blue eyed pleco
+blue german shepherd
+blue gray gnatcatcher
+blue grosbeak
+blue iguana
+blue jay
+blue lacy dog
+blue nose pit bull
+blue picardy spaniel
+blue racer
+blue shark
+blue tanager
+blue tang
+blue tit
+blue whale
+blue-grey tanager
+blue-ringed octopus
+bluefin tuna
+bluefish
+bluegill
+bluetick coonhound
 board
+boas
 boat
+bobcat
+bobolink
 body
+boelen’s python
+boer goat
+boerboel
+boggle
+boglen terrier
+boiga
 boil
 boiled
 bold
+bolivian anaconda
+bolognese dog
 bomb
+bombardier beetle
+bombay
 bone
+bonefish
 bonfire
+bongo
+bonito fish
+bonnethead shark
+bonobo
 boogie
 boogie-woogie
 book
@@ -297,59 +691,141 @@ bookcase
 booking
 bookshop
 bookstore
+boomslang
 boot
+booted bantam
+borador
 border
+border collie
+border collie mix
+border terrier
+bordoodle
 bored
 boring
+borkie
 born
+bornean orangutan
+borneo elephant
 borrow
+boskimo
 boss
+boston terrier
 both
 bother
 bottle
+bottlenose dolphin
 bottom
 bourbon
+bouvier des flandres
+bowfin
+bowhead whale
 bowl
 box
+box jellyfish
+box tree moth
+box turtle
+box-headed blood bee
+boxachi
+boxador
+boxer dog
+boxer mix
+boxerdoodle
+boxfish
+boxsky
+boxweiler
 boy
 boyfriend
+boykin spaniel
+bracco italiano
 bracelet
+brachiosaurus
+brahma chicken
+brahminy blindsnake
 brain
 brake
 branch
+braque du bourbonnais
+braque francais
 brave
+brazilian black tarantula
+brazilian terrier
+brazilian treehopper
 bread
 break
 breakfast
 breath
+bredl’s python
 breeze
+briard
 bride
 bridge
 brief
 bright
 brilliant
 bring
+british timber
+brittany
 broad
+broad-fronted moose
 broccoli
 brochure
 broken
+brontosaurus
+bronze whaler shark
+bronze-winged jacana
+brook trout
+brookesia micra
 brother
 brown
+brown bear
+brown dog tick
+brown headed cowbird
+brown hyena
+brown snake
+brown tree snake
+brown water snake
+brown-banded cockroach
+brug
 brush
+brussels griffon
 bucket
+budgerigar
+buff orpington chicken
+buffalo
+buffalo fish
 bug
 build
 building
 bulb
 bull
+bull and terrier
+bull shark
+bull terrier
+bull trout
+bullboxer
+bulldog
+bulldog mix
+bullet ant
+bullfrog
+bullmastiff
+bullsnake
+bumblebee
 bunch
 bureaucratic
 burgeon
 burger
+burmese
+burmese python
 burn
 burning
+burrowing frog
+burrowing owl
 bury
 bus
+bush baby
+bush dog
+bush viper
+bushmaster snake
 business
 businessman
 businesswoman
@@ -358,6 +834,7 @@ but
 butcher
 butter
 butterfly
+butterfly fish
 button
 buy
 buyer
@@ -365,75 +842,148 @@ by
 bye
 cab
 cabbage
+cabbage moth
 cabin
 cabinet
 cable
 cacophony
+cactus moth
+cactus mouse
+cactus wren
+caecilian
 cafe
 cafeteria
 cage
+caiman
+caiman lizard
+cairn terrier
 cake
 calculator
 calculus
 calf
+california condor
+california kingsnake
+california tarantula
 call
 calm
 camel
+camel cricket
+camel spider
 camera
 camp
+campine chicken
 camping
 campsite
 can
+canaan dog
+canada lynx
+canada warbler
+canadian eskimo dog
+canadian horse
 canal
 cancel
 candidate
 candle
 candy
+cane corso
+cane rat
+cane spider
+canebrake rattlesnake
 canteen
+cantil
+canvasback
 cap
+cape lion
 capital
 captain
+capuchin
+capybara
+caracal
 card
 cardboard
+cardinal
 care
 career
 careful
 carefully
 careless
+caribbean reef shark
+caribou
+carolina dog
+carolina parakeet
+carp
+carpenter ant
 carpet
+carpet beetle
+carpet python
+carpet viper
+carrion beetle
 carrot
 carry
 cartoon
+cascabel
 case
 cash
+cashmere goat
 cashpoint
+cassowary
 castle
 casual
 cat
+cat snake
+cat-eyed snake
+cat-faced spider
+catahoula bulldog
+catahoula leopard
+catalan sheepdog
 catastrophic
 catch
+caterpillar
+catfish
 cathedral
 cattle
+caucasian mountain dog
+caucasian shepherd
+cava tzu
+cavador
+cavalier king charles spaniel
+cavapoo
 cave
+cave bear
+cave lion
 cd
 cd-rom
+cecropia moth
+cedar waxwing
 ceiling
 celebrate
 celebration
 celebrity
 cent
 center
+centipede
 central
+central asian shepherd
+central ranges taipan
 century
+cephalaspis
+ceratopsian
+ceratosaurus
 cereal
 ceremony
 certain
 certainly
 certificate
+cervalces latifrons
+cesky fousek
+cesky terrier
 chain
+chain pickerel
 chair
 challenge
 challenging
+chameleon
+chamois
 champion
 championship
 chance
@@ -447,38 +997,90 @@ charcuterie
 charge
 charity
 charming
+chartreux
 chat
 chatroom
+cheagle
 cheap
 cheat
 check
 check-in
+checkered garter snake
 checkout
 cheerful
 cheese
+cheetah
 chef
 chemist
 chemistry
 cheque
+chesapeake bay retriever
+chestnut-sided warbler
+chevrotain
+chi chi
 chiaroscuro
+chickadee
 chicken
+chicken snake
+chigger
+chihuahua
+chihuahua mix
 child
 childhood
+children’s python
+chilean recluse spider
+chilean rose tarantula
+chilesaurus
 chilli
+chimaera
+chimpanzee
 chin
+chinchilla
+chinese alligator
+chinese cobra
+chinese crested dog
+chinese geese
+chinese paddlefish
+chinese shar-pei
+chinese water deer
+chinook
+chinook salmon
+chinstrap penguin
 chip
+chipit
+chipmunk
+chipoo
+chipping sparrow
+chiton
+chiweenie
 chocolate
 choice
 choose
+chorkie
+chow chow
+chow pom
+chow shepherd
+christmas beetle
+christmas island red crab
+chromodoris willani
 chrysanthemum
 chrysopoeia
+chusky
+cicada
+cichlid
+cigarette beetle
 cinema
+cinereous vulture
+cinnamon ball python
+cinnamon bear
+cinnamon ferret
 circle
 circumference
 circumstantial
 circus
 city
 clap
+clark’s grebe
 class
 classical
 classmate
@@ -487,46 +1089,96 @@ clean
 cleaner
 clear
 clearly
+clearnose skate
 clever
 click
+click beetle
 cliff
 climate
 climb
 climbing
 clinic
 clock
+clock spider
 close
 closed
 clothes
+clothes moth
 cloud
+clouded leopard
 cloudy
 clown
+clownfish
 club
+clumber spaniel
 coach
+coachwhip snake
 coast
+coastal carpet python
+coastal taipan
 coat
+coati
+cobalt blue tarantula
+cobia fish
+cobras
+cochin chicken
+cockalier
+cockapoo
+cockatiel
+cockatoo
+cocker spaniel
+cockle
+cockroach
 coconut
+coconut crab
 cod
+codfish
+codling moth
+coelacanth
 coffee
 coin
 cola
 cold
 collaboration
+collared peccary
 colleague
 collect
 collection
 college
+collett’s snake
+collie
+collie mix
+colossal squid
 colour
 colourful
 comb
+comb jellyfish
+comb-crested jacana
 come
 comedy
+comet moth
 comfort
+comfort retriever
 comfortable
 comic
 comma
 commensurateness
 common
+common boa
+common buzzard
+common carp
+common european adder
+common frog
+common furniture beetle
+common goldeneye
+common grackle
+common green magpie
+common house spider
+common loon
+common raven
+common spotted cuscus
+common toad
+common yellowthroat
 communicate
 communication
 company
@@ -542,14 +1194,18 @@ complicated
 composite
 composition
 comprehensive
+compsognathus
 computer
 concentrate
 concert
 conclusion
 condition
+cone snail
 conference
 confused
 confusing
+conger eel
+congo snake
 connect
 connection
 conscientious
@@ -575,6 +1231,7 @@ contribution
 control
 controversial
 conundrum
+conure
 convenient
 conversation
 convince
@@ -582,22 +1239,46 @@ convivial
 cook
 cooker
 cookie
+cookiecutter shark
 cooking
 cool
+cooper’s hawk
 copious
+copperhead
 copy
+coral
+coral snake
+corella
+corgidor
+corgipoo
+corkie
+corman shepherd
+cormorant
 corn
+corn earworm
+corn rex cat
+corn snake
 corner
+cornish rex
 correct
 correction
 correspondence
 correspondent
 corridor
+cory catfish
+coryphodon
+cosmic caterpillar
 cost
+costa’s hummingbird
 costume
 cosy
+coton de tulear
 cottage
 cotton
+cotton-top tamarin
+cottonmouth
+coues deer
+cougar
 cough
 could
 count
@@ -623,7 +1304,17 @@ court
 cousin
 cover
 cow
+cow reticulated python
+coyote
+crab
+crab spider
+crab-eating fox
+crab-eating macaque
+crabeater seal
+crane
+crappie fish
 crash
+crayfish
 crazy
 cream
 create
@@ -632,21 +1323,39 @@ creature
 credit
 credulity
 crepuscular
+crested gecko
+crested penguin
 crew
 cricket
 crime
 criminal
+croatian sheepdog
+crocodile
+crocodile monitor
+crocodile shark
+crocodylomorph
 crop
 cross
+cross fox
+cross river gorilla
 crossing
 crossroads
+crow
 crowd
 crowded
+crucian carp
 cruel
 cruise
 crumb
 cry
+cryolophosaurus
+cthulhu
+cuban boa
+cuban cockroach
+cubera snapper
+cuckoo
 cucumber
+cucumber beetle
 cultural
 culture
 cup
@@ -655,6 +1364,8 @@ cure
 curious
 curiously
 curly
+curly coated retriever
+curly hair tarantula
 currency
 curriculum
 curry
@@ -665,36 +1376,68 @@ customer
 customs
 cut
 cute
+cuttlefish
 cv
 cycle
 cycling
 cyclist
 cyst
+czechoslovakian wolfdog
+dachsador
+dachshund
+dachshund mix
+dactylotum bicolor
 dad
+daeodon
 daily
+dalmadoodle
+dalmador
+dalmatian
+dalmatian mix
 damage
 damaged
+damselfish
 dance
 dancer
 dancing
 dandelion
+dandie dinmont terrier
 danger
 dangerous
+daniff
+danios
+danish swedish farmdog
+dapple dachshund
 dark
+dark-eyed junco
+darkling beetle
+darwin’s fox
+darwin’s frog
 date
+daug
 daughter
 day
+de brazza’s monkey
+de kay’s brown snake
 deaf
 deal
 dear
 death
+death adder
+deathwatch beetle
+death’s head cockroach
 decide
 decision
 declare
 decompose
 decorate
+decorator crab
 decrease
 deep
+deer
+deer head chihuahua
+deer mouse
+deer tick
 defeat
 defence
 defend
@@ -702,6 +1445,9 @@ defenestrate
 defenestration
 definitely
 degree
+deinocheirus
+deinosuchus
+deja vu
 delay
 delete
 deliberation
@@ -722,10 +1468,17 @@ depth
 describe
 description
 desert
+desert ghost ball python
+desert kingsnake
+desert locust
+desert rain frog
+desert tortoise
+desert wolf
 deserve
 design
 designer
 desk
+desmostylus
 despite
 dessert
 destination
@@ -733,12 +1486,20 @@ destroy
 detail
 detective
 determination
+deutsche bracke
 develop
 development
+devil’s coach horse beetle
+devon rex
+dhole
 diagram
 dial
+diamond python
+diamondback moth
 diary
 dicarboxylic
+dickcissel
+dickinsonia
 dictionary
 die
 diet
@@ -748,10 +1509,23 @@ difficult
 difficulty
 dig
 digital
+dik-dik
 dilate
+dilophosaurus
+dimetrodon
+diminutive woodrat
+dingo
 dinner
+dinocrocuta
+dinofelis
+dinopithecus
 dinosaur
+dinosaur shrimp
+dinosaurs
+diplodocus
 diploma
+diprotodon
+dire wolf
 direct
 direction
 directly
@@ -767,10 +1541,12 @@ disappoint
 disappointed
 disappointing
 disappointment
+disco clam
 discord
 discount
 discover
 discrimination
+discus
 discuss
 discussed
 discussion
@@ -791,101 +1567,219 @@ district
 disturb
 dive
 diver
+divers
 divide
 diving
+diving bell spider
+diving duck
 do
+doberman pinscher
+dobsonfly
 document
 documentary
 documentation
+dodo
+doedicurus
 dog
+dog tick
+dogfish
+dogo argentino
+dogue de bordeaux
 doll
 dollar
 dolphin
+dolphin fish
 donkey
 door
+dorgi
+dorkie
+dorking chicken
+dormouse
 dot
 double
+double doodle
 doubt
+douc
 down
 download
 downstairs
+downy woodpecker
+doxiepoo
+doxle
 dozen
 dr
+draco volans lizard
+dracula parrot
 drag
+dragon eel
+dragon snake
+dragonfish
+dragonfly
 drama
 draw
 drawer
 drawing
+dreadnoughtus
 dream
 dress
 dressed
+drever
+dried fruit moth
 drink
 drive
 driver
+dromornis stirtoni
 drop
 drugstore
 drum
+drum fish
 dry
+dubia cockroach
 duck
+dugong
 dull
+dumeril’s boa
+dung beetle
+dungeness crab
+dunker
+dunkleosteus
+dunnock
 duo
 during
+dusky dolphin
+dusky shark
 dustbin
 dusty
+dutch rabbit
+dutch shepherd
 duty
 duty-free
 duvet
 dvd
+dwarf boa
+dwarf crocodile
+dwarf gourami
+dwarf hamster
 each
+eagle
+eagle ray
 earache
+eared grebe
+earless monitor lizard
 early
 earn
 earring
 earth
+earthworm
+earwig
 easily
 east
+east siberian laika
 eastern
+eastern barred bandicoot
+eastern bluebird
+eastern box turtle
+eastern brown snake
+eastern chipmunk
+eastern coral snake
+eastern cottontail
+eastern diamondback rattlesnake
+eastern dobsonfly
+eastern fence lizard
+eastern glass lizard
+eastern gorilla
+eastern gray squirrel
+eastern green mamba
+eastern hognose snake
+eastern indigo snake
+eastern kingbird
+eastern lowland gorilla
+eastern meadowlark
+eastern phoebe
+eastern racer
+eastern rat snake
+eastern tiger snake
+eastern turkey
+eastern woodrat
 easygoing
 eat
 eccentricity
+echidna
+eclectus parrot
 economics
 edge
+edible frog
 edify
 education
 educational
+eel
+eel catfish
+eelpout
 effect
 effete
 effort
 egg
 egregious
+egret
+egyptian asp
+egyptian cobra
+egyptian goose
+egyptian mau
+egyptian tortoise
+egyptian vulture
+eider
 eight
 either
 elaboration
+eland
+elasmosaurus
+elasmotherium
 elbow
 elder
 elderly
 election
 electric
+electric catfish
+electric eel
 electrical
 electricity
 electroencephalography
 electronegativities
 electronic
+elegant tern
 elementary
 elephant
+elephant beetle
+elephant bird
+elephant fish
+elephant seal
+elephant shrew
 elevator
+elf owl
+elk
 else
 email
 embarrass
 embarrassed
 embarrassing
 embassy
+ember tetra
+embolotherium
+emerald toucanet
+emerald tree boa
+emerald tree monitor
 emergency
+emperor angelfish
+emperor goose
+emperor penguin
+emperor tamarin
 employ
 employee
 employer
 employment
 empty
+emu
+enchi ball python
 encourage
 end
 ending
@@ -894,6 +1788,19 @@ energy
 engine
 engineer
 engineering
+english angora rabbit
+english bulldog
+english cocker spaniel
+english cream golden retriever
+english crested guinea pig
+english foxhound
+english longhorn cattle
+english pointer
+english setter
+english shepherd
+english sparrow
+english springer spaniel
+english toy terrier
 enjoy
 enormous
 enough
@@ -901,24 +1808,57 @@ enquiry
 enter
 entertain
 entertainment
+entlebucher mountain dog
 entrance
 entrepreneur
 entry
 envelope
 environment
 environmental
+epagneul pont audemer
+epicyon haydeni
+epidexipteryx
 epitome
 equal
+equatorial spitting cobra
 equipment
+equus giganteus
 eraser
+ermine
+eryops
 escape
 eschew
+escolar
+eskimo dog
+eskipoo
 especially
 essay
 essential
+estrela mountain dog
+euoplocephalus
+eurasian beaver
+eurasian bullfinch
+eurasian collared dove
+eurasian eagle-owl
+eurasian jay
+eurasian lynx
+eurasian nuthatch
+eurasian sparrowhawk
+eurasian wolf
+eurasier
 euro
+european bee-eater
+european corn borer
+european goldfinch
+european polecat
+european robin
+european starling
+european wildcat
+eurypterus
 even
 evening
+evening bat
+evening grosbeak
 ever
 every
 everybody
@@ -937,6 +1877,7 @@ exchange
 excited
 exciting
 excuse
+executioner wasp
 exercise
 exhausted
 exhibition
@@ -960,6 +1901,7 @@ extra
 extraordinary
 extremely
 eye
+eyelash viper
 fabrication
 face
 face-to-face
@@ -967,15 +1909,26 @@ facilities
 fact
 factory
 fail
+fainting goat
 fair
 fairly
+fairy-wren
+falcon
 fall
+fallow deer
 false
+false cobra
+false coral snake
+false killer whale
+false water cobra
+false widow spider
 familiar
 family
 famous
 fan
 fancy
+fancy mouse
+fangtooth
 fantastic
 far
 fare
@@ -995,53 +1948,99 @@ favour
 favourite
 fax
 fear
+feather star
 fee
 feed
 feel
 feeling
+feist
 female
+fennec fox
+fer-de-lance snake
+ferret
+ferruginous hawk
 ferry
 festival
 fetch
 fever
 few
 fiction
+fiddler crab
 field
+field cuckoo bumblebee
+field spaniel
+fierce snake
+figeater beetle
 fight
 figure
+fila brasileiro
 file
 fill
 film
+fin whale
 final
 finally
 financial
+finch
 find
 fine
 finger
+finger monkey
 finish
+finnish lapphund
+finnish spitz
 fire
+fire ball python
+fire eel
+fire salamander
+fire-bellied toad
 firefighter
+firefly
+firefly ball python
 firework
 firm
 first
 fish
+fisher
 fishing
+fishing cat
+fishing spiders
 fit
 fitness
 fix
 flag
+flamingo
 flat
+flat-coated retriever
+flathead catfish
 flavour
+flea
+flea beetle
+fleckvieh cattle
 flight
 float
 flood
 floor
+florida gar
+florida mouse
+florida panther
+florida woods cockroach
+flounder
+flounder fish
 flour
+flour beetle
 flow
 flower
+flowerhorn fish
 flu
+fluke fish
 flute
 fly
+flycatcher
+flying fish
+flying lemur
+flying snake
+flying squirrel
 fog
 foggy
 fold
@@ -1053,6 +2052,7 @@ food
 fool
 foot
 football
+football fish
 footballer
 for
 forbidden
@@ -1060,71 +2060,153 @@ forecast
 foreign
 foreigner
 forest
+forest cobra
+forest cuckoo bumblebee
 forever
 forget
 forgive
 fork
 form
 former
+formosan mountain dog
 fortnight
 fortunately
+fossa
 fountain
+fox
+fox snakes
+fox squirrel
+fox terrier
 fractious
 frame
 free
+freeway ball python
 freeze
 freezer
 freezing
+french bulldog
+french bulldog mix
+french lop
+frenchton
+frengle
 frequent
 fresh
+freshwater crocodile
+freshwater drum
+freshwater eel
+freshwater jellyfish
+freshwater sunfish
 fridge
 fried
 friend
 friendly
 friendship
+frigatebird
 frighten
 frightened
 frightening
+frilled lizard
+frilled shark
+fritillary butterfly
+frizzle chicken
 frog
+frogfish
 from
 front
 frozen
+frug
 fruit
+fruit bat
+fruit fly
 fry
 fuchsia
 fuel
 full
 full-time
 fully
+fulvous whistling duck
 fun
 funambulist
 fundamental
 fur
+fur seal
 furniture
+furrow bee
 further
 furthest
 future
+gaboon viper
+gadwall
 gain
+galapagos penguin
+galapagos shark
+galapagos tortoise
 gallery
 galvanize
 game
 gap
+gar
 garage
 garden
+garden eel
+garden spider
+gargoyle gecko
 garlic
+garter snake
 gas
+gastornis
 gate
+gazelle
 gear
+gecko
 general
 generally
 generation
 generous
+genet
 gentle
+gentoo penguin
+geoffroys tamarin
 geographical
 geography
+gerberian shepsky
+gerbil
+german cockroach
+german longhaired pointer
+german pinscher
+german shepherd guide
+german shepherd mix
+german sheppit
+german sheprador
+german shorthaired pointer
+german spitz
+german wirehaired pointer
 get
+gharial
+ghost catfish
+ghost crab
 giant
+giant african land snail
+giant armadillo
+giant beaver
+giant clam
+giant desert centipede
+giant golden mole
+giant house spider
+giant isopod
+giant leopard moth
+giant panda bear
+giant salamander
+giant schnauzer
+giant schnoodle
+giant siphonophore
+giant trevally
+giant weta
+giant wood moth
+gibbon
 gift
+gigantopithecus
+gila monster
 giraffe
 girl
 girlfriend
@@ -1132,22 +2214,74 @@ give
 glad
 glance
 glass
+glass frog
+glass lizard
 glasses
+glechon
+glen of imaal terrier
 glove
+glowworm
+gnat
 gnaw
 gnome
 go
 goal
 goalkeeper
 goat
+goberian
+goblin shark
+goby fish
 goggle
 gold
+goldador
+goldcrest
 golden
+golden dox
+golden eagle
+golden irish
+golden jackal
+golden lancehead
+golden lion tamarin
+golden masked owl
+golden mole
+golden newfie
+golden oriole
+golden pyrenees
+golden retriever
+golden retriever mix
+golden saint
+golden shepherd
+golden shiner
+golden tortoise beetle
+golden trout
+golden-crowned flying fox
+golden-crowned kinglet
+goldendoodle
+goldfish
 golf
+goliath beetle
+goliath frog
+goliath grouper
+goliath tigerfish
+gollie
+gomphotherium
 good
 good-looking
 googol
+goonch catfish
+goose
+gooty sapphire tarantula
+gopher
+gopher snake
+gopher tortoise
+goral
+gordon setter
 gorgeous
+gorgosaurus
+gorilla
+goshawk
+gouldian finch
+gourami
 government
 grab
 grade
@@ -1164,22 +2298,79 @@ grandson
 granny
 grant
 grape
+grapevine beetle
 graphics
 grass
+grass carp
+grass snake
+grass spider
+grasshopper
+grasshopper mouse
 grateful
+gray catbird
+gray fox
+gray tree frog
 great
+great blue heron
+great crested flycatcher
+great dane
+great dane mix
+great danoodle
+great egret
+great hammerhead shark
+great kiskadee
+great plains rat snake
+great potoo bird
+great pyrenees
+great pyrenees mix
+great white shark
+greater swiss mountain dog
+grebe
 green
+green anaconda
+green anole
+green aphids
+green bee-eater
+green bottle blue tarantula
+green frog
+green heron
+green june beetle
+green mamba
+green rat snake
+green snake
+green sunfish
+green tree frog
+green tree python
+greenland dog
+greenland shark
 greet
 greeting
 grey
+grey heron
+grey mouse lemur
+grey reef shark
+grey seal
+greyhound
+griffon vulture
+griffonshire
 grill
 grilled
 grisly
 grizzly
+grizzly bear
+groenendael
 groom
 ground
+ground snake
+ground squirrel
+groundhog
+groundhog tick
 group
+grouper
+grouse
 grow
+grunion
+guadalupe bass
 guard
 guess
 guest
@@ -1187,18 +2378,42 @@ guest-house
 guide
 guidebook
 guilty
+guinea fowl
+guinea pig
 guitar
 guitarist
+gulper catfish
+gulper eel
 gum
 gun
+guppy
 guy
 gym
 gymnastics
+gypsy cuckoo bumblebee
+gypsy moth
+gypsy moth caterpillar
+haast’s eagle
 habit
+habu snake
+haddock
+hagfish
+haikouichthys
+hainosaurus
 hair
 haircut
+hairy frogfish
+hairy woodpecker
+hairy-footed flower bee
 half
+halibut
 hall
+hallucigenia
+hamburg chicken
+hammerhead shark
+hammerhead worm
+hammond’s flycatcher
+hamster
 hand
 handbag
 handkerchief
@@ -1210,13 +2425,35 @@ happen
 happily
 happiness
 happy
+harbor porpoise
+harbor seal
 harbour
 hard
+hardhead catfish
 hardly
 hardware
+hare
+harlequin coral snake
+harlequin rabbit
+harp seal
+harpy eagle
+harrier
+harris’s hawk
+hartebeest
 hat
 hate
+hatzegopteryx
+havamalt
+havanese
+havapoo
+havashire
+havashu
 have
+hawaiian crow
+hawaiian goose
+hawaiian monk seal
+hawk
+hawk moth caterpillar
 he
 head
 headache
@@ -1229,26 +2466,41 @@ heart
 heat
 heater
 heating
+hedgehog
 heel
 height
+helicoprion
 helicopter
+hellbender
 hello
 helmet
 help
+hepatic tanager
 her
 herb
+hercules beetle
+hercules moth
 here
+hermit crab
 hero
 heroine
+heron
+herrerasaurus
+herring
+herring gull
 hers
 hey
 hi
 hidden
 hide
 high
+highland cattle
 hill
 him
+himalayan
 himself
+hippopotamus
+hippopotamus gorgops
 hire
 his
 historic
@@ -1256,56 +2508,118 @@ historical
 history
 hit
 hitchhike
+hoary bat
 hobby
+hobo spider
+hogfish
+hognose snake
+hokkaido
 hold
 hole
 holiday
+holy cross frog
 home
+honduran white bat
 honestly
 honey
+honey badger
+honey bee
+honey buzzard
 honeymoon
 honorific
+hooded oriole
+hooded seal
+hook-nosed sea snake
+hoopoe
 hope
 hopeful
 hopefully
 hopeless
+horgi
+horn shark
+hornbill
+horned adder
+horned beetle
+horned grebe
+horned lizard
+horned viper
+hornet
 horrible
 horror
 horse
+horse mackerel
+horsefly
+horseshoe crab
 hospital
 hostel
 hot
 hotel
+houdan chicken
 hour
 house
+house finch
+house sparrow
+house wren
+housefly
+hovasaurus
+hovawart
 how
+howler monkey
 hug
 human
+humboldt penguin
+humboldt squid
 humid
+hummingbird
+hummingbird hawk-moth
+humpback whale
 hunger
 hungry
 hunt
+huntaway
+huntsman spider
 hurry
 hurt
 husband
+huskador
+huskita
+husky
+husky jack
+huskydoodle
 hut
+hyacinth macaw
+hyaenodon
+hyena
 hyperconsciousnesses
 hyperpigmentation
 i
+ibex
+ibis
+ibizan hound
+icadyptes
+icelandic sheepdog
+ichthyosaurus
+ichthyostega
 icicle
 icy
 id
 idea
 identification
 if
+iguana
+iguanodon
 ill
 illness
 illusion
 illustration
 imagination
 imagine
+img boa constrictor
 immediately
 immigration
+immortal jellyfish
+impala
+imperial moth
 imperious
 impetus
 implementation
@@ -1316,6 +2630,7 @@ improve
 improvement
 in
 inch
+inchworm
 include
 including
 incomprehensibilities
@@ -1326,14 +2641,25 @@ incredible
 indeed
 independence
 independent
+indian cobra
+indian elephant
+indian giant squirrel
+indian palm squirrel
+indian python
+indian rhinoceros
+indian star tortoise
+indianmeal moth
 indict
+indigo snake
 indispensable
 indistinguishability
 indistinguishableness
 individual
 individuality
+indochinese tiger
 indoor
 indoors
+indri
 industrialize
 industry
 inform
@@ -1343,9 +2669,11 @@ ingredient
 initial
 injure
 ink
+inland taipan
 inquiry
 inquisitive
 insect
+insects
 inside
 insist
 insouciant
@@ -1381,28 +2709,74 @@ investigation
 invitation
 invite
 involve
+io moth
+irish doodle
+irish elk
+irish setter
+irish terrier
+irish water spaniel
+irish wolfhound
 iron
 ironing
 irreplaceable
+irukandji jellyfish
 island
 issue
 it
+italian greyhound
 item
 its
 itself
+ivory-billed woodpecker
+ivy bee
+jabiru
+jacana
+jack crevalle
+jack russells
+jack-chi
+jackabee
+jackal
+jackdaw
 jacket
+jackrabbit
+jackson’s chameleon
+jagdterrier
+jaguar
+jaguarundi cat
 jail
 jam
+jamaican boa
+jamaican iguana
+japanese bantam chicken
+japanese beetle
+japanese chin
+japanese macaque
+japanese rat snake
+japanese spitz
+japanese squirrel
+japanese terrier
 jar
+javan leopard
+javan mudsnake
+javan rhinoceros
+javan tubercle snake
+javanese
 jazz
 jealous
 jeans
+jellyfish
+jerboa
 jet
+jewel beetle
 jewellery
 job
 jog
+john dory
 join
 joke
+jonah crab
+joro spider
+josephoartigasia monesi
 journalist
 journey
 judge
@@ -1410,87 +2784,228 @@ jug
 juice
 jump
 jumper
+jumping spider
 jungle
+jungle carpet python
+junglefowl
 just
 justification
+kagu
+kai ken
+kakapo
+kaluga sturgeon
+kamehameha butterfly
+kangal shepherd dog
 kangaroo
+kangaroo mouse
+kangaroo rat
+katydid
+kauai
+kea
+keagle
+keel-billed toucan
+keelback
 keen
 keep
 keeper
+keeshond
+kelp greenling
+kentucky warbler
+kenyan sand boa
+kermode bear
+kerry blue terrier
+kestrel
+keta salmon
 kettle
 key
+key deer
 keyboard
+keyhole cichlid
+khao manee
+khapra beetle
+kiang
 kick
 kid
+kiko goat
 kill
+killdeer
+killer bee
+killer clown ball python
+killer whale
+killifish
 kilogramme
 kilometre
+kinabalu giant red leech
 kind
+kinder goat
 king
+king cobra
+king crab
+king eider
+king mackerel
+king penguin
+king quail
+king rat snake
+king salmon
+king shepherd
+king snake
+king vulture
+kingfisher
+kingklip
+kinkajou
+kirtland’s snake
+kishu
 kiss
+kissing bugs
+kissing gourami
 kit
+kit fox
 kitchen
 kite
+kitefin shark
 kitten
+kiwi
+klipspringer
 knee
 knife
+knifefish
+knight anole
 knit
 knock
 know
+koala
+kodiak bear
+kodkod
+koi fish
+kokanee salmon
+komodo dragon
+komondor
+kooikerhondje
+koolie
+korean jindo
+kori bustard
+kouprey
+kowari
+krait
+kribensis
+krill
+kudu
+kudzu bug
+kuvasz
+labahoula
 label
+labmaraner
 laboratory
+labout’s fairy wrasse
+labrabull
+labradane
+labradoodle
+labrador retriever
+labraheeler
+labrottie
+lace bug
+lace monitor
 lack
 ladder
 lady
+ladybug
+ladyfish
+lagotto romagnolo
 lake
+lake sturgeon
+lake trout
+lakeland terrier
+lamancha goat
 lamb
 lamp
+lamprey
+lancashire heeler
+lancetfish
 land
 landscape
+landseer newfoundland
 language
+lappet-faced vulture
+lapponian herder
 laptop
+larder beetle
 large
+large munsterlander
+largemouth bass
 last
 late
 lately
 later
 latest
 laugh
+laughing kookaburra
+lavender albino ball python
 law
+lawnmower blenny
 lawyer
 lay
+lazarus lizard
 lazy
 lead
 leader
 leaf
+leaf-tailed gecko
+leafcutter ant
+leafcutter bee
 league
 learn
 least
+least flycatcher
 leather
+leatherback sea turtle
 leave
 lecture
+leech
+leedsichthys
 left
 left-hand
 leg
 legerdemain
+leghorn chicken
 legislation
+leichhardt’s grasshopper
 leisure
+lemming
 lemon
+lemon blast ball python
+lemon cuckoo bumblebee
+lemon shark
 lemonade
+lemur
 lend
 length
+leonberger
+leopard
+leopard cat
+leopard frog
+leopard gecko
+leopard lizard
+leopard seal
+leopard shark
+leopard tortoise
+leptocephalus
 less
+lesser jacana
+lesser scaup
 lesson
 let
 letter
 lettuce
 level
+lhasa apso
+lhasapoo
 liaison
 library
 licence
 lie
 life
 lift
+liger
 light
 lighter
 lightning
@@ -1498,11 +3013,19 @@ like
 likely
 limit
 limited
+limpet
 line
+lineback cattle
 link
+linnaeus’s two-toed sloth
+linnet
 lion
+lionfish
 lionize
+lion’s mane jellyfish
+liopleurodon
 lip
+lipstick albino boa
 liquefy
 liquid
 list
@@ -1511,21 +3034,41 @@ literature
 litre
 litter
 little
+little brown bat
+little penguin
 live
 lively
+livyatan
+lizard
+lizardfish
+llama
+loach
 load
 loan
+lobster
 local
 locate
 location
 lock
 locker
+locust
+loggerhead shrike
 logo
 lollipop
+lone star tick
 lonely
 long
+long-eared owl
+long-haired rottweiler
+long-tailed tit
+long-winged kite spider
+longfin mako shark
+longnose gar
 look
+loon
 loose
+lorikeet
+loris
 lorry
 lose
 lost
@@ -1534,52 +3077,132 @@ loud
 love
 lovely
 low
+lowchen
 luck
 lucky
 luggage
+lumpfish
+luna moth
+luna moth caterpillar
 lunch
 lunchtime
+lungfish
+lurcher
 luxury
+lykoi cat
+lynx
+lyrebird
+lystrosaurus
+macaque
 macaron
+macaroni penguin
 macaroon
+macaw
+macgillivray’s warbler
+machaeroides
 machine
+mackenzie valley wolf
+macrauchenia
 mad
+madagascar hissing cockroach
+madagascar jacana
+madagascar tree boa
 madam
+madora moth
 maestro
 magazine
+magellanic penguin
+maggot
 magic
 magnification
 magnificent
+magnolia warbler
+magpie
+magyarosaurus
+mahi mahi
+maiasaura
 mail
 main
+maine coon
 make
 make-up
+mal shi
+malayan civet
+malayan krait
+malayan tiger
+malchi
 male
+mallard
+malteagle
+maltese
+maltese mix
+maltese shih tzu
+maltipom
+maltipoo
+mamba
+mamushi snake
 man
+man of war jellyfish
 manage
 manager
+manatee
 manchester
+manchester terrier
+mandarin rat snake
+mandrill
+maned wolf
 mango
+mangrove snake
+mangrove snapper
 manipulation
+manta ray
+mantella frog
 many
 map
+marabou stork
+marans chicken
+marble fox
+maremma sheepdog
+margay
 marimba
+marine iguana
+marine toad
 mark
 market
+markhor
+marmoset
+marmot
 marriage
 married
 marry
+marsh frog
+marsican brown bear
 marvellous
+masiakasaurus
+masked angelfish
+masked palm civet
+mason bee
+massasauga
+mastador
+mastiff
+mastiff mix
 match
 mate
 material
 mathematical
 matter
+mauzer
 maximum
 may
+may beetle
+mayan cichlid
 maybe
+mayfly
 me
+meagle
 meal
+mealworm beetle
+mealybug
 mean
 meaning
 meanwhile
@@ -1587,8 +3210,17 @@ meat
 mechanic
 medicine
 medium
+meerkat
 meet
 meeting
+megalania
+megalochelys
+megalodon
+megamouth shark
+meganeura
+megatherium
+meiolania
+mekong giant catfish
 melange
 melon
 member
@@ -1597,6 +3229,7 @@ memory
 mend
 mention
 menu
+merganser
 mess
 message
 messy
@@ -1604,21 +3237,41 @@ metal
 metanoia
 method
 metre
+mexican alligator lizard
+mexican black kingsnake
+mexican eagle
+mexican fireleg tarantula
+mexican free-tailed bat
+mexican mole lizard
 microelectronically
+microraptor
 microwave
 midday
 middle
 middle-aged
+midget faded rattlesnake
 midnight
 might
+miki
 mild
 mile
 milk
+milk snake
+milkfish
+milkweed aphids
 millimetre
 million
+millipede
 mind
 mine
+mini labradoodle
+mini lop
+miniature bull terrier
+miniature husky
+miniature pinscher
 minimum
+mink
+minke whale
 minus
 minuscule
 minute
@@ -1628,91 +3281,187 @@ misconception
 miserable
 miss
 missing
+mississippi kite
 mistake
 mistletoe
 mix
 mobile
+moccasin snake
+mockingbird
 model
 modern
+modern game chicken
 modification
+moist
+mojarra
+mojave ball python
+mojave rattlesnake
+mola mola
+mole
+mole crab
+mole cricket
+mole snake
+mollusk
+molly
+monarch butterfly
 money
+mongoose
+mongrel
+monitor lizard
 monkey
+monkfish
+monocled cobra
+monte iberia eleuth
 month
 monument
 mood
 moon
+moon jellyfish
+moonglow boa
+moorhen
+moose
+moray eel
 more
+morkie
 morning
+morpho butterfly
+mosasaurus
+moscow watchdog
 mosquito
+mosquito hawk
 most
+moth
 mother
 motor-racing
 motorbike
 motorcycle
 motorway
 mountain
+mountain beaver
+mountain bluebird
+mountain cur
+mountain feist
+mountain gorilla
+mountain lion
+mourning dove
+mourning gecko
+mourning warbler
 mouse
+mouse spider
+mouse-deer
 moustache
 mouth
 move
 movie
+mozambique spitting cobra
 mr
 mrs
 ms
 much
+mud snake
+mudi
+mudpuppy
+mudskipper
 mug
+mule
+mule deer
+mulga snake
+mullet fish
 multifaceted
 multiply
 mum
+muntjac
 murmur
+muscovy duck
 museum
 mushroom
 music
 musical
 musician
+musk deer
+muskellunge
+muskie
+muskox
+muskrat
+mussurana snake
 must
+muttaburrasaurus
 my
+myna bird
 myriad
 myself
 mystery
+nabarlek
+naegleria
+naked mole rat
 name
 narcissistic
 narrow
+narwhal
 nasty
 national
 nationality
 nativity
+natterjack
 natural
 nature
 nauseous
+nautilus
+neanderthal
+neapolitan mastiff
 near
 nearby
 nearly
 neat
+nebelung
 necessary
 neck
 necklace
 need
+needlefish
 negative
 neighbour
 neighbourhood
+nelore cattle
+nematode
+nene
+neon tetra
 nephew
+neptune grouper
 nervous
 net
+netherland dwarf rabbit
 network
 neuropharmacological
 never
 new
+new hampshire red chicken
+newfoundland
+newfypoo
 news
 newspaper
+newt
 next
+nguni cattle
 nice
+nicobar pigeon
 niece
+nigerian goat
 night
+night adder
+night heron
+night snake
 nightclub
+nightingale
+nightjar
 nightlife
 nightmare
+nile crocodile
+nile monitor
+nile perch
+nilgai
 no
+no see ums
 nobody
 noise
 noisome
@@ -1721,13 +3470,38 @@ none
 noninterventionists
 nontet
 noon
+norfolk terrier
 normal
 normally
+norrbottenspets
 north
+north american black bear
 northeast
 northern
+northern alligator lizard
+northern bobwhite
+northern cardinal
+northern crested caracara
+northern flicker
+northern fur seal
+northern harrier
+northern inuit dog
+northern jacana
+northern pacific rattlesnake
+northern parula
+northern pintail
+northern potoo
+northern screamer
+northern water snake
 northwest
+norway rat
+norwegian buhund
+norwegian elkhound
+norwegian forest
+norwegian lundehund
+norwich terrier
 nose
+nose-horned viper
 nostalgia
 not
 note
@@ -1736,13 +3510,25 @@ notepaper
 nothing
 notice
 noticeboard
+nova scotia duck tolling retriever
 novel
 now
 nowadays
 nowhere
+nubian goat
+nudibranch
 numb
+numbat
 number
+nuralagus
 nurse
+nurse shark
+nut weevil
+nuthatch
+nutria
+nyala
+oak toad
+oarfish
 obfuscate
 object
 obstruction
@@ -1751,10 +3537,19 @@ obviously
 occasion
 occupation
 ocean
+ocean perch
+ocean pout
+ocean sunfish
+ocean whitefish
+oceanic whitetip shark
+ocellated turkey
+ocelot
 octet
+octopus
 odd
 oddity
 odious
+oenpelli python
 of
 off
 offer
@@ -1762,13 +3557,26 @@ office
 officer
 often
 oh
+oilfish
 oj
+okapi
 okay
 old
+old english sheepdog
+old house borer
 old-fashioned
+oleander hawk moth
+olingo
 olive
+olive baboon
+olive python
+olive sea snake
+olm
+olympic marmot
 omelette
 on
+onagadori chicken
+onager
 once
 one
 onion
@@ -1776,26 +3584,60 @@ online
 only
 onomatopoeia
 onto
+opabinia
+opah
+opaleye
 open
 opera
 operate
 operation
 opinion
+opossum
 opportunity
 opposite
 option
 or
+oranda goldfish
 orange
+orange baboon tarantula
+orange dream ball python
+orange roughy
+orange spider
+orange tanager
+orange-crowned warbler
+orange-headed tanager
+orangutan
+orb weaver
+orchard oriole
 orchestra
+orchid dottyback
 order
 ordinary
+oregon spotted frog
 organisation
 organise
 organization
+ori-pei
+oribi
+oriental cockroach
+oriental dwarf kingfisher
 original
+orinoco crocodile
+ornate bichir
+ornate black-tailed rattlesnake
+ornate box turtle
+ornithocheirus
+ornithomimus
+ortolan bunting
+oscar fish
+osprey
 ostensibly
+ostracod
+ostrich
 other
 otherwise
+otter
+otterhound
 ought
 our
 ours
@@ -1805,31 +3647,63 @@ outdoor
 outdoors
 outside
 oven
+ovenbird
 over
 overenthusiastically
 overnight
 oversophistication
 overspecializations
+oviraptor
 owe
+owl
+owl butterfly
+owlfly
 own
 owner
 ox
 oxen
+oxpecker
 oxtail
+oyster
+oyster toadfish
+ozark bass
+pachycephalosaurus
+pacific coast tick
+pacific sleeper shark
+pacific spaghetti eel
 pack
 packet
+paddlefish
+pademelon
 paint
+painted bunting
+painted turtle
 painter
 painting
 pair
 palace
+palaeoloxodon namadicus
+palaeophis
 pale
+paleoparadoxia
+palm rat
+palo verde beetle
 pan
+panda pied ball python
+pangolin
+pantaloon bee
+panther
+panthera atrox
 pants
 paper
+papillon
+papillon mix
 paradigm
+paradise flying snake
 paragraph
+parakeet
 paraphernalia
+parasaurolophus
 parcel
 pardon
 parent
@@ -1837,12 +3711,18 @@ park
 parking
 parliamentary
 parrot
+parrot snake
+parrotfish
+parrotlet
+parson russell terrier
 part
 part-time
+parti schnauzer
 participation
 particular
 partly
 partner
+partridge
 party
 pass
 passenger
@@ -1850,8 +3730,13 @@ passport
 password
 past
 pasta
+patagonian cavy
+patagonian mara
+patagotitan
+patas monkey
 path
 patient
+patterdale terrier
 pattern
 paucity
 pause
@@ -1859,77 +3744,141 @@ pavement
 pay
 pc
 pea
+pea puffer
 peace
 peaceful
 peach
+peacock
+peacock bass
+peacock butterfly
+peacock spider
+peagle
 peak
 peanut
 pear
 pedestrian
+peekapoo
 peel
+pekingese
+pelagornis
+pelagornithidae
+pelican
+pelycosaurs
+pembroke welsh corgi
 pen
 pence
 pencil
 penfriend
 penguin
+pennsylvania wood cockroach
 penny
 penultimate
 people
 pepper
+peppered moth
+peppermint angelfish
 per
 percent
+perch fish
+peregrine falcon
 perfect
 perform
 performance
 perfume
 perhaps
+peringuey’s adder
 period
 permanent
 permit
 permitted
 pernicious
+perro de presa canario
+persian
 person
 personal
 personally
 perspicacious
 persuade
 persuasion
+peruvian guinea pig
+peruvian inca orchid
+pesquet’s parrot
 pet
+petit basset griffon vendéen
+petite goldendoodle
 petrol
+pharaoh hound
 pharmacy
+pheasant
+pheasant-tailed jacana
 phenomenalistically
+philippine cobra
 philistine
 philosophizations
 phlegm
+phoenix chicken
 phone
+phorusrhacos
 photo
 photocopy
 photographer
 photography
 phrase
 physics
+phytosaurs
 pi
 piano
+picardy spaniel
 pick
 picnic
 picture
+pictus catfish
 pie
+piebald dachshund
 piece
+pied ball python
+pied tamarin
+pied-billed grebe
 pig
+pig-nosed turtle
+pigeon
+pika
+pike fish
 pile
+pileated woodpecker
 pill
 pillow
 pilot
 pin
+pinacate beetle
+pine beetle
+pine marten
+pine siskin
+pine snake
 pineapple
+pinfish
 pink
+pink bollworm
+pink dolphin
+pink fairy armadillo
+pink salmon
+pink toed tarantula
+pink-necked green pigeon
 pious
 pipe
+pipe snake
+pipefish
+piranha
 pirate
+pit bull
+pit viper
+pitador
+pitsky
 pity
 pizza
 place
 plain
+plains hognose snake
 plan
 plane
 planet
@@ -1937,6 +3886,9 @@ plant
 plastic
 plate
 platform
+platinum arowana
+platybelodon
+platypus
 play
 player
 playground
@@ -1945,31 +3897,68 @@ please
 pleased
 pleasure
 plenty
+plesiosaur
+pliosaur
+plott hound mix
+plott hounds
 plug
 plus
+plymouth rock chicken
 pneumonia
 pocket
+pocket beagle
+pocket pitbull
+podenco canario
 poem
 poet
 poetry
 point
+pointer
+pointer mix
+poison dart frog
+polacanthus
+polar bear
+polecat
 police
 policeman
+polish chicken
+polish lowland sheepdog
+polish tatra sheepdog
 polite
 political
 politician
 politics
+polka dot stingray
+pollock fish
 pollution
+polyphemus moth
+pomapoo
+pomchi
+pomeagle
+pomeranian
+pomeranian mix
+pompano fish
+pomsky
+pond skater
+poochon
+poodle
+poogle
 pool
+pool frog
 pop
 popsicle
 popular
+porbeagle shark
+porcupine
+porcupinefish
 port
+portuguese podengo
 position
 positive
 possibility
 possible
 possibly
+possum
 post
 postcard
 poster
@@ -1977,15 +3966,24 @@ postman
 postpone
 pot
 potato
+potato beetle
+potoo
+potoroo
 pound
 pour
 powder
+powderpost beetle
 power
 powerful
 practice
 practise
+prairie chicken
+prairie dog
+prairie rattlesnake
+prawn
 pray
 prayer
+praying mantis
 predestabilization
 predict
 prefer
@@ -2017,6 +4015,8 @@ private
 prize
 probably
 problem
+proboscis monkey
+procoptodon
 procrastination
 produce
 product
@@ -2027,6 +4027,7 @@ progress
 project
 promise
 promote
+pronghorn
 pronounce
 pronunciation
 proper
@@ -2039,20 +4040,61 @@ provide
 pseudoparenchymatous
 pseudopseudohypoparathyroidism
 pseudoscientifically
+psittacosaurus
 psychopharmacological
+pteranodon
+pterodactyl
 public
 publish
+pudelpointer
+puertasaurus
+puff adder
+pufferfish
+puffin
+pug
+pug mix
+pugapoo
+puggle
+pugshire
+puli
 pull
+puma
+pumi
 pump
+pumpkin patch tarantula
 punish
 puppy
 pure
 purple
+purple emperor butterfly
+purple finch
+purple gallinule
+purple tarantula
 purpose
 purse
+purussaurus
 push
+puss caterpillar
+puss moth
 puzzle
+pygmy hippopotamus
+pygmy marmoset
+pygmy python
+pygmy rattlesnake
+pygmy shark
+pygora goat
+pyjama shark
 pyjamas
+pyrador
+pyredoodle
+pyrenean mastiff
+pyrenean shepherd
+pyrosome
+python
+père david’s deer
+quagga
+quahog clam
+quail
 qualification
 qualified
 quality
@@ -2060,7 +4102,10 @@ quantity
 quarter
 quartet
 queen
+queen snake
 question
+quetzal
+quetzalcoatlus northropi
 queue
 quick
 quickly
@@ -2069,13 +4114,26 @@ quintet
 quit
 quite
 quiz
+quokka
+quoll
 rabbit
+raccoon
+raccoon dog
 race
+racer snake
 racket
+radiated tortoise
 radio
+ragamuffin
+ragdoll
+raggle
 rail
 railway
 rain
+rainbow boa
+rainbow grasshopper
+rainbow kribs
+rainbow shark
 raincoat
 rainforest
 raise
@@ -2084,7 +4142,11 @@ rap
 rapscallion
 rare
 rarely
+rat
+rat snakes
+rat terrier
 rather
+rattlesnake
 raw
 reach
 read
@@ -2122,11 +4184,51 @@ recycle
 recycled
 recycling
 red
+red ackie monitor
+red aphids
+red deer
+red diamondback rattlesnake
+red drum fish
+red finch
+red fox
+red kite
+red knee tarantula
+red nose pit bull
+red panda
+red paper wasp
+red racer snake
+red spitting cobra
+red squirrel
+red star chicken
+red tail boa
+red tanager
+red wolf
+red-bellied black snake
+red-bellied woodpecker
+red-billed quelea bird
+red-eared slider
+red-eyed tree frog
+red-footed tortoise
+red-handed tamarin
+red-headed vulture
+red-lipped batfish
+red-shouldered hawk
+red-tailed cuckoo bumblebee
+red-winged blackbird
+redback spider
+redbone coonhound
+redcap chicken
+redear sunfish
+redhump eartheater
+redstart
+redtail catfish
 reduce
+reef shark
 refreshments
 refrigerator
 refund
 refuse
+regal jumping spider
 regarding
 regards
 region
@@ -2134,6 +4236,7 @@ register
 registration
 regret
 regular
+reindeer
 reinstitutionalization
 reinstitutionalizing
 relation
@@ -2151,6 +4254,7 @@ remove
 rent
 repair
 repeat
+repenomamus
 replace
 reply
 report
@@ -2168,6 +4272,7 @@ responsible
 rest
 restaurant
 result
+reticulated python
 retire
 return
 revelation
@@ -2176,36 +4281,89 @@ revise
 revision
 revolutionary
 reward
+rex rabbit
+rhamphosuchus
+rhea
+rhesus macaque
+rhino beetle
+rhino viper
+rhinoceros
+rhode island red chicken
+rhodesian ridgeback
+rhombic egg-eater snake
 rhythm
+ribbon eel
+ribbon snake
 rice
 rich
 ride
 rider
 right
 right-hand
+rim rock crowned snake
 ring
+ring-billed gull
+ringed kingfisher
+rinkhals snake
 rise
 river
+river otter
+river turtle
 road
+roadrunner
 roast
 rob
+robber flies
+robin
 rock
+rock bass
+rock crab
+rock hyrax
+rock python
+rockfish
+rockhopper penguin
+rodents
+roe deer
 role
 roll
 romance
 romantic
 roof
 room
+roosevelt elk
+rooster
+root aphids
 rose
+rose-breasted grosbeak
+roseate spoonbill
+rosy boa
+rotterman
+rottle
+rottsky
+rottweiler
+rottweiler mix
 rough
+rough earth snake
+rough green snake
+rough-legged buzzard
+rough-legged hawk
 round
 roundabout
 route
 routine
+rove beetle
 row
+royal penguin
 rubber
+rubber boa
 rubbish
+ruby-crowned kinglet
+ruby-throated hummingbird
+rudderfish
+ruddy duck
+ruddy turnstone
 rude
+rufous hummingbird
 rug
 rugby
 ruin
@@ -2214,49 +4372,140 @@ ruler
 run
 runner
 running
+russell terrier
+russel’s viper
+russian bear dog
+russian blue
+russian tortoise
+saanen goat
+saarloos wolfdog
+saber-toothed tiger
+sable
+sable black german shepherd
+sable ferret
+sable german shepherd
 sacrilegious
+saddleback caterpillar
 safe
 safely
 sagacious
+saiga
 sail
+sailfish
 sailing
+saint berdoodle
+saint bernard
+saint shepherd
 salad
+salamander
 salary
 sale
 saleswoman
 salmon
+salmon shark
 salt
+saluki
+sambar
 same
+samoyed
+san francisco garter snake
 sand
+sand cat
+sand crab
+sand dollar
+sand flea
+sand lizard
+sand tiger shark
+sand viper
 sandal
+sandhill crane
+sandpiper
 sandwich
+sandworm
 sanguine
+saola
+sapsali
+sarcosuchus
+sardines
+sarkastodon
+sarplaninac
+sarus crane
+satanic leaf-tailed gecko
 satisfaction
 satisfactory
 satisfied
+saturniidae moth
 sauce
 saucepan
 saucer
+sauropoda
 sausage
+savanna goat
+savannah monitor
+savannah sparrow
 save
+savu python
+saw-scaled viper
+sawfish
 say
+scale-crested pygmy tyrant
+scaleless ball python
+scallops
+scarab beetle
 scared
 scarf
+scarlet kingsnake
+scarlet macaw
+scarlet tanager
 scary
 scene
 scenery
+schapendoes
+schipperke
+schneagle
+schnoodle
 school
 schoolchild
 science
 scientific
 scientist
+scimitar-horned oryx
+scissor-tailed flycatcher
 scissors
 scooter
 score
+scorpion
+scorpion fish
+scotch collie
+scottish deerhound
+scottish fold cat
+scottish terrier
 scream
 screen
+scrotum frog
+scrub python
+sculpin
 sculpture
+scutosaurus
 sea
+sea anemone
+sea bass
+sea dragon
+sea eagle
+sea lion
+sea otter
+sea roach
+sea slug
+sea snake
+sea spider
+sea squirt
+sea trout
+sea turtle
+sea urchin
+seagull
+seahorse
+seal
+sealyham terrier
 search
 seaside
 season
@@ -2267,22 +4516,29 @@ secret
 secretary
 section
 security
+sedge warbler
 see
 seem
+sehuencas water frog
+sei whale
 select
 self-service
 selfish
 semiautobiographical
 send
+senegal parrot
+senepol cattle
 sense
 sensible
 sentence
 separate
 septet
+sequined spider
 serendipity
 series
 serious
 seriously
+serval
 serve
 server
 service
@@ -2291,34 +4547,60 @@ set
 several
 sew
 sextet
+seymouria
 shade
 shadow
 shake
 shall
 shame
 shampoo
+shantungosaurus
 shape
 share
 shark
 sharp
+sharp-shinned hawk
+sharp-tailed snake
+shastasaurus
 shave
 she
 sheep
+sheepadoodle
+sheepshead fish
 sheet
 shelf
+shepadoodle
+shepherd
+shepkita
+shepweiler
 sherbet
+shetland sheepdog
+shiba inu
+shiba inu mix
+shichi
+shih poo
+shih tzu
+shih tzu mix
+shikoku
+shiloh shepherd
 shine
 shiny
 ship
+shiranian
 shirt
 shocked
 shocking
 shoe
+shoebill stork
+shollie
 shoot
 shop
 shopping
 shore
 short
+short-eared owl
+short-faced bear
+shortfin mako shark
 shortly
 shorts
 should
@@ -2326,9 +4608,21 @@ shoulder
 shout
 show
 shower
+shrew
+shrimp
 shut
+siamese
+siamese fighting fish
+siberian
+siberian husky
+siberian ibex
+siberian retriever
+siberian tiger
+siberpoo
+sichuan takin
 sick
 side
+sidewinder
 sight
 sightseeing
 sign
@@ -2336,11 +4630,19 @@ signal
 signature
 significance
 signpost
+sika deer
 silence
 silent
 silk
+silken windhound
+silkie chicken
+silky shark
+silky terrier
 silly
 silver
+silver dollar
+silver labrador
+simbakubwa
 similar
 simple
 since
@@ -2350,40 +4652,79 @@ singer
 singing
 single
 sink
+sinosauropteryx
 sir
 sister
 sit
 site
 situated
 situation
+sivatherium
+six-eyed sand spiders
+sixgill shark
 size
 skate
+skate fish
 skateboard
 skateboarding
 skating
+skeleton tarantula
 ski
 skiing
 skill
 skin
+skink lizard
+skipjack tuna
 skirt
+skua
+skunk
 sky
+skye terrier
 sleep
+sleeper shark
 sleeve
 slim
 slip
+sloth
+slovak cuvac
+slow worm
 slowly
+slug
 small
+smallmouth bass
 smart
 smell
 smile
+smilosuchus
 smoke
 smoking
+smokybrown cockroach
 smooth
+smooth earth snake
+smooth fox terrier
+smooth green snake
+smooth hammerhead shark
+smooth snake
 snack
+snail
+snailfish
 snake
+snapping turtle
+snook fish
+snorkie
+snouted cobra
 snow
+snow bunting
+snow crab
+snow goose
+snow leopard
+snowberry clearwing moth
 snowboard
 snowboarding
+snowflake eel
+snowshoe
+snowshoe hare
+snowy owl
 so
 so-so
 soap
@@ -2392,15 +4733,18 @@ sociable
 social
 society
 sock
+sockeye salmon
 sofa
 soft
 software
 soldier
+soldier beetle
 solipsism
 solipsist
 solipsistic
 solution
 solve
+somali
 some
 somebody
 somehow
@@ -2410,6 +4754,8 @@ sometimes
 somewhere
 son
 song
+song sparrow
+song thrush
 soon
 sophistication
 sore
@@ -2420,18 +4766,38 @@ sound
 soup
 sour
 south
+south china tiger
 southeast
+southeastern blueberry bee
 southern
+southern black racer
+southern flannel moth
+southern hognose snake
+southern house spider
+southern pacific rattlesnake
 southwest
 souvenir
 space
+spadefoot toad
 spaghetti
+spaghettification
+spalax
+spanador
+spanish goat
+spanish mackerel
+spanish mastiff
+spanish water dog
 spare
 sparkling
+sparrow
+sparrowhawk
 speak
 speaker
 special
 specification
+speckled kingsnake
+speckled trout
+spectacled bear
 spectacular
 spectrophotometrically
 speech
@@ -2439,48 +4805,103 @@ speed
 spell
 spelling
 spend
+sperm whale
+sphynx
 spice
 spicy
+spider
+spider ball python
+spider beetle
+spider monkey
+spider wasp
+spider-tailed horned viper
 spill
 spinach
+spinner shark
+spinone italiano
+spinosaurus
+spiny bush viper
+spiny dogfish
+spiny hill turtle
+spiny-tailed lizard
+spirit bear
 spite
+spitting cobra
+spixs macaw
 spoil
+sponge
+spongy moth
 spoon
 sport
 spot
+spotted bass
+spotted gar
+spotted garden eel
+spotted lanternfly
+spotted python
+spotted skunk
+springador
+springbok
+springerdoodle
 spy
 square
 squash
+squash bee
+squash beetle
+squid
+squirrel
+squirrel monkey
+squirrelfish
+sri lankan elephant
+stabyhoun
 stadium
 staff
+staffordshire bull terrier
+stag beetle
 stage
 stairs
 stall
 stamp
 stand
+standard schnauzer
 star
+star-nosed mole
+starfish
+stargazer fish
 start
 station
 statue
 stay
 steak
 steal
+steelhead salmon
 steep
+steller’s sea cow
 step
 stick
+stick insect
 sticky
+stiletto snake
 still
+stingray
 stir
+stoat
 stomach
 stone
+stone crab
+stonechat
+stonefish
 stop
+stoplight loosejaw
 store
+stork
 storm
 story
 straight
 strange
 stranger
 strawberry
+strawberry hermit crab
 stream
 street
 stress
@@ -2489,6 +4910,10 @@ stressful
 strict
 strike
 stripe
+striped bass
+striped hyena
+striped rocket frog
+stromatolite
 strong
 student
 studies
@@ -2496,9 +4921,12 @@ studio
 study
 stuff
 stuntperson
+stupendemys
 stupid
+sturgeon
 style
 stylish
+styracosaurus
 subject
 subordination
 subscription
@@ -2509,28 +4937,45 @@ succedaneum
 succeed
 success
 such
+suchomimus
+suckerfish
 suddenly
 suffer
 sugar
+sugar glider
 suggest
 suggestion
 suit
 suitable
 suitcase
+sulcata tortoise
+sultan chicken
 sum
+sumatran elephant
+sumatran orangutan
+sumatran rhinoceros
+sumatran tiger
+summer flounder
+summer tanager
 sun
+sun bear
 sunbathe
+sunbeam snake
 sunglasses
 sunrise
 sunset
+sunset ball python
 sunshine
+super pastel ball python
 supercalifragilisticexpialidocious
 superincomprehensibleness
 superintendent
 supermarket
 supernatural
+supersaurus
 superstition
 supervision
+superworm
 supper
 support
 supporter
@@ -2539,66 +4984,131 @@ sure
 surf
 surfboard
 surfing
+surgeonfish
 surname
 surprise
 surprised
 surprising
 surround
+sussex chicken
 sustainability
+swai fish
+swainson’s hawk
+swallow
+swallowtail butterfly
+swallowtail caterpillar
+swan
 sweater
 sweatshirt
+swedish elkhound
+swedish lapphund
+swedish vallhund
 sweet
 swim
 swimming
 swimsuit
 switch
+swordfish
 synecdoche
+syrian hamster
 system
 t-shirt
 table
 table-cloth
 tablet
+taco terrier
+tailless whip scorpion
+taimen fish
+taipan
 take
 takeaway
+takin
 talent
 talented
 talk
 tall
+tamarin
+tamaskan
+tang
+tangerine leopard gecko
 tap
+tapanuli orangutan
+tapir
+tarantula
+tarantula hawk
+tarbosaurus
+tarpon
+tarsier
+tasmanian devil
+tasmanian tiger
+tasmanian tiger snake
 taste
 tasty
 tatterdemalion
 tau
+tawny frogmouth
+tawny mining bee
+tawny owl
 tax
 taxi
 tea
 teach
 teacher
 teaching
+teacup chihuahua
+teacup maltese
+teacup miniature horse
+teacup poodle
 team
 tear
 technique
 technological
 technology
+teddy bear hamster
+teddy guinea pig
+teddy roosevelt terrier
 teenager
 teeth
 telephone
+telescope fish
 television
 tell
 temporary
+ten-lined june beetle
+tennessee walking horse
 tennis
+tenrec
 tense
 tent
+tent caterpillar
+tentacled snake
+tenterfield terrier
 term
+termite
 terpsichorean
 terrible
 terribly
+terrier
 terrific
 terrified
+terror bird
 test
+tetra
+texas blind snake
+texas brown tarantula
+texas coral snake
+texas garter snake
+texas heeler
+texas indigo snake
+texas night snake
+texas rat snake
+texas spiny lizard
 text
 textbook
+thai ridgeback
+thalassomedon
 than
+thanatosdrakon
 thank
 thanks
 that
@@ -2612,6 +5122,8 @@ then
 there
 therefore
 theremin
+therizinosaurus
+theropod
 these
 they
 thick
@@ -2621,40 +5133,73 @@ thing
 think
 thirsty
 this
+thornback ray
+thorny devil
 those
 though
 thought
+thresher shark
 thriller
 throat
 through
 throw
+thrush
 thumb
 thunder
 thunderstorm
+thylacoleo
+thylacoleo carnifex
+thylacosmilus
+tibetan fox
+tibetan mastiff
+tibetan spaniel
+tibetan takin
+tibetan terrier
 tick
 ticket
 tidy
 tie
+tiffany
 tiger
+tiger beetle
+tiger moth
+tiger muskellunge
+tiger rattlesnake
+tiger salamander
+tiger shark
+tiger snake
+tiger swallowtail
+tiger swallowtail caterpillar
+tiger trout
 tights
+tiktaalik
 till
+timber rattlesnake
 time
 timetable
+timor python
 timorous
 tin
 tiny
 tip
+tire track eel
 tired
 tiring
 tissue
+titan beetle
+titanoboa
+titanosaur
 title
 to
+toadfish
 toast
 today
 toe
 together
 toilet
+tokay gecko
 tomato
+tomato hornworm
 tomorrow
 tongue
 tonight
@@ -2664,15 +5209,24 @@ toothbrush
 toothpaste
 top
 topic
+torkie
+tornjak
+tortoise
+tosa
 total
 totally
+toucan
 touch
 tour
 tourism
 tourist
 tower
+towhee
 town
+toxodon
 toy
+toy fox terrier
+toy poodle
 track
 tracksuit
 trade
@@ -2689,13 +5243,29 @@ translation
 transmission
 transmogrify
 transport
+transylvanian hound
+trapdoor spider
 tree
+tree cricket
+tree frog
+tree kangaroo
+tree snake
+tree swallow
+tree viper
+treecreeper
+treehopper
+treeing tennessee brindle
+treeing walker coonhound
 trend
 trick
+triggerfish
 trio
 trip
+troodon
+tropicbird
 trouble
 trousers
+trout
 truck
 true
 trumpet
@@ -2703,27 +5273,53 @@ trunk
 trust
 truth
 try
+tsetse fly
+tuatara
 tube
+tufted coquette
+tufted titmouse
+tully monster
 tuna
+tundra swan
 tune
+turaco
 turkey
+turkey vulture
+turkish angora
 turn
 turning
+turnspit
+turtle frog
+turtles
+tusoteuthis
+tussock moth
+tussock moth caterpillar
 twice
+twig snake
 twin
+tylosaurus
 type
 typical
 typically
+tyrannosaurus rex
 tyre
+uakari
+uaru cichlid
 ubiquitous
 ugly
+uguisu
 uhtceare
+uinta ground squirrel
+uintatherium
 ulotrichous
 ultracrepidarian
 ultrarevolutionaries
+ulysses butterfly
 umbrella
+umbrellabird
 unable
 unapologetically
+unau
 unbelievable
 uncertainty
 uncharacteristically
@@ -2739,6 +5335,7 @@ underneath
 underpants
 understand
 underwear
+underwing moth
 undress
 unemployed
 unemployment
@@ -2777,79 +5374,132 @@ unusual
 unwell
 up
 update
+upland sandpiper
 upload
 upon
 upper
 upset
 upstairs
+ural owl
+urechis unicinctus
 urgent
 urgently
+urial
+uromastyx
+urutu snake
 us
 use
 useful
 usual
 usually
+utonagan
 vacuum
 valetudinarian
 valley
+valley bulldog
 valuable
 value
+vampire bat
+vampire crab
+vampire squid
 van
 vanilla
+vaquita
 variety
 various
 vase
+veery
+vegavis
 vegetable
 vegetarian
 vehicle
+velociraptor
+venus flytrap
 verisimilitude
+vermilion flycatcher
 versus
+vervet monkey
 very
+vestal cuckoo bumblebee
 vet
 via
 vibraphone
 vibraslap
+vicuña
 video
 view
 village
 vindication
+vine snake
+vinegaroon
 violin
+viper
+viper boa
+viper shark
+viperfish
+virgin islands dwarf gecko
 virus
 visa
 visceral
 visit
 visitor
+vizsla
 vocabulary
 voice
+volcano snail
+vole
+volpino italiano
 volume
 vote
 vowel
 vulnerability
+vulture
+wahoo fish
+waimanu
 wait
 waiter
 waitress
 wake
 walk
 walking
+walking catfish
 wall
+wallaby
 wallet
+walleye fish
+walrus
+wandering albatross
 want
 war
+warbler
 wardrobe
 warm
 warn
 warning
+warthog
 wash
 washing-up
+wasp
 waste
 watch
 water
+water beetle
+water buffalo
+water bug
+water dragon
+water spider
+water vole
+waterbuck
 waterfall
+wattled jacana
 wave
+wax moth
 way
 we
 weak
+weasel
 weather
+weaver bird
 web
 webcam
 wednesday
@@ -2859,16 +5509,39 @@ weekend
 weekly
 weigh
 weight
+weimaraner
+weimardoodle
 welcome
 well
 well-dressed
 well-known
+wels catfish
+welsh black cattle
+welsh corgi
+welsh springer spaniel
+welsh terrier
 west
+west highland terrier
+west siberian laika
 western
+western blacklegged tick
+western blind snake
+western diamondback rattlesnake
+western gorilla
+western green mamba
+western hognose snake
+western kingbird
+western lowland gorilla
+western rat snake
+western rattlesnake
+western tanager
+westiepoo
 wet
 whale
+whale shark
 what
 whatever
+wheaten terrier
 wheel
 wheelchair
 when
@@ -2878,17 +5551,47 @@ wherever
 whether
 which
 whilst
+whimbrel
+whinchat
+whippet
+whiptail lizard
 white
+white bass
+white butterfly
+white catfish
+white crappie
+white ferret
+white german shepherd
+white marlin
+white rhinoceros
+white shark
+white sturgeon
+white tiger
+white-crowned sparrow
+white-eyed vireo
+white-faced capuchin
+white-shouldered house moth
+white-tail deer
+white-tailed eagle
+whitetail deer
+whiting
 who
 whole
+whoodle
+whooping crane
 whose
 why
 wide
 wife
 wild
+wild boar
+wild turkey
+wildebeest
 wildlife
 will
 willing
+willow flycatcher
+willow warbler
 win
 wind
 window
@@ -2897,22 +5600,53 @@ windsurfing
 windy
 wing
 winner
+winter moth
+wire fox terrier
+wirehaired pointing griffon
+wirehaired vizsla
 wise
 wish
 with
 within
 without
+wiwaxia
+wolf
+wolf eel
+wolf snake
+wolf spider
+wolffish
+wolverine
+woma python
 woman
+wombat
 wonder
 wood
+wood bison
+wood duck
+wood frog
+wood tick
+wood turtle
+woodchuck
 wooden
+woodlouse
+woodlouse spider
+woodpecker
+woodrat
 wool
+wool carder bee
+woolly aphids
+woolly bear caterpillar
+woolly mammoth
+woolly monkey
+woolly rhinoceros
 word
 work
 worker
 working
 workout
 world
+worm
+worm snake
 worried
 worry
 worse
@@ -2921,28 +5655,79 @@ worth
 would
 wow
 wrap
+wrasse
 write
 writer
 writing
+writing spider
 written
 wrong
+wrought iron butterflyfish
+wryneck
+wyandotte chicken
+wyoming toad
 x-ray
+x-ray tetra
+xeme
+xenacanthus
+xenoceratops
 xenon
+xenoposeidon
+xenotarsosaurus
+xerus
 xi
+xiaosaurus
+xiaotingia
+xingu river ray
+xiongguanlong
+xiphactinus
 xiphoid
+xoloitzcuintli
 xylem
 xylocarp
 xylograph
 xylophone
+yabby
+yak
+yakutian laika
+yarara
 yard
 yeah
 year
 yellow
+yellow anaconda
+yellow aphids
+yellow bass
+yellow bellied sapsucker
+yellow belly ball python
+yellow bullhead catfish
+yellow cobra
+yellow crazy ant
+yellow perch
+yellow sac spider
+yellow spotted lizard
+yellow tanager
+yellow tang
+yellow-bellied sea snake
+yellow-eyed penguin
+yellow-faced bee
+yellowfin tuna
+yellowhammer
+yellowish cuckoo bumblebee
+yellowjacket
+yellowtail snapper
+yellowthroat
 yes
 yesterday
 yet
+yeti crab
 yoga
 yoghurt
+yokohama chicken
+yoranian
+yorkie bichon
+yorkiepoo
+yorkshire terrier
 you
 young
 your
@@ -2951,8 +5736,21 @@ yourself
 youth
 zamiaceae
 zebra
+zebra finch
+zebra mussels
+zebra pleco
+zebra shark
+zebra snake
+zebra spitting cobra
+zebra tarantula
+zebrafish
+zebu
 zero
 zeugma
+zokor
 zone
+zonkey
 zoo
+zorse
 zucchini
+zuchon

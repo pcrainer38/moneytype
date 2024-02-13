@@ -6,21 +6,21 @@
 // 2 - Regenerate the wordsSeeds.json file.
 // 3 
 
-
-
 const fs = require('node:fs');
 
 // Read from the "words.txt" file. Makes into a temp array by newline char
 try {
     const wordsFile = fs.readFileSync('words.txt', 'utf8');
-    unsortedWordsFile = wordsFile.split("\n");
+    unsortedWords = wordsFile.toLowerCase().split("\n");
+    processedWords = unsortedWords.map((word) => word.trim());
 } catch (err) {
     console.error(err);
 }
 
 // Write to the "words.txt" file with sorted by line
 try {
-    fs.writeFileSync('words.txt', [...unsortedWordsFile].sort().join("\n"));
+    fs.writeFileSync('words.txt', [...new Set(processedWords)].sort().join("\n"));
+    // Spread operator and adding a Set version of trimmedWordsFile so there are no duplicate entries
 } catch (err) {
     console.error(err);
 }
