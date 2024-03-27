@@ -1,5 +1,18 @@
 // import { bootstrap } from 'bootstrap';
 // import { useQuery } from '@apollo/client';
+import sfxNewWordAppear from "../assets/newWordAppear.wav"
+import sfxMoneyGained1 from "../assets/moneyGained1.wav"
+import sfxMoneyGained2 from "../assets/moneyGained2.wav"
+import sfxMoneyGained3 from "../assets/moneyGained3.wav"
+import sfxMoneyGained4 from "../assets/moneyGained4.wav"
+import sfxMoneyGained5 from "../assets/moneyGained5.wav"
+import sfxMistype from "../assets/mistype.wav"
+import sfxUpgradeMoneyMultiplier from "../assets/upgradeMoneyMultiplier.wav"
+import sfxUpgradeTimeExtender from "../assets/upgradeTimeExtender.wav"
+import sfxUpgradeWordDifficulty from "../assets/upgradeWordDifficulty.wav"
+import sfxUpgradeDenied from "../assets/upgradeDenied.wav"
+
+
 import { useEffect, useRef, useState } from "react";
 
 import Image from "react-bootstrap/Image";
@@ -8,19 +21,22 @@ import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
 import difficulty from "/upgradeDifficulty.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
+import timeExtender from "/upgradeTimeExtender.svg?url";
 
 import darkDifficulty from "/upgradeDifficultyDark.svg?url";
-import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
 import darkMultiplier from "/upgradeMoneyMultiplierDark.svg?url";
+import darkTimeExtender from "/upgradeTimeExtenderDark.svg?url";
 
 import { useThemeContext } from "../components/ThemeContext.jsx";
 
-import { GET_UPGRADES, GET_WORDS, GET_MONEY } from "../utils/queries.js";
+import { GET_MONEY, GET_UPGRADES, GET_WORDS } from "../utils/queries.js";
 
 import { useMutation, useQuery } from "@apollo/client";
+import Container from "react-bootstrap/Container";
 import { ADD_MONEY, UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
+import { useUserContext } from "../components/UserContext.jsx";
 import User from "../utils/user.js";
 
 const Game = () => {
@@ -39,23 +55,32 @@ const Game = () => {
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
-  const [wordTargetTimeRemaining, setWordTargetTimeRemaining] = useState(0);
+  const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] =
+    useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
   const [upgradeMoneyMultiplier, setUpgradeMoneyMultiplier] = useState(0);
   const [upgradeWordDifficulty, setUpgradeWordDifficulty] = useState(0);
   let word = useRef("");
   let mistakes = useRef(0); //useRef will NOT refresh the page upon being updated
   let wordDifficulty = useRef(0);
-  let wordTimeAlloted = useRef(0);
+  let wordTimeAlloted = useRef(0.0);
+  let wordTargetTimeRemaining = useRef(0.0);
+  let wordTimeStarted = useRef(0.0);
   let hasLoadedUpgrades = useRef(false);
   let hasLoadedMoney = useRef(false);
+  let firstLoad = useRef(true);
 
   const [setUpgrades] = useMutation(UPDATE_UPGRADES);
   const [addMoney] = useMutation(ADD_MONEY);
   // Get upgrades
   const { data: dbUpgrades, loading: upgradesLoading } = useQuery(GET_UPGRADES);
   // Get money
-  const { data: dbMoney, loading: moneyLoading } = useQuery(GET_MONEY);
+  const {
+    data: dbMoney,
+    previousData: prevDbMoney,
+    loading: moneyLoading,
+    refetch: refreshMoney,
+  } = useQuery(GET_MONEY, { fetchPolicy: "no-cache" });
 
   const upgradeLevelMappings = {
     moneyMultiplier: upgradeMoneyMultiplier,
@@ -77,21 +102,53 @@ const Game = () => {
   }
 
   if (!hasLoadedMoney.current && User.isLoggedIn() && !moneyLoading) {
+    console.log("Refreshed user money to %s", dbMoney.virtualMoney);
     setUserMoney(dbMoney.virtualMoney);
     hasLoadedMoney.current = true;
   }
 
-  function applyUpgrade(upgrade) {
+  async function applyUpgrade(upgrade) {
     const cost = getUpgradeCost(upgrade, upgradeLevelMappings[upgrade]);
     if (userMoney >= cost) {
-      if (User.isLoggedIn())
-        setUpgrades({
-          variables: {
-            [upgrade]: 1,
-          },
-        });
-      setUserMoney(userMoney - cost);
-      setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
+      let didUpgrade = true;
+      if (User.isLoggedIn()) {
+        try {
+          await setUpgrades({
+            variables: {
+              [upgrade]: 1,
+            },
+          });
+          didUpgrade = true;
+        } catch (e) {
+          playSfx(sfxUpgradeDenied);
+          const newMoney = await refreshMoney();
+          setUserMoney(newMoney.data.virtualMoney);
+          didUpgrade = false;
+        }
+      }
+      if (didUpgrade) {
+        if (upgrade == "moneyMultiplier") {
+          playSfx(sfxUpgradeMoneyMultiplier);
+        } else if (upgrade == "timeExtender") {
+          playSfx(sfxUpgradeTimeExtender);
+        } else if (upgrade == "wordDifficulty") {
+          playSfx(sfxUpgradeWordDifficulty);
+        }
+        setUserMoney(userMoney - cost);
+        setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
+      }
+    } else {
+      playSfx(sfxUpgradeDenied);
+    }
+  }
+
+  async function playSfx(sound) {
+    var audio = new Audio(sound);
+
+    try {
+      await audio.play();
+    } catch (e) {
+      console.log(`ERROR PLAYING SOUND: ${e}`);
     }
   }
 
@@ -123,14 +180,19 @@ const Game = () => {
   function nextWordAppear() {
     // lets calculate the money gained before resetting mistakes to 0
     if (word.current.length !== 0 && mistakes.current < 3) {
-      const moneyToAdd = Math.floor(
-        /*wordTargetBounty*/ (wordTarget.length *
-          (1 + wordDifficulty.current * 0.5) +
-          wordTargetTimeRemaining * 2 * (1 - mistakes.current * 0.33)) *
-          (upgradeMoneyMultiplier + wordDifficulty.current * 0.25)
-      );
-      console.log(userMoney);
+      const moneyToAdd = calculateMoneyGained();
+      //console.log(userMoney);
       setUserMoney(userMoney + moneyToAdd);
+      if (moneyToAdd > 0) {
+        let randomMoneyGainedSfx = [
+          sfxMoneyGained1,
+          sfxMoneyGained2,
+          sfxMoneyGained3,
+          sfxMoneyGained4,
+          sfxMoneyGained5
+        ]
+        playSfx(randomMoneyGainedSfx[Math.floor(Math.random() * randomMoneyGainedSfx.length)]);
+      }
       if (User.isLoggedIn())
         addMoney({
           variables: {
@@ -139,6 +201,7 @@ const Game = () => {
         });
     }
     setUserWord("");
+    playSfx(sfxNewWordAppear);
     wordTimeStarted.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
@@ -150,12 +213,57 @@ const Game = () => {
     setWordsBank(wordsBank.slice(0, -1));
   }
 
-  function newTimerCountdownAppear() {
-    //console.log(Date());
+  function updateTimer() {
     let timer = setTimeout(() => {
-      newTimerCountdownAppear();
-    }, wordTimeAlloted.current * 100);
+      let timerDisplayNumber = Math.floor( wordTimeAlloted.current * 10 - ( Date.now() - wordTimeStarted.current )/100)/10;
+      timerDisplayNumber > 0 ? setWordTargetTimeRemainingDisplay(`${timerDisplayNumber}s`) : setWordTargetTimeRemainingDisplay("0s");
+      setTimeout(updateTimer, 50);
+    }, 50);
     return () => clearTimeout(timer);
+  }
+
+  useEffect(() => {
+    updateTimer();
+  }, []);
+
+  function generateDisplayWord() {
+    let display = [];
+    for (let char in word.current) {
+      if (word.current[char] === wordTarget[char]?.toUpperCase())
+        display.push(<span key={char}>{word.current[char]}</span>);
+      else
+        display.push(
+          <span className="bad-word" key={char}>
+            {word.current[char]}
+          </span>
+        );
+    }
+    display.push(
+      <span className="word-to-type" key="lastPart">
+        {wordTarget.slice(wordDisplay.length).toUpperCase()}
+      </span>
+    );
+    return display;
+  }
+
+  function generateDisplayWord() {
+    let display = [];
+    for (let char in word.current) {
+      if (word.current[char] === wordTarget[char]?.toUpperCase())
+        display.push(<span key={char}>{word.current[char]}</span>);
+      else
+        display.push(
+          <span className="bad-word" key={char}>
+            {word.current[char]}
+          </span>
+        );
+    }
+    display.push(
+      <span className="word-to-type" key="lastPart">
+        {wordTarget.slice(wordDisplay.length).toUpperCase()}
+      </span>
+    );
+    return display;
   }
 
   useEffect(() => {
@@ -164,18 +272,23 @@ const Game = () => {
         setUserWord(wordDisplay.slice(0, -1));
       } else if (/[0-9a-zA-Z-]/.test(e.key) && e.key.length == 1) {
         const correct = e.key === wordTarget[wordDisplay.length];
-        console.log(wordDisplay.length, wordTarget.length);
+        if (!correct && word.current.length === 0) return;
         if (!correct) {
           // increment num mistakes
           mistakes.current++;
+          playSfx(sfxMistype);
           //if number of mistakes is greater than 3, then move to next word
           if (mistakes.current > 2) {
             nextWordAppear();
             return;
           }
-        } else if (mistakes.current == 0 && wordTarget.length == ( wordDisplay.length + 1) ) {
-            nextWordAppear();
-            return;
+        } else if (
+          wordTarget.toUpperCase() ==
+          wordDisplay.toUpperCase() + e.key.toUpperCase()
+        ) {
+          word.current += e.key.toUpperCase();
+          nextWordAppear();
+          return;
         }
         //Above code will run when the word is successfully typed
         setUserWord(wordDisplay + e.key.toUpperCase());
@@ -201,8 +314,7 @@ const Game = () => {
     }
     wordDifficulty.current = wordsBank[wordsBank.length - 1].difficulty;
     wordTimeAlloted.current =
-      (1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25);
-    setWordTargetTimeRemaining(wordTimeAlloted.current);
+      1.25 + upgradeTimeExtender * 0.1 + wordDifficulty.current * 0.25;
     //This is setting a timer
     let timer = setTimeout(() => {
       nextWordAppear();
@@ -211,55 +323,26 @@ const Game = () => {
   }, [wordsBank]);
 
   useEffect(() => {
-    nextWordAppear();
-    newTimerCountdownAppear();
-  }, []);
-
-  // These are just variables being declared.
-  // let tempWordBank = []; //Gets populated by the back-end (50 words) ... Gets populated with a word Object
-  // Word object, when called to appear, will set the wordTargetAllotedTime to the formula
-  // let userInput = "";
-  // let wordTarget = tempWordBank[0].word;
-  // let wordDifficulty = tempWordBank[0].difficulty;
-  // let wordTargetAllotedTime = /*(in seconds)*/ ( 1.5 + ( upgradeTimeExtender * 0.1 ) + ( ( wordDifficulty ) * 0.25 ) );
-  // let wordTargetTimeRemaining = 0.0; // = wordTargetAllotedTime - wordTargetTimeRemaining
-  // let numOfMistakes = 0; //Reset to 0 when new word appears
-  // let numOfMistakesAllowed = 3; //This can be changed and dependent on getNumMistakes()
-  // let money = 0; //This is the money that the player has (money += moneyTotalGained)
-  // let wordTargetBounty = wordTarget.length * ( ( 1 + ( wordDifficulty ) * 0.5 ) ); //The money gained from typing the word correctly
-  // let moneyMultiplier = 1 += upgradeMoneyMultiplier * 0.1;
-  // let moneyTotalGained = ( ( ( wordTargetBounty ) + ( wordTargetTimeRemaining * 2 * ( 1 - ( numOfMistakes * .33 ) ) ) ) * ( moneyMultiplier + ( ( wordDifficulty ) * .25 ) ) );
-  // let upgradeMoneyMultiplier = 0; //Starts at Level 0
-  // let upgradeWordDifficulty = 0; //Level 1 is at 0 --- Level 2 is at 1 --- Level 3 is at 2 --- etc...
-  // let upgradeTimeExtender = 0; //Start at Level 0
-  // let upgradeCostMoneyMultiplier = 120 * ( 1 + ( upgradeMoneyMultiplier ** 2 ) ); //Cost to upgrade
-  // let upgradeCostWordDifficulty = 250 + ( ( upgradeWordDifficulty ) * 750 ); //Cost to upgrade
-  // let upgradeCostTimeExtender = 175 * ( 1 + ( upgradeCostMoneyMultiplier ** 2 ) ) ; //Cost to upgrade
-
-  // function getNumMistakes(word, targetWord) {
-  //     let mistakes = 0;
-  //     for (let i = 0; i < targetWord.length; i++) {
-  //       if (word[i] !== targetWord[i]) mistakes++;
-  //     }
-  //     return mistakes;
-  //   }
-
-  //Each time we type
-  // if ( getNumMistakes (userInput, wordTarget) > 2 ) {
-  //delete the word out of existence and go to the next one.
-  // };
-
-  // if ( tempWordBank.length < 5 ) {
-  //call the server to repopulate tempWordBank[] with 50 new word objects.
-  //will need an await/promise
-  // }
+    if (!user?._id) {
+      // Reset upgrades
+      for (let upgrade in setUpgradeMappings) {
+        setUpgradeMappings[upgrade](0);
+      }
+      setUserMoney(0);
+      setWordsBank([]);
+      fetchWords();
+    }
+  }, [user]);
 
   return (
     <>
       <Container>
         <div className="gameWindow d-inline-flex justify-content-between flex-d w-100">
-          <div className="wordCard d-flex align-items-center justify-content-center w-75">
-            <div className="text-center d-flex flex-column align-items-center">
+          <div className="wordCard d-flex align-items-center justify-content-center w-75 row">
+            <div className="text-center d-flex flex-column align-items-center column">
+              <p id="timer">
+                {wordTargetTimeRemainingDisplay}
+              </p>
               <p id="bounty">
                 Prize:
                 <Image
