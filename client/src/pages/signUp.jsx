@@ -39,16 +39,22 @@ export default function SignUp(props) {
     //   document.getElementById(target + "-warning").style.display = "none";
     // }
 
-    document.getElementById(target + "-warning").style.display = `${textValue === "" ? "block": "none"}`;
+    document.getElementById(target + "-warning").style.display = `${
+      textValue === "" ? "block" : "none"
+    }`;
 
     if (target === "email") {
       let regex = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]{2,3}/;
       let result = regex.test(textValue);
-      document.getElementById(target + "-warning").style.display = `${result ? "none": "block"}`;
+      document.getElementById(target + "-warning").style.display = `${
+        result ? "none" : "block"
+      }`;
     } else if (target === "password") {
       let pwregex = /^.{8,20}$/;
       let pwresult = pwregex.test(textValue);
-      document.getElementById(target + "-warning").style.display = `${pwresult ? "none": "block"}`;
+      document.getElementById(target + "-warning").style.display = `${
+        pwresult ? "none" : "block"
+      }`;
     }
   }
 
@@ -98,7 +104,7 @@ export default function SignUp(props) {
     }
     if (!err && !response?.errors) {
       console.log("Successful!");
-      User.setToken(response.data.login);
+      User.setToken(response.data.addUser);
       setUser(User.getUser());
     } else {
       console.log("Error! Check Network tab.");
