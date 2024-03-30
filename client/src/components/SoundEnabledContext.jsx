@@ -23,7 +23,7 @@ function SoundProvider(props) {
   function setSound(sound) {
     if (User.isLoggedIn()) updateSound({ variables: { sound } });
     setSoundInternal(sound);
-    localStorage.setItem(true, sound);
+    localStorage.setItem("sound", sound);
   }
 
   function querySound() {
