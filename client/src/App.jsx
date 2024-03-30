@@ -15,10 +15,12 @@ import darkLogo from "/moneyTypeLogoDark.svg?url";
 import User from "./utils/user.js";
 
 import { useThemeContext } from "./components/ThemeContext.jsx";
+import { useSoundContext } from "./components/SoundEnabledContext.jsx";
 import { useUserContext } from "./components/UserContext.jsx";
 
 function App() {
   const { theme, setTheme } = useThemeContext();
+  const { sound, setSound } = useSoundContext();
   const { user, setUser } = useUserContext();
 
   return (
@@ -57,6 +59,14 @@ function App() {
       </div>
       <Container>
         <div className="toggle d-flex justify-content-end">
+        <button
+            onClick={() => {
+              setSound(sound ? "light" : "dark");
+            }}
+            className="theme-switcher"
+          >
+            <Image src={sound ? moonSvg : sunSvg} fluid></Image>
+          </button>
           <button
             onClick={() => {
               setTheme(theme === "dark" ? "light" : "dark");

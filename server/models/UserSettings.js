@@ -4,6 +4,10 @@ const userSettingsSchema = new Schema({
         theme: {
             type: String,
             default: "dark"
+        },
+        sound_option: {
+            type: Boolean,
+            default: true
         }
 });
 

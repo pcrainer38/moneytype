@@ -18,10 +18,18 @@ export const ADD_MONEY = gql`
   }
 `;
 
-export const UPDATE_SETTINGS = gql`
+export const UPDATE_THEME = gql`
   mutation Mutation($theme: String) {
     updateUserSettings(theme: $theme) {
       theme
+    }
+  }
+`;
+
+export const UPDATE_SOUND_OPTION = gql`
+  mutation Mutation($sound_option: Boolean) {
+    updateUserSettings(sound_option: $sound_option) {
+      sound_option
     }
   }
 `;
