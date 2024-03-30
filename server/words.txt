@@ -30,6 +30,7 @@ achrioptera manga
 acid
 ackie monitor
 acknowledgment
+acne
 acquaintance
 acquiesce
 across
@@ -621,6 +622,7 @@ blacknose shark
 blackpoll warbler
 blacktip reef shark
 blacktip shark
+blade
 bladefin basslet
 blame
 blank
@@ -671,6 +673,7 @@ boas
 boat
 bobcat
 bobolink
+bodega
 body
 boelen’s python
 boer goat
@@ -845,6 +848,7 @@ busy
 but
 butcher
 butter
+butter knife
 butterfly
 butterfly fish
 button
@@ -909,6 +913,7 @@ cap
 cape lion
 capital
 capsized
+capsule
 captain
 capuchin
 capybara
@@ -1145,6 +1150,7 @@ cockatoo
 cocker spaniel
 cockle
 cockroach
+cocoa
 coconut
 coconut crab
 cod
@@ -1209,6 +1215,7 @@ complementary
 complete
 complicated
 compliment
+composer
 composite
 composition
 comprehensive
@@ -1221,6 +1228,7 @@ concoction
 condition
 cone snail
 conference
+configuration
 confused
 confusing
 conger eel
@@ -1615,6 +1623,7 @@ dollar
 dolphin
 dolphin fish
 donkey
+donut
 door
 dorgi
 dorkie
@@ -1626,6 +1635,7 @@ double
 double doodle
 doubt
 douc
+doughnut
 down
 download
 downstairs
@@ -1834,6 +1844,7 @@ ennui
 enormous
 enough
 enquiry
+ensemble
 enter
 entertain
 entertainment
@@ -2390,6 +2401,7 @@ grey mouse lemur
 grey reef shark
 grey seal
 greyhound
+griffin
 griffon vulture
 griffonshire
 grill
@@ -2456,6 +2468,7 @@ hammond’s flycatcher
 hamster
 hand
 handbag
+handbook
 handkerchief
 handle
 handsome
@@ -2510,6 +2523,7 @@ heating
 hedgehog
 heel
 height
+heir
 helicoprion
 helicopter
 hellbender
@@ -2648,6 +2662,7 @@ idea
 identification
 idol
 if
+ignore
 iguana
 iguanodon
 ill
@@ -2720,6 +2735,7 @@ insects
 inside
 insist
 insouciant
+inspect
 inspiration
 install
 instance
@@ -3353,6 +3369,7 @@ mollusk
 molly
 monarch butterfly
 money
+moneytype
 mongoose
 mongrel
 monitor lizard
@@ -3743,6 +3760,7 @@ pale
 paleoparadoxia
 palm rat
 palo verde beetle
+pamphlet
 pan
 panda pied ball python
 pangolin
@@ -3909,6 +3927,7 @@ pilfer
 pill
 pillow
 pilot
+pimple
 pin
 pinacate beetle
 pine beetle
@@ -4007,6 +4026,7 @@ poogle
 pool
 pool frog
 pop
+popcorn
 popsicle
 popular
 porbeagle shark
@@ -4330,6 +4350,7 @@ rescue
 research
 reservation
 reserve
+reset
 resort
 respect
 responsible
@@ -4784,6 +4805,7 @@ snail
 snailfish
 snake
 snapping turtle
+snapshot
 snook fish
 snorkie
 snouted cobra
@@ -4908,6 +4930,7 @@ spoil
 sponge
 spongy moth
 spoon
+spork
 sport
 spot
 spotted bass
@@ -5431,6 +5454,7 @@ unfortunately
 unfriendly
 unhappy
 unhealthy
+unicorn
 uniform
 unimportant
 uninterested
@@ -5739,6 +5763,7 @@ would
 wow
 wrap
 wrasse
+wrench
 write
 writer
 writing
