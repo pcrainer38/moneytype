@@ -20,6 +20,7 @@ import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
 import difficulty from "/upgradeDifficulty.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
 import timeExtender from "/upgradeTimeExtender.svg?url";
@@ -38,7 +39,9 @@ import { ADD_MONEY, UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
 import { useUserContext } from "../components/UserContext.jsx";
+import { useSoundContext } from "../components/SoundEnabledContext.jsx";
 import User from "../utils/user.js";
+
 
 const Game = () => {
   const { user, setUser } = useUserContext();
@@ -53,6 +56,7 @@ const Game = () => {
     },
   });
   const { theme, setTheme } = useThemeContext();
+  const { sound } = useSoundContext();
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
   const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
@@ -143,13 +147,15 @@ const Game = () => {
     }
   }
 
-  async function playSfx(sound) {
-    var audio = new Audio(sound);
+  async function playSfx(soundFileName) {
+    if (sound) {
+      var audio = new Audio(soundFileName);
 
-    try {
-      await audio.play();
-    } catch (e) {
-      console.log(`ERROR PLAYING SOUND: ${e}`);
+      try {
+        await audio.play();
+      } catch (e) {
+        console.log(`ERROR PLAYING SOUND: ${e}`);
+      }
     }
   }
 

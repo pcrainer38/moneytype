@@ -9,6 +9,8 @@ import Image from "react-bootstrap/Image";
 
 import moonSvg from "/Moon.svg?url";
 import sunSvg from "/Sun.svg?url";
+import soundOptionSvg from "/moneyTypeSFXOption.svg?url";
+import soundOptionOffSvg from "/moneyTypeSFXOptionOff.svg?url";
 import Logo from "/moneyTypeLogo.svg?url";
 import darkLogo from "/moneyTypeLogoDark.svg?url";
 
@@ -61,11 +63,11 @@ function App() {
         <div className="toggle d-flex justify-content-end">
         <button
             onClick={() => {
-              setSound(sound ? "light" : "dark");
+              setSound(!sound);
             }}
             className="theme-switcher"
           >
-            <Image src={sound ? moonSvg : sunSvg} fluid></Image>
+            <Image src={sound ? soundOptionSvg : soundOptionOffSvg} fluid></Image>
           </button>
           <button
             onClick={() => {
