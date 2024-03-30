@@ -17,7 +17,7 @@ const typeDefs = `#graphql
         addUser(username: String!, email: String!, password: String!): ID
         updatePassword(password: String!): User
         login(email: String!, password: String!): ID
-        updateUserSettings(theme: String): UserSettings
+        updateUserSettings(theme: String, sound: Boolean): UserSettings
         updateUserUpgrades(moneyMultiplier: Int, wordLength: Int, wordDifficulty: Int, timeExtender: Int): UserUpgrades
         addMoney(money: Int!): Int
     }
@@ -52,7 +52,8 @@ const typeDefs = `#graphql
 
     type UserSettings {
         _id: ID
-        theme: String        
+        theme: String
+        sound: Boolean
     }
 `;
 
