@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { createContext, useContext, useRef, useState } from "react";
 import { GET_SOUND_OPTION } from "../utils/queries.js";
-import { UPDATE_SOUND_OPTION } from "../utils/mutations.js";
+import { UPDATE_SETTINGS } from "../utils/mutations.js";
 import User from "../utils/user.js";
 
 const SoundContext = createContext();
@@ -17,13 +17,13 @@ function SoundProvider(props) {
     error,
     refetch: refetchSound,
   } = useQuery(GET_SOUND_OPTION);
-  const [updateSound] = useMutation(UPDATE_SOUND_OPTION);
+  const [updateSettings] = useMutation(UPDATE_SETTINGS);
   const [sound, setSoundInternal] = useState(localStorage?.sound ?? true);
 
   function setSound(sound) {
-    if (User.isLoggedIn()) updateSound({ variables: { sound } });
     setSoundInternal(sound);
     localStorage.setItem("sound", sound);
+    if (User.isLoggedIn()) updateSettings({ variables: { sound } });
   }
 
   function querySound() {

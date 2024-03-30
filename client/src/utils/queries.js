@@ -46,7 +46,7 @@ export const GET_THEME = gql`
 export const GET_SOUND_OPTION = gql`
   query UserSettings {
     userSettings {
-      sound_option
+      sound
     }
   }
 `;
