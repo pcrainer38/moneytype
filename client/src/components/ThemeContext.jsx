@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { createContext, useContext, useRef, useState } from "react";
 import { GET_THEME } from "../utils/queries.js";
-import { UPDATE_THEME as UPDATE_SETTINGS } from "../utils/mutations.js";
+import { UPDATE_SETTINGS } from "../utils/mutations.js";
 import User from "../utils/user.js";
 
 const ThemeContext = createContext();
