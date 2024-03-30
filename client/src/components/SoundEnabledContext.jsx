@@ -17,13 +17,13 @@ function SoundProvider(props) {
     error,
     refetch: refetchSound,
   } = useQuery(GET_SOUND_OPTION);
-  const [updateSound] = useMutation(UPDATE_SETTINGS);
+  const [updateSettings] = useMutation(UPDATE_SETTINGS);
   const [sound, setSoundInternal] = useState(localStorage?.sound ?? true);
 
   function setSound(sound) {
     setSoundInternal(sound);
     localStorage.setItem("sound", sound);
-    if (User.isLoggedIn()) updateSound({ variables: { sound } });
+    if (User.isLoggedIn()) updateSettings({ variables: { sound } });
   }
 
   function querySound() {
