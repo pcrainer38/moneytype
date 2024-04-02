@@ -1,7 +1,9 @@
 aardvark
 aardwolf
 ability
+ablaze
 able
+abomination
 about
 above
 abroad
@@ -21,11 +23,14 @@ accompany
 account
 accountant
 accurate
+ace
 ache
 achieve
 achrioptera manga
+acid
 ackie monitor
 acknowledgment
+acne
 acquaintance
 acquiesce
 across
@@ -42,6 +47,8 @@ add
 addax
 addition
 address
+adelie penguin
+adjourn
 admiral butterfly
 admire
 admission
@@ -56,7 +63,6 @@ advertise
 advertisement
 advice
 advise
-adelie penguin
 aeroplane
 aesculapian snake
 affenpinscher
@@ -100,6 +106,7 @@ airedale terrier
 airedoodle
 airline
 airport
+ajar
 akbash
 akita
 akita shepherd
@@ -116,6 +123,7 @@ albertonectes
 albino corn snake
 album
 aldabra giant tortoise
+algae
 alike
 alive
 all
@@ -371,6 +379,7 @@ avoid
 awake
 away
 axanthic ball python
+axel
 axolotl
 ayam cemani
 aye-aye
@@ -391,7 +400,7 @@ badly
 badminton
 bag
 baggage
-bagle – basset hound mix
+bagle - basset hound mix
 bagworm moth
 bagworm moth caterpillar
 baiji
@@ -447,6 +456,7 @@ barred owl
 barrel eye
 barreleye fish
 barylambda
+base
 baseball
 basenji dog
 basenji mix
@@ -612,6 +622,7 @@ blacknose shark
 blackpoll warbler
 blacktip reef shark
 blacktip shark
+blade
 bladefin basslet
 blame
 blank
@@ -662,6 +673,7 @@ boas
 boat
 bobcat
 bobolink
+bodega
 body
 boelen’s python
 boer goat
@@ -691,6 +703,7 @@ bookcase
 booking
 bookshop
 bookstore
+boolean
 boomslang
 boot
 booted bantam
@@ -771,6 +784,7 @@ broccoli
 brochure
 broken
 brontosaurus
+bronze
 bronze whaler shark
 bronze-winged jacana
 brook trout
@@ -810,6 +824,7 @@ bullfrog
 bullmastiff
 bullsnake
 bumblebee
+bun
 bunch
 bureaucratic
 burgeon
@@ -833,11 +848,13 @@ busy
 but
 butcher
 butter
+butter knife
 butterfly
 butterfly fish
 button
 buy
 buyer
+buzz
 by
 bye
 cab
@@ -895,6 +912,8 @@ canvasback
 cap
 cape lion
 capital
+capsized
+capsule
 captain
 capuchin
 capybara
@@ -1119,6 +1138,8 @@ coastal taipan
 coat
 coati
 cobalt blue tarantula
+cobbler
+cobblestone
 cobia fish
 cobras
 cochin chicken
@@ -1129,6 +1150,7 @@ cockatoo
 cocker spaniel
 cockle
 cockroach
+cocoa
 coconut
 coconut crab
 cod
@@ -1140,6 +1162,7 @@ coin
 cola
 cold
 collaboration
+collagen
 collared peccary
 colleague
 collect
@@ -1191,6 +1214,8 @@ complaint
 complementary
 complete
 complicated
+compliment
+composer
 composite
 composition
 comprehensive
@@ -1199,9 +1224,11 @@ computer
 concentrate
 concert
 conclusion
+concoction
 condition
 cone snail
 conference
+configuration
 confused
 confusing
 conger eel
@@ -1243,6 +1270,7 @@ cookiecutter shark
 cooking
 cool
 cooper’s hawk
+coordinate
 copious
 copperhead
 copy
@@ -1311,6 +1339,7 @@ crab spider
 crab-eating fox
 crab-eating macaque
 crabeater seal
+craft
 crane
 crappie fish
 crash
@@ -1411,6 +1440,7 @@ dapple dachshund
 dark
 dark-eyed junco
 darkling beetle
+dart
 darwin’s fox
 darwin’s frog
 date
@@ -1494,6 +1524,7 @@ devon rex
 dhole
 diagram
 dial
+diamond
 diamond python
 diamondback moth
 diary
@@ -1509,6 +1540,7 @@ difficult
 difficulty
 dig
 digital
+dihydrogen monoxide
 dik-dik
 dilate
 dilophosaurus
@@ -1572,6 +1604,7 @@ divide
 diving
 diving bell spider
 diving duck
+dna
 do
 doberman pinscher
 dobsonfly
@@ -1590,16 +1623,19 @@ dollar
 dolphin
 dolphin fish
 donkey
+donut
 door
 dorgi
 dorkie
 dorking chicken
 dormouse
+dossier
 dot
 double
 double doodle
 doubt
 douc
+doughnut
 down
 download
 downstairs
@@ -1719,6 +1755,7 @@ effect
 effete
 effort
 egg
+eggnog
 egregious
 egret
 egyptian asp
@@ -1758,6 +1795,7 @@ elevator
 elf owl
 elk
 else
+elves
 email
 embarrass
 embarrassed
@@ -1802,9 +1840,11 @@ english sparrow
 english springer spaniel
 english toy terrier
 enjoy
+ennui
 enormous
 enough
 enquiry
+ensemble
 enter
 entertain
 entertainment
@@ -1865,6 +1905,7 @@ everybody
 everyone
 everything
 everywhere
+evolve
 exact
 exactly
 exaggeration
@@ -1873,6 +1914,8 @@ examiner
 example
 excellent
 except
+excess
+excessive
 exchange
 excited
 exciting
@@ -1899,7 +1942,9 @@ explore
 explorer
 extra
 extraordinary
+extreme
 extremely
+extremity
 eye
 eyelash viper
 fabrication
@@ -1926,10 +1971,12 @@ familiar
 family
 famous
 fan
+fanatic
 fancy
 fancy mouse
 fangtooth
 fantastic
+fantasy
 far
 fare
 farm
@@ -2050,6 +2097,7 @@ following
 fond
 food
 fool
+foosball
 foot
 football
 football fish
@@ -2219,6 +2267,7 @@ glass lizard
 glasses
 glechon
 glen of imaal terrier
+glitter
 glove
 glowworm
 gnat
@@ -2297,6 +2346,7 @@ grandparent
 grandson
 granny
 grant
+granule
 grape
 grapevine beetle
 graphics
@@ -2351,6 +2401,7 @@ grey mouse lemur
 grey reef shark
 grey seal
 greyhound
+griffin
 griffon vulture
 griffonshire
 grill
@@ -2387,6 +2438,7 @@ gulper eel
 gum
 gun
 guppy
+gutter
 guy
 gym
 gymnastics
@@ -2416,6 +2468,7 @@ hammond’s flycatcher
 hamster
 hand
 handbag
+handbook
 handkerchief
 handle
 handsome
@@ -2459,6 +2512,7 @@ head
 headache
 headline
 headteacher
+heal
 health
 healthy
 hear
@@ -2469,6 +2523,7 @@ heating
 hedgehog
 heel
 height
+heir
 helicoprion
 helicopter
 hellbender
@@ -2605,13 +2660,16 @@ icy
 id
 idea
 identification
+idol
 if
+ignore
 iguana
 iguanodon
 ill
 illness
 illusion
 illustration
+image
 imagination
 imagine
 img boa constrictor
@@ -2677,6 +2735,7 @@ insects
 inside
 insist
 insouciant
+inspect
 inspiration
 install
 instance
@@ -2925,6 +2984,7 @@ land
 landscape
 landseer newfoundland
 language
+lantern
 lappet-faced vulture
 lapponian herder
 laptop
@@ -2960,6 +3020,7 @@ leather
 leatherback sea turtle
 leave
 lecture
+lecturn
 leech
 leedsichthys
 left
@@ -3111,6 +3172,7 @@ madam
 madora moth
 maestro
 magazine
+mage
 magellanic penguin
 maggot
 magic
@@ -3133,6 +3195,7 @@ malayan tiger
 malchi
 male
 mallard
+mallet
 malteagle
 maltese
 maltese mix
@@ -3301,16 +3364,19 @@ mole
 mole crab
 mole cricket
 mole snake
+molecular
 mollusk
 molly
 monarch butterfly
 money
+moneytype
 mongoose
 mongrel
 monitor lizard
 monkey
 monkfish
 monocled cobra
+monstrosity
 monte iberia eleuth
 month
 monument
@@ -3393,6 +3459,7 @@ myself
 mystery
 nabarlek
 naegleria
+naive
 naked mole rat
 name
 narcissistic
@@ -3503,6 +3570,7 @@ norwich terrier
 nose
 nose-horned viper
 nostalgia
+nostalgic
 not
 note
 notebook
@@ -3515,11 +3583,13 @@ novel
 now
 nowadays
 nowhere
+nozzle
 nubian goat
 nudibranch
 numb
 numbat
 number
+numerous
 nuralagus
 nurse
 nurse shark
@@ -3584,6 +3654,7 @@ online
 only
 onomatopoeia
 onto
+oodles
 opabinia
 opah
 opaleye
@@ -3608,6 +3679,7 @@ orange-crowned warbler
 orange-headed tanager
 orangutan
 orb weaver
+orc
 orchard oriole
 orchestra
 orchid dottyback
@@ -3688,6 +3760,7 @@ pale
 paleoparadoxia
 palm rat
 palo verde beetle
+pamphlet
 pan
 panda pied ball python
 pangolin
@@ -3719,6 +3792,7 @@ part
 part-time
 parti schnauzer
 participation
+particle
 particular
 partly
 partner
@@ -3756,6 +3830,7 @@ peagle
 peak
 peanut
 pear
+pearl
 pedestrian
 peekapoo
 peel
@@ -3823,6 +3898,7 @@ photo
 photocopy
 photographer
 photography
+photosphere
 phrase
 physics
 phytosaurs
@@ -3830,6 +3906,7 @@ pi
 piano
 picardy spaniel
 pick
+pickle
 picnic
 picture
 pictus catfish
@@ -3846,9 +3923,11 @@ pika
 pike fish
 pile
 pileated woodpecker
+pilfer
 pill
 pillow
 pilot
+pimple
 pin
 pinacate beetle
 pine beetle
@@ -3915,6 +3994,7 @@ poetry
 point
 pointer
 pointer mix
+poison
 poison dart frog
 polacanthus
 polar bear
@@ -3946,6 +4026,7 @@ poogle
 pool
 pool frog
 pop
+popcorn
 popsicle
 popular
 porbeagle shark
@@ -4037,10 +4118,13 @@ protect
 proud
 prove
 provide
+pseudonym
 pseudoparenchymatous
 pseudopseudohypoparathyroidism
+pseudoscience
 pseudoscientifically
 psittacosaurus
+psychic
 psychopharmacological
 pteranodon
 pterodactyl
@@ -4266,6 +4350,7 @@ rescue
 research
 reservation
 reserve
+reset
 resort
 respect
 responsible
@@ -4431,6 +4516,7 @@ sarkastodon
 sarplaninac
 sarus crane
 satanic leaf-tailed gecko
+satin
 satisfaction
 satisfactory
 satisfied
@@ -4438,6 +4524,7 @@ saturniidae moth
 sauce
 saucepan
 saucer
+saudade
 sauropoda
 sausage
 savanna goat
@@ -4451,6 +4538,8 @@ say
 scale-crested pygmy tyrant
 scaleless ball python
 scallops
+scapegoat
+scar
 scarab beetle
 scared
 scarf
@@ -4490,6 +4579,7 @@ scutosaurus
 sea
 sea anemone
 sea bass
+sea cucumber
 sea dragon
 sea eagle
 sea lion
@@ -4509,6 +4599,7 @@ sealyham terrier
 search
 seaside
 season
+seat
 second
 second-hand
 secondary
@@ -4586,6 +4677,7 @@ shiloh shepherd
 shine
 shiny
 ship
+shipwreck
 shiranian
 shirt
 shocked
@@ -4645,12 +4737,14 @@ silver labrador
 simbakubwa
 similar
 simple
+simultaneously
 since
 sincerely
 sing
 singer
 singing
 single
+single-minded
 sink
 sinosauropteryx
 sir
@@ -4680,6 +4774,7 @@ skua
 skunk
 sky
 skye terrier
+skyscraper
 sleep
 sleeper shark
 sleeve
@@ -4710,6 +4805,7 @@ snail
 snailfish
 snake
 snapping turtle
+snapshot
 snook fish
 snorkie
 snouted cobra
@@ -4788,6 +4884,7 @@ spanish mackerel
 spanish mastiff
 spanish water dog
 spare
+spark
 sparkling
 sparrow
 sparrowhawk
@@ -4815,6 +4912,7 @@ spider beetle
 spider monkey
 spider wasp
 spider-tailed horned viper
+spigot
 spill
 spinach
 spinner shark
@@ -4832,6 +4930,7 @@ spoil
 sponge
 spongy moth
 spoon
+spork
 sport
 spot
 spotted bass
@@ -4874,6 +4973,7 @@ statue
 stay
 steak
 steal
+steam
 steelhead salmon
 steep
 steller’s sea cow
@@ -5034,6 +5134,7 @@ tangerine leopard gecko
 tap
 tapanuli orangutan
 tapir
+tar
 tarantula
 tarantula hawk
 tarbosaurus
@@ -5141,6 +5242,7 @@ thought
 thresher shark
 thriller
 throat
+throne
 through
 throw
 thrush
@@ -5150,6 +5252,7 @@ thunderstorm
 thylacoleo
 thylacoleo carnifex
 thylacosmilus
+thyme
 tibetan fox
 tibetan mastiff
 tibetan spaniel
@@ -5209,6 +5312,7 @@ toothbrush
 toothpaste
 top
 topic
+torch
 torkie
 tornjak
 tortoise
@@ -5245,6 +5349,7 @@ transmogrify
 transport
 transylvanian hound
 trapdoor spider
+treasure
 tree
 tree cricket
 tree frog
@@ -5349,6 +5454,7 @@ unfortunately
 unfriendly
 unhappy
 unhealthy
+unicorn
 uniform
 unimportant
 uninterested
@@ -5420,6 +5526,7 @@ vermilion flycatcher
 versus
 vervet monkey
 very
+vessel
 vestal cuckoo bumblebee
 vet
 via
@@ -5656,6 +5763,7 @@ would
 wow
 wrap
 wrasse
+wrench
 write
 writer
 writing
@@ -5735,6 +5843,8 @@ yours
 yourself
 youth
 zamiaceae
+zeal
+zealous
 zebra
 zebra finch
 zebra mussels

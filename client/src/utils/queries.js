@@ -35,10 +35,18 @@ export const GET_MONEY = gql`
   }
 `;
 
-export const GET_SETTINGS = gql`
+export const GET_THEME = gql`
   query UserSettings {
     userSettings {
       theme
+    }
+  }
+`;
+
+export const GET_SOUND_OPTION = gql`
+  query UserSettings {
+    userSettings {
+      sound
     }
   }
 `;

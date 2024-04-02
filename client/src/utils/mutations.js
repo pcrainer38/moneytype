@@ -19,9 +19,10 @@ export const ADD_MONEY = gql`
 `;
 
 export const UPDATE_SETTINGS = gql`
-  mutation Mutation($theme: String) {
-    updateUserSettings(theme: $theme) {
+  mutation Mutation($theme: String, $sound: Boolean) {
+    updateUserSettings(theme: $theme, sound: $sound) {
       theme
+      sound
     }
   }
 `;

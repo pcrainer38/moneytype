@@ -20,6 +20,7 @@ import Image from "react-bootstrap/Image";
 
 import dollarSign from "/moneyTypeDollarSign.svg?url";
 import darkDollarSign from "/moneyTypeDollarSignDark.svg?url";
+
 import difficulty from "/upgradeDifficulty.svg?url";
 import multiplier from "/upgradeMoneyMultiplier.svg?url";
 import timeExtender from "/upgradeTimeExtender.svg?url";
@@ -38,7 +39,9 @@ import { ADD_MONEY, UPDATE_UPGRADES } from "../utils/mutations.js";
 
 import { getUpgradeCost } from "../../../shared/gameLogic.js";
 import { useUserContext } from "../components/UserContext.jsx";
+import { useSoundContext } from "../components/SoundEnabledContext.jsx";
 import User from "../utils/user.js";
+
 
 const Game = () => {
   const { user, setUser } = useUserContext();
@@ -53,9 +56,10 @@ const Game = () => {
     },
   });
   const { theme, setTheme } = useThemeContext();
+  const { sound } = useSoundContext();
   const [wordDisplay, setWordDisplay] = useState("");
   const [userMoney, setUserMoney] = useState(0);
-  const [wordTarget, setWordTarget] = useState(""); //useSate will refresh the page upon being updated
+  const [wordTarget, setWordTarget] = useState(""); //useState will refresh the page upon being updated
   const [wordTargetTimeRemainingDisplay, setWordTargetTimeRemainingDisplay] =
     useState(0);
   const [upgradeTimeExtender, setUpgradeTimeExtender] = useState(0);
@@ -128,12 +132,18 @@ const Game = () => {
         }
       }
       if (didUpgrade) {
-        if (upgrade == "moneyMultiplier") {
-          playSfx(sfxUpgradeMoneyMultiplier);
-        } else if (upgrade == "timeExtender") {
-          playSfx(sfxUpgradeTimeExtender);
-        } else if (upgrade == "wordDifficulty") {
-          playSfx(sfxUpgradeWordDifficulty);
+        switch (upgrade) {
+          case "moneyMultiplier":
+            playSfx(sfxUpgradeMoneyMultiplier);
+            break;
+          case "timeExtender":
+            playSfx(sfxUpgradeTimeExtender);
+            break;
+          case "wordDifficulty":
+            playSfx(sfxUpgradeWordDifficulty);
+            break;
+          default:
+            console.log(`The sound event ${upgrade} does not have a defined case for upgrading. Will be added in a future update!`);
         }
         setUserMoney(userMoney - cost);
         setUpgradeMappings[upgrade](upgradeLevelMappings[upgrade] + 1);
@@ -143,13 +153,15 @@ const Game = () => {
     }
   }
 
-  async function playSfx(sound) {
-    var audio = new Audio(sound);
+  async function playSfx(soundFileName) {
+    if (sound) {
+      var audio = new Audio(soundFileName);
 
-    try {
-      await audio.play();
-    } catch (e) {
-      console.log(`ERROR PLAYING SOUND: ${e}`);
+      try {
+        await audio.play();
+      } catch (e) {
+        console.log(`ERROR PLAYING SOUND: ${e}`);
+      }
     }
   }
 
@@ -202,7 +214,6 @@ const Game = () => {
         });
     }
     setUserWord("");
-    playSfx(sfxNewWordAppear);
     wordTimeStarted.current = Date.now();
     mistakes.current = 0;
     // if less than 5 words left, fetch new words
@@ -212,12 +223,14 @@ const Game = () => {
     if (!wordsBank.length) return;
     setWordTarget(wordsBank[wordsBank.length - 1].word);
     setWordsBank(wordsBank.slice(0, -1));
+    playSfx(sfxNewWordAppear);
   }
 
   function updateTimer() {
     let timer = setTimeout(() => {
       let timerDisplayNumber = Math.floor( wordTimeAlloted.current * 10 - ( Date.now() - wordTimeStarted.current )/100)/10;
-      timerDisplayNumber > 0 ? setWordTargetTimeRemainingDisplay(`${timerDisplayNumber}s`) : setWordTargetTimeRemainingDisplay("0s");
+      //timerDisplayNumber > 0 ? setWordTargetTimeRemainingDisplay(`${timerDisplayNumber}s`) : setWordTargetTimeRemainingDisplay("0s");
+      setWordTargetTimeRemainingDisplay(timerDisplayNumber > 0 ? `${timerDisplayNumber}s` : "0s");
       setTimeout(updateTimer, 50);
     }, 50);
     return () => clearTimeout(timer);

@@ -18,6 +18,7 @@ import Scoreboard from "./pages/Scoreboard.jsx";
 
 import ThemeProvider from "./components/ThemeContext.jsx";
 import UserProvider from "./components/UserContext.jsx";
+import SoundProvider from "./components/SoundEnabledContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,10 +63,12 @@ const client = new ApolloClient({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
-    <ThemeProvider>
-      <UserProvider>
-        <RouterProvider router={router} />
-      </UserProvider>
-    </ThemeProvider>
+    <SoundProvider>
+      <ThemeProvider>
+        <UserProvider>
+          <RouterProvider router={router} />
+        </UserProvider>
+      </ThemeProvider>
+    </SoundProvider>
   </ApolloProvider>
 );
