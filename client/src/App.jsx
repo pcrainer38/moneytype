@@ -31,7 +31,7 @@ function App() {
         <Container>
           <Link
             to={"/"}
-            className="d-flex align-items-center text-decoration-none"
+            className=" navs d-flex align-items-center text-decoration-none"
           >
             <Image src={theme === "dark" ? darkLogo : Logo} fluid></Image>
             <h1>Money Type</h1>

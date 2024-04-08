@@ -358,8 +358,8 @@ const Game = () => {
   return (
     <>
       <Container>
-        <div className="gameWindow d-inline-flex justify-content-between flex-d w-100">
-          <div className="wordCard d-flex align-items-center justify-content-center w-75 row">
+        <div className="gameWindow flex-d w-100">
+          <div className="wordCard d-flex align-items-center justify-content-center row">
             <div className="text-center d-flex flex-column align-items-center column">
               <p id="timer">
                 {wordTargetTimeRemainingDisplay}
